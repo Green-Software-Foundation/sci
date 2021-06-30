@@ -1,4 +1,4 @@
-# software_carbon_intensity Specification
+# Software Carbon Intensity (SCI) Specification
 
 ## Scope
 ## Milestone dates
