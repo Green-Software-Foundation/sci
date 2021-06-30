@@ -1,0 +1,14 @@
+---
+title: "Software_Carbon_Intensity"
+status: "Draft"
+version: "1.0"
+organisationName: "Green Software Foundation"
+date: "2021-07-01"
+copyrightDate: "2021"
+logo: "images/gsf_logo.png"
+documentName: "Software_Carbon_Intensity-V1_0"
+files:
+  - License.md
+  - Software_Carbon_Intensity.md
+  - Appendix_A.md
+---
