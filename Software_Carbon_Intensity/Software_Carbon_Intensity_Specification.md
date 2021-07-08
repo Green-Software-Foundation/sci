@@ -128,8 +128,6 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 ## Introduction
 
-```
-# Executive Summary
 From a market perspective...  
 
 * What can you do with this specification?
@@ -137,7 +135,7 @@ From a market perspective...
 * How can this specification be applied?
 * Consider the target audience and provide deployment examples as possible.
 
-# Introduction
+## Start
 
 A carbon intensity is a rate of carbon emissions compared against another measure. The carbon intensity of electricity is carbon emissions per kWh. 
 
@@ -148,7 +146,7 @@ C / R
 C = The total amount of carbon the software is emitting over a time period.
 R = The other measure we will be comparing against.
 
-# Taxonomy of Green Software
+## Taxonomy of Green Software
 
 The taxonomy of Green Software is broadly split into these categories.
 
@@ -157,14 +155,14 @@ The taxonomy of Green Software is broadly split into these categories.
 - **Energy Efficient Applications:** Applications that use less energy to perform the same function.
 - **Hardware Efficient Applications:** Applications that use the least physical resources possible to peform their function.
 
-# Criteria for calculating total carbon emissions, C
+## Criteria for calculating total carbon emissions, C
 
 **Criteria: Making an application Carbon Aware, Energy Efficient or Hardware Efficient should reduce the value of C.**
 
 The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calcualtion of carbon emissions that are purely cost based, using those methods results in a carbon number that will not not change if you make the application carbon aware or energy efficient.
 
 For example if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, the method of calculation should mean the value of X goes down. If we make the application more energy efficient the value of X goes down. If we make the application more hardware efficient, the value of X goes down.
-```
+
 
 ### Version 1.0
 
