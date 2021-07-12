@@ -1,7 +1,7 @@
 ## Scope
 
 
-This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 vice
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product. This specification describes the carbon intensity of a software application or service.
@@ -153,13 +153,13 @@ The taxonomy of Green Software is broadly split into these categories.
 
 - **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently being generated.
 - **Energy Efficient Applications:** Applications that use less energy to perform the same function.
-- **Hardware Efficient Applications:** Applications that use the least physical resources possible to peform their function.
+- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
 
 ## Criteria for calculating total carbon emissions, C
 
 **Criteria: Making an application Carbon Aware, Energy Efficient or Hardware Efficient should reduce the value of C.**
 
-The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calcualtion of carbon emissions that are purely cost based, using those methods results in a carbon number that will not not change if you make the application carbon aware or energy efficient.
+The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a carbon number that will not change if you make the application carbon aware or energy efficient.
 
 For example if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, the method of calculation should mean the value of X goes down. If we make the application more energy efficient the value of X goes down. If we make the application more hardware efficient, the value of X goes down.
 
