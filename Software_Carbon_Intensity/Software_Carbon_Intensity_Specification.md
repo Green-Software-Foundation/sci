@@ -141,7 +141,7 @@ The taxonomy of Green Software is broadly split into these categories.
 
 - **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently being generated.
 - **Energy Efficient Applications:** Applications that use less energy to perform the same function.
-- **Hardware Efficient Applications:** Applications that use the least physical resources possible to peform their function.
+- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
 
 ## Characteristics for calculating total carbon emissions, C
 
@@ -150,7 +150,6 @@ The taxonomy of Green Software is broadly split into these categories.
 The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
 
 For example if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, a characteristic of our methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
-
 
 ### Version 1.0
 
