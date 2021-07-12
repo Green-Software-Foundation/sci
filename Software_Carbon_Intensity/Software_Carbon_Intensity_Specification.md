@@ -1,8 +1,8 @@
 ## Scope
 
-```
-Define as it relates to Green Software Foundation Activity. If it adds clarity, define what is not in the scope. DELETE THIS COMMENT 
-```
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
+
+Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product. This specification describes the carbon intensity of a software application or service.
 
 ## References
 ### Normative References
@@ -125,16 +125,31 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 ## Introduction
 
-```
-From a market perspective...  
+A carbon intensity is a rate of carbon emissions compared against another measure. The carbon intensity of electricity is carbon emissions per kWh. 
 
-* What can you do with this specification?
-* What problem does this solve?
-* How can this specification be applied?
-* Consider the target audience and provide deployment examples as possible.
+To calculate the carbon intensity we need to decide two things.
 
-DELETE THIS COMMENT
-```
+`C / R`
+
+`C` = The total amount of carbon the software is emitting over a time period.
+
+`R` = The other measure we will be comparing against.
+
+## Taxonomy of Green Software
+
+The taxonomy of Green Software is broadly split into these categories.
+
+- **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently being generated.
+- **Energy Efficient Applications:** Applications that use less energy to perform the same function.
+- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
+
+## Characteristics for calculating total carbon emissions, C
+
+### (1) `C` should be sensitive to carbon awareness, energy efficiency or hardware efficiency improvements to the application
+
+The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
+
+For example if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, a characteristic of our methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
 
 ### Version 1.0
 
