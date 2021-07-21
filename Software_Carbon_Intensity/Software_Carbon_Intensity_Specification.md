@@ -151,6 +151,16 @@ The challenges with existing methods of calculation is that they are only sensit
 
 For example if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, a characteristic of our methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
 
+
+
+## Exclusions
+
+### Carbon Offsets and Electricity Attribute Certificates
+
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, carbon offsets and elecitricity attribute certificates (EACs) must not be included in the emissions calculation.
+
+
+
 ### Version 1.0
 
 ```
