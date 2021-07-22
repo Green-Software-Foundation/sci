@@ -127,7 +127,7 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 * **What can you do with this specification?**
 
-The purpose of this specification will be to enable standardization across industry empowering customers to make more informed choices in the software solutions that they pick.
+The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick.
 
 * **What problem does this solve?**
 
