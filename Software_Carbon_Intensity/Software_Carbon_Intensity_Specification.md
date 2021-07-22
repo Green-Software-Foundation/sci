@@ -152,7 +152,7 @@ Green Software broadly addresses emissions in these categories.
 
 ## Characteristics for calculating total carbon emissions, C
 
-### (1) `C` should be sensitive to carbon awareness, energy efficiency or hardware efficiency improvements to the application
+### (1) `C` should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
 
 #### Operational Emissions
 
