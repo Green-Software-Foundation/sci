@@ -32,7 +32,7 @@ The recommended approach for getting invlved with the specification is to:
 Standard WG projects are copyrighted under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## License
-Standard WG projects are licensed under the MIT License - see the [LICENSE.md](Software_Carbon_Intensity/License.md) file for details
+Standard WG projects are licensed under the MIT License - see the [LICENSE.md](Software_Carbon_Intensity/License.md) file for details.
 
 ## Patent
 Standard WG projects operate under the W3C Patent Mode.
