@@ -123,6 +123,22 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 ## Introduction
 
+* **What can you do with this specification?**
+
+The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick.
+
+* **What problem does this solve?**
+
+This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
+
+* **How can this specification be applied?**
+
+The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
+
+* **Who is the target audience?** 
+
+The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
+
 This standard uses a consequential approach to calculating the real world emissions associated with software. This approach measures the total change in global emissions associated with a particular piece of software.
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
@@ -178,6 +194,7 @@ The challenges with existing methods of calculation is that they are only sensit
 ### Carbon Offsets and Electricity Attribute Certificates
 
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, carbon offsets and elecitricity attribute certificates (EACs) must not be included in the emissions calculation.
+
 
 
 
