@@ -1,8 +1,6 @@
 ## Scope
 
-```
-Define as it relates to Green Software Foundation Activity. If it adds clarity, define what is not in the scope. DELETE THIS COMMENT 
-```
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
 
 ## References
 ### Normative References
@@ -140,6 +138,65 @@ The specification can be applied to any software to measure and reduce its carbo
 * **Who is the target audience?** 
 
 The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
+
+This standard uses a consequential approach to calculating the real world emissions associated with software. This approach measures the total change in global emissions associated with a particular piece of software.
+
+Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
+
+A carbon intensity is a rate of carbon emissions compared against another measure. 
+
+To calculate the carbon intensity we need to decide two things.
+
+`C / R`
+
+`C` = The total amount of carbon the software is emitting over a time period.
+
+`R` = The other measure we will be comparing against.
+
+## Taxonomy of Green Software
+
+Green Software broadly addresses emissions in these categories.
+
+***Operational Emissions:***
+- **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently available.
+- **Energy Efficient Applications:** Applications that use less energy, and thus causes less emissions, to perform the same function.
+
+***Embodied Emissions***
+- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
+
+## Characteristics for calculating total carbon emissions, C
+
+### (1) `C` should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
+
+#### Operational Emissions
+
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
+
+Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the solution can be re-architected to take advantage of different configurations that scale better in terms of efficiency. All combined, these effects should be reflected in the total operational emissions. 
+
+
+#### Embodied Emissions
+
+[placeholder]
+
+#### Calculating total emissions, C
+
+Total emissions, C, is the sum of operational and embodied emissions.
+
+Overall, if we calculate the total carbon emissions C of an application as X, and then we make the application carbon aware, a characteristic of the methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
+
+The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
+
+
+
+## Exclusions
+
+### Carbon Offsets and Electricity Attribute Certificates
+
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, carbon offsets and elecitricity attribute certificates (EACs) must not be included in the emissions calculation.
+
+
+
 
 ### Version 1.0
 
