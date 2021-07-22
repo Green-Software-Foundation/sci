@@ -127,7 +127,7 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 This standard uses a consequential approach to calculating the real world emissions associated with software. This approach measures the total change in global emissions associated with a particular piece of software.
 
-Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product. 
+Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
 A carbon intensity is a rate of carbon emissions compared against another measure. 
 
