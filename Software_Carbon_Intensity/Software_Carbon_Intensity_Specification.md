@@ -139,7 +139,7 @@ The specification can be applied to any software to measure and reduce its carbo
 
 * **Who is the target audience?** 
 
-The target audience for this are software architects, developers and maintainers who ideally can use this as a tool where they can enter characterisitics about their software solution and get a score that they can share with their customers highlighting the environmental impact of their solution.
+The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
 
 ### Version 1.0
 
