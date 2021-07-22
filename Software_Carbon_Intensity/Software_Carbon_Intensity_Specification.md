@@ -135,7 +135,7 @@ This solves the problem of incompatible and opaque metrics that are potentially 
 
 * **How can this specification be applied?**
 
-The application of the specification can be towards creating a certified, standardized, practical score to the entire software solution.
+The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
 
 * **Who is the target audience?** 
 
