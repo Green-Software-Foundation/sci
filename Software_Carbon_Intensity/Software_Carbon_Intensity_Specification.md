@@ -125,16 +125,21 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 ## Introduction
 
-```
-From a market perspective...  
+* **What can you do with this specification?**
 
-* What can you do with this specification?
-* What problem does this solve?
-* How can this specification be applied?
-* Consider the target audience and provide deployment examples as possible.
+The purpose of this specification will be to enable standardization across industry empowering customers to make more informed choices in the software solutions that they pick.
 
-DELETE THIS COMMENT
-```
+* **What problem does this solve?**
+
+This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
+
+* **How can this specification be applied?**
+
+The application of the specification can be towards creating a certified, standardized, practical score to the entire software solution.
+
+* **Who is the target audience?** 
+
+The target audience for this are software architects, developers and maintainers who ideally can use this as a tool where they can enter characterisitics about their software solution and get a score that they can share with their customers highlighting the environmental impact of their solution.
 
 ### Version 1.0
 
