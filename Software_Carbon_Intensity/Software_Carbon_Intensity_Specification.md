@@ -169,7 +169,7 @@ Carbon aware software will optimize the timing and location of operation to mini
 
 Total emissions, C, is the sum of operational and embodied emissions.
 
-Overall, if we calculate the total carbon emissions of an application as X, and then we make the application carbon aware, a characteristic of the methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
+Overall, if we calculate the total carbon emissions C of an application as X, and then we make the application carbon aware, a characteristic of the methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
 
 The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
 
