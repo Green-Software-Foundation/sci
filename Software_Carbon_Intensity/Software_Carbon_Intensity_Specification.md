@@ -123,63 +123,82 @@ The list should be maintained in alphabetic order. DELETE This Row
 
 ## Introduction
 
-* **What can you do with this specification?**
+#### Problem Statement
 
-The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick.
+The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick. This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
 
-* **What problem does this solve?**
-
-This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
-
-* **How can this specification be applied?**
+#### Applications Of This Specification
 
 The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
 
-* **Who is the target audience?** 
+#### Target Audience
 
 The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
 
-This standard uses a consequential approach to calculating the real world emissions associated with software. This approach measures the total change in global emissions associated with a particular piece of software.
+
+## Methodology Summary 
+
+This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
-A carbon intensity is a rate of carbon emissions compared against another measure. 
+To calculate the carbon intensity we need the following:
 
-To calculate the carbon intensity we need to decide two things.
+`O`= Operational emissions of a given piece of software
+`E` = Embodied emissions of a given piece of software
 
-`C / R`
+**These are used to calculate total carbon emissions (C):**
+`C` = Total amount of carbon the software is emitting over a time period.
 
-`C` = The total amount of carbon the software is emitting over a time period.
+`C = O + Embodied `
 
-`R` = The other measure we will be comparing against.
 
-## Taxonomy of Green Software
+## Taxonomy & Terminolopgy of Green Software
 
 Green Software broadly addresses emissions in these categories.
 
-***Operational Emissions:***
+***Operational Emissions (O):***
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
+
+Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects should be reflected in the total operational emissions. 
+
+### Energy Measurement (E)
+This is a reflection of the energy consumption consumed by a given piece of software for a given task. This could be applied for several taxonomies:  
+- Datacenter
+- Indiviudual machine (e.g. VM/Node)
+- Indiviudual service (e.g. machine learning training job)
+- Execution of code 
+
+### Location-Based Carbon Intensity Measurement (I)
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh.
+
+Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims. 
+
+The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
+
+Some categories of applications that apply Operational Emissions (O): 
+
 - **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently available.
 - **Energy Efficient Applications:** Applications that use less energy, and thus causes less emissions, to perform the same function.
 
-***Embodied Emissions***
+` Operational emissions = Energy Measurement (kWh) * Carbon Intensity `
+
+`O = E * I `
+
+
+
+***Embodied Emissions (Embodied) ***
+[placeholder]
+
+Some categories of applications that apply Embodied Emissions (Embodied): 
 - **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
 
 ## Characteristics for calculating total carbon emissions, C
 
 ### (1) `C` should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
 
-#### Operational Emissions
 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
-
-Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects should be reflected in the total operational emissions. 
-
-
-#### Embodied Emissions
-
-[placeholder]
-
-#### Calculating total emissions, C
+#### Calculating Total Emissions, C
 
 Total emissions, C, is the sum of operational and embodied emissions.
 
@@ -187,13 +206,30 @@ Overall, if we calculate the total carbon emissions C of an application as X, an
 
 The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
 
+To calculate the carbon intensity we need to compare total emissions (C) against a baseline (R).
+
+`R` = Baseline, the other measure we will be comparing against (baseline, or carbon counterfactual) 
+
+` Total Emissions = C / R`
+
 
 
 ## Exclusions
 
-### Carbon Offsets and Electricity Attribute Certificates
+### Market-Based Measures: Carbon Offsets and Electricity Attribute Certificates
 
-Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, carbon offsets and elecitricity attribute certificates (EACs) must not be included in the emissions calculation.
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
+- carbon offsets  
+- electricity attribute certificates (EACs) 
+- Power Purchase Agreements (PPAs)
+- Renewable Energy Credits (RECs)
+
+Market-based measures which includes companies agreements and infrastructure: We don’t need the market-based info to be shared by API to Developers, which keeps things simple, and prevents concerns about publishing ‘seemingly less green data about Azure’. This can be viewed in two ways:
+
+- **(A) “matched by renewables”**, e.g. PPA for solar near a datacenter that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective.
+
+- **(B) “powered by renewables via a direct wire connection”**, e.g. a datacenter with solar panels on the roof and a battery storage located onsite. This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+
 
 
 
