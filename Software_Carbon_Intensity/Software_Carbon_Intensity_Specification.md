@@ -148,7 +148,7 @@ To calculate the carbon intensity we need the following:
 
 `E` = Embodied emissions of a given piece of software
 
-**These are used to calculate total carbon emissions (C):**
+**These are used to calculate total carbon emissions (`C`):**
 
 `C` = Total amount of carbon the software is emitting over a time period.
 
@@ -159,19 +159,19 @@ To calculate the carbon intensity we need the following:
 
 Green Software broadly addresses emissions in these categories.
 
-***Operational Emissions (O):***
+***Operational Emissions (`O`):***
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
 
 Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects should be reflected in the total operational emissions. 
 
-### Energy Measurement (E)
+### Energy Measurement (`E`) 
 This is a reflection of the energy consumption consumed by a given piece of software for a given task. This could be applied for several taxonomies:  
 - Datacenter
 - Indiviudual machine (e.g. VM/Node)
 - Indiviudual service (e.g. machine learning training job)
 - Execution of code 
 
-### Location-Based Carbon Intensity Measurement (I)
+### Location-Based Carbon Intensity Measurement (`I`)
 The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh.
 
 Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims. 
