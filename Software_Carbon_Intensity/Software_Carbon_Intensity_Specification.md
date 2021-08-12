@@ -145,9 +145,11 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 To calculate the carbon intensity we need the following:
 
 `O`= Operational emissions of a given piece of software
+
 `E` = Embodied emissions of a given piece of software
 
 **These are used to calculate total carbon emissions (C):**
+
 `C` = Total amount of carbon the software is emitting over a time period.
 
 `C = O + Embodied `
@@ -193,9 +195,9 @@ Some categories of applications that apply Operational Emissions (O):
 Some categories of applications that apply Embodied Emissions (Embodied): 
 - **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
 
-## Characteristics for calculating total carbon emissions, C
+## Characteristics for calculating total carbon emissions, `C`
 
-### (1) `C` should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
+#### C should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
 
 
 #### Calculating Total Emissions, C
