@@ -226,7 +226,7 @@ To calculate the carbon intensity we need to compare total emissions (C) against
 
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
 
-### Market-based Measures** 
+### Market-based Measures 
 **“Market-based measures"** are achieved through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following: 
 - Carbon offsets 
 - Electricity Attribute Certificates (EACs) 
