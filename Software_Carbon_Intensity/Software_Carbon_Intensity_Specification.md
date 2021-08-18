@@ -161,7 +161,7 @@ To calculate the carbon intensity we need the following:
 
 
 
-## Taxonomy & Terminolopgy of Green Software
+## Taxonomy & Terminology of Green Software
 
 Green Software broadly addresses emissions in these categories.
 
@@ -224,19 +224,16 @@ To calculate the carbon intensity we need to compare total emissions (C) against
 
 ## Exclusions
 
-### Market-Based Measures: Carbon Offsets and Electricity Attribute Certificates
-
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
-- carbon offsets  
-- electricity attribute certificates (EACs) 
+
+### “Market-based Measures”**, through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following: 
+- Carbon offsets 
+- Electricity Attribute Certificates (EACs) 
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-Market-based measures which includes companies agreements and infrastructure: We don’t need the market-based info to be shared by API to Developers, which keeps things simple, and prevents concerns about publishing ‘seemingly less green data about Azure’. This can be viewed in two ways:
-
-- **(A) “matched by renewables”**, e.g. PPA for solar near a datacenter that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective.
-
-- **(B) “powered by renewables via a direct wire connection”**, e.g. a datacenter with solar panels on the roof and a battery storage located onsite. This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+### Infrastructure Meaures 
+**“Infrastructure Measures”** that integrate renewables via a direct wire connection (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
 
 
 
