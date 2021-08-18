@@ -148,11 +148,15 @@ To calculate the carbon intensity we need the following:
 
 `E` = Embodied emissions of a given piece of software
 
+`R` = Baseline as a demoninator  (e.g. carbon per additional user, api-call, ML job, etc) 
+
 **These are used to calculate total carbon emissions (`C`):**
 
-`C` = Total amount of carbon the software is emitting over a time period.
+`C = O + E ` = Total amount of carbon the software is emitting over a time period
 
-`C = O + Embodied `
+`CI = C / R` = Total carbon per 
+
+`CI = O + E`
 
 
 ## Taxonomy & Terminolopgy of Green Software
