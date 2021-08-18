@@ -85,10 +85,10 @@ Examples:
 DELETE THIS COMMENT
 ```
 <table>
-  <caption>Definitions</caption>
+  <caption>Marginal Carbon Intensity</caption>
   <tbody>
     <tr>
-	<td><strong>Definition-1</strong></td>
+	<td><strong>Marginal emissions intensity is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment. This is the only figure that matters if you’re trying to optimize the scheduling of your compute in real-time. </strong></td>
 	<td>Description definition-1</td>
     </tr>
     <tr>
@@ -146,17 +146,18 @@ To calculate the carbon intensity we need the following:
 
 `O`= Operational emissions of a given piece of software
 
-`E` = Embodied emissions of a given piece of software
+`M` = Embodied emissions of a given piece of software
 
 `R` = Baseline as a demoninator  (e.g. carbon per additional user, api-call, ML job, etc) 
 
-**These are used to calculate total carbon emissions (`C`):**
+**These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
 
-`C = O + E ` = Total amount of carbon the software is emitting over a time period
+`C = O + M ` = Total amount of carbon the software is emitting over a time period
 
-`CI = C / R` = Total carbon per 
+**carbon intensity (`CI`) compares this carbon against a baseline :**
 
-`CI = O + E`
+`CI = C / R` = Total carbon intensity rate per baseline
+
 
 
 ## Taxonomy & Terminolopgy of Green Software
@@ -172,7 +173,7 @@ Carbon aware software will optimize the timing and location of operation to mini
 This is a reflection of the energy consumption consumed by a given piece of software for a given task. This could be applied for several taxonomies:  
 - Datacenter
 - Indiviudual machine (e.g. VM/Node)
-- Indiviudual service (e.g. machine learning training job)
+- Indiviudual service (e.g. API call, ML training job)
 - Execution of code 
 
 ### Location-Based Carbon Intensity Measurement (`I`)
