@@ -85,11 +85,11 @@ Examples:
 DELETE THIS COMMENT
 ```
 <table>
-  <caption>Marginal Carbon Intensity</caption>
+  <caption>Marginal </caption>
   <tbody>
     <tr>
-	<td><strong>Marginal emissions intensity is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment. This is the only figure that matters if you’re trying to optimize the scheduling of your compute in real-time. </strong></td>
-	<td>Description definition-1</td>
+	<td><strong>Carbon Intensity </strong></td>
+	<td>Marginal emissions intensity is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment. This is the only figure that matters if you’re trying to optimize the scheduling of your compute in real-time.</td>
     </tr>
     <tr>
 	<td><strong>Definition-2</strong></td>
