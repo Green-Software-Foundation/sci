@@ -89,7 +89,7 @@ DELETE THIS COMMENT
   <tbody>
     <tr>
 	<td><strong>Marginal Carbon Intensity </strong></td>
-	<td></td>
+	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
 	<td><strong>Definition-2</strong></td>
@@ -178,16 +178,18 @@ This is a reflection of the energy consumption consumed by a given piece of soft
 - Execution of code 
 
 ### Location-Based Marginal Carbon Intensity Measurement (`I`)
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh. This requires 'Marginal' carbon (defined above), and is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh. This requires 'Marginal' carbon (defined above), and This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-Location-based marginal carbon intensity measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. 
+Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims. 
+
+The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
 Some categories of applications that apply Operational Emissions (O): 
 
 - **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently available.
 - **Energy Efficient Applications:** Applications that use less energy, and thus causes less emissions, to perform the same function.
 
-` Operational emissions = Energy Measurement (kWh) * Carbon Intensity `
+` Operational emissions = Energy Measurement (kWh) * Marginal Carbon Intensity `
 
 `O = E * I `
 
