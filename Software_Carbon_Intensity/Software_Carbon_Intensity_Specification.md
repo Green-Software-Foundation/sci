@@ -146,19 +146,19 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 ### Measurements of real-world emissions
 
 `C` = Total Carbon Emissions, or the total amount of carbon the software is emitting over a time period
+[![\\ \underbrace{C = \overbrace{O}^\text{operational emissions} + \overbrace{M}^\text{embodied emissions}}_\text{total amount of carbon the software is emitting over a time period}](https://latex.codecogs.com/svg.latex?%5C%5C%20%5Cunderbrace%7BC%20%3D%20%5Coverbrace%7BO%7D%5E%5Ctext%7Boperational%20emissions%7D%20%2B%20%5Coverbrace%7BM%7D%5E%5Ctext%7Bembodied%20emissions%7D%7D_%5Ctext%7Btotal%20amount%20of%20carbon%20the%20software%20is%20emitting%20over%20a%20time%20period%7D)](#_)
+
 
 `CI` = Carbon intensity, or total carbon intensity rate per baseline
 
+<!-- `Total Carbon Intensity ('CI') = C / R` expressed as latex below using https://8holon.github.io/latex-to-markdown/ -->
+[![\\ \underbrace{CI = \overbrace{C}^\text{total emissions} / \overbrace{R}^\text{baseline emissions or carbon counterfactual}}_\text{total carbon intensity}](https://latex.codecogs.com/svg.latex?%5C%5C%20%5Cunderbrace%7BCI%20%3D%20%5Coverbrace%7BC%7D%5E%5Ctext%7Btotal%20emissions%7D%20%2F%20%5Coverbrace%7BR%7D%5E%5Ctext%7Bbaseline%20emissions%20or%20carbon%20counterfactual%7D%7D_%5Ctext%7Btotal%20carbon%20intensity%7D)](#_)
+
 `R` = Baseline as a deomninator  (e.g. carbon per additional user, api-call, ML job, etc)
 
+[![\\ R = \text{baseline or carbon counterfactual}](https://latex.codecogs.com/svg.latex?%5C%5C%20R%20%3D%20%5Ctext%7Bbaseline%20or%20carbon%20counterfactual%7D)](#_)
+
 **Carbon intensity (`CI`) compares total carbon intensity (`C`) against a baseline (`R`).**
-
-### Calculating the measurements
-`C = O + M ` = Total amount of carbon the software is emitting over a time period
-
-`CI = C / R` = Total carbon intensity rate per baseline
-
-`R` = Baseline as a demoninator  (e.g. carbon per additional user, api-call, ML job, etc)
 
 #### Underlying definitions of variables
 Further information on calculating these variables is given below.
@@ -204,7 +204,7 @@ Some categories of applications that apply Operational Emissions (O):
 
 
 <!-- `Operational Emissions ('O') = Energy Measurement (kWh) * Marginal Carbon Intensity ` expressed as latex below using https://md-math.netlify.app/ -->
-<img alt="Operational Emissions ('O') = Energy Measurement (kWh) * Marginal Carbon Intensity" src="https://render.githubusercontent.com/render/math?math=\underbrace{O%20=%20\overbrace{kWh}^\text{Energy%20Measurement%20('E')}%20*%20\overbrace{I}^\text{Marginal%20Carbon%20Intensity}}_\text{Operational%20Emissions}" />
+[![\\ \underbrace{O = \overbrace{kWh}^\text{Energy Measurement ('E')} * \overbrace{I}^\text{Marginal Carbon Intensity}}_\text{Operational Emissions}](https://latex.codecogs.com/svg.latex?%5C%5C%20%5Cunderbrace%7BO%20%3D%20%5Coverbrace%7BkWh%7D%5E%5Ctext%7BEnergy%20Measurement%20('E')%7D%20*%20%5Coverbrace%7BI%7D%5E%5Ctext%7BMarginal%20Carbon%20Intensity%7D%7D_%5Ctext%7BOperational%20Emissions%7D)](#_)
 
 ### Embodied Emissions  (`M`)
 [placeholder]
@@ -227,7 +227,9 @@ To calculate the carbon intensity (`CI`) we need to compare total emissions (`C`
 
 `R` = Baseline, the other measure we will be comparing against (baseline, or carbon counterfactual)
 
-<!-- `Total Carbon Intensity ('CI') = C / R` expressed as latex below using https://md-math.netlify.app/ -->
+[![\\ R = \text{baseline (the other measure we will be comparing against) or carbon counterfactual}](https://latex.codecogs.com/svg.latex?%5C%5C%20R%20%3D%20%5Ctext%7Bbaseline%20(the%20other%20measure%20we%20will%20be%20comparing%20against)%20or%20carbon%20counterfactual%7D)](#_)
+
+<!-- `Total Carbon Intensity ('CI') = C / R` expressed as latex below using https://8holon.github.io/latex-to-markdown/ -->
 <img alt="Total Carbon Intensity ('CI') = C / R" src="https://render.githubusercontent.com/render/math?math=\underbrace{CI%20=%20\overbrace{C}^\text{total%20emissions}%20/%20\overbrace{R}^\text{baseline%20emissions%20or%20carbon%20counterfactual}}_\text{total%20carbon%20intensity}" />
 
 ## Exclusions
