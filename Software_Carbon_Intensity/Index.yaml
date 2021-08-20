@@ -6,7 +6,7 @@ organisationName: "Green Software Foundation"
 date: "2021-07-01"
 copyrightDate: "2021"
 logo: "images/gsf_logo.png"
-documentName: "SSoftware_Carbon_Intensity_Specification"
+documentName: "Software_Carbon_Intensity_Specification"
 files:
   - License.md
   - Software_Carbon_Intensity.md
