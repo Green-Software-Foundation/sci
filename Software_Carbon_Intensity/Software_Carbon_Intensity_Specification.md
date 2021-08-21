@@ -41,25 +41,10 @@ Add/Remove reference rows as needed - DELETE This Row
 
 ### Informative References
 
-```
-Check the version of the Dictionary you are using and update the reference below. Delete the [GSFDICT] entry if the Dictionary is not used. In general, use the latest
-available version unless seeking alignment with an existing set of specifications.
-
-DELETE THIS COMMENT
-```
-<table>
-  <caption>Informative References </caption>
-  <tbody>
-    <tr>
-      <td><strong>[GSFDICT]</strong></td>
-      <td>"Dictionary for GSF Specifications", Version x.y, Green Software Foundation™, GSF-ORG-Dictionary-Vx_y, URL:http://greensoftware.foundation/</td>
-    </tr>
-  </tbody>
-</table>
-
-```
-Add/Remove references as needed - DELETE This Row
-```
+|||
+| ----------- | ----------- |
+| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
+| **Principles of Green Software Engineering** | https://principles.green |
 
 ## Terminology and Conventions
 ### Conventions
