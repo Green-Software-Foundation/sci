@@ -195,28 +195,20 @@ The only figure that matters if you’re trying to optimize the scheduling of yo
 ### Embodied Emissions  (`M`) 
 [placeholder]
 
+## Core Characteristics
 
+As the SCI specification matures and develops, these core characteristics SHALL remain true.
 
-## Characteristics for calculating total carbon emissions (`C`)
+### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
 
-#### C should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
+- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI SHALL be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
+- If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X SHALL go down.
 
+### The SCI has a low bar for implementation
 
-#### Calculating Total Emissions, C
-
-Total emissions, C, is the sum of operational and embodied emissions.
-
-Overall, if we calculate the total carbon emissions C of an application as X, and then we make the application carbon aware, a characteristic of the methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
-
-The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
-
-To calculate the carbon intensity we need to compare total emissions (C) against a baseline (R).
-
-`R` = Baseline, the other measure we will be comparing against (baseline, or carbon counterfactual) 
-
-` Total Emissions = C / R`
-
-
+- Anyone without much experience or training SHALL be able to follow the SCI specification instructions.
+- Calculation of the SCI SHALL be possible without incurring any cost, for instance, for data or services or tooling.
+- Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
 
 ## Exclusions
 
