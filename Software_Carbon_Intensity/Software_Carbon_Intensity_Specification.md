@@ -158,6 +158,7 @@ To calculate the carbon intensity we need the following:
 `CI = C / R` = Total carbon intensity rate per baseline
 
 **carbon delta (`D`) is the difference between two carbon intensities :**
+
 `D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
 
 
