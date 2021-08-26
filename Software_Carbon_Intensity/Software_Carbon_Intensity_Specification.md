@@ -89,7 +89,7 @@ DELETE THIS COMMENT
   <tbody>
     <tr>
 	<td><strong>Marginal Carbon Intensity (I) </strong></td>
-	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
+	<td>This is the emissions intensity of the marginal power plant(s) which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
 	<td><strong>Carbon Counterfactual (CC) </strong></td>
