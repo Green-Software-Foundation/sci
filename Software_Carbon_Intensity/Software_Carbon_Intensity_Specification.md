@@ -41,25 +41,10 @@ Add/Remove reference rows as needed - DELETE This Row
 
 ### Informative References
 
-```
-Check the version of the Dictionary you are using and update the reference below. Delete the [GSFDICT] entry if the Dictionary is not used. In general, use the latest
-available version unless seeking alignment with an existing set of specifications.
-
-DELETE THIS COMMENT
-```
-<table>
-  <caption>Informative References </caption>
-  <tbody>
-    <tr>
-      <td><strong>[GSFDICT]</strong></td>
-      <td>"Dictionary for GSF Specifications", Version x.y, Green Software Foundation™, GSF-ORG-Dictionary-Vx_y, URL:http://greensoftware.foundation/</td>
-    </tr>
-  </tbody>
-</table>
-
-```
-Add/Remove references as needed - DELETE This Row
-```
+|||
+| ----------- | ----------- |
+| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
+| **Principles of Green Software Engineering** | https://principles.green |
 
 ## Terminology and Conventions
 ### Conventions
@@ -89,13 +74,11 @@ DELETE THIS COMMENT
   <tbody>
     <tr>
 	<td><strong>Marginal Carbon Intensity (I) </strong></td>
-	<td>This is the emissions intensity of the marginal power plant(s) which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
+	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
-	<td><strong>Carbon Delta (D) </strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. 
-		
-		This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
+	<td><strong>Carbon Delta (D)</strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
     </tr>
   </tbody>
 </table>
@@ -138,6 +121,13 @@ The specification can be applied to any software to measure and reduce its carbo
 
 The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
 
+## Software Sustainability Actions
+
+All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
+
+- **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
+- **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
+- **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
 ## Methodology Summary 
 
@@ -156,7 +146,7 @@ To calculate the carbon intensity we need the following:
 `O = E * I ` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
 
 `M` = Embodied emissions of a given piece of software
-
+****
 **These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
 
 `C = O + M ` = Total amount of carbon the software is emitting over a time period
@@ -167,13 +157,9 @@ To calculate the carbon intensity we need the following:
 
 `CI = C / R` = Total carbon intensity rate per baseline
 
-**carbon delta (`D`) is the difference between two carbon intensities  :**
-
+**carbon delta (`D`) is the difference between two carbon intensities :**
 `D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
 
-## Taxonomy & Terminology of Green Software
-
-Green Software broadly addresses emissions in these categories.
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
@@ -194,40 +180,25 @@ Location-based measures the grid carbon intensity (annual average) of a regional
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-Some categories of applications that apply Operational Emissions (O): 
-
-- **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently available.
-- **Energy Efficient Applications:** Applications that use less energy, and thus causes less emissions, to perform the same function.
-
-` Operational emissions = Energy Measurement (kWh) * Marginal Carbon Intensity `
-
-
 ### Embodied Emissions  (`M`) 
 [placeholder]
 
-Some categories of applications that apply Embodied Emissions (Embodied): 
-- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
+## Core Characteristics
 
-## Characteristics for calculating total carbon emissions (`C`)
+As the SCI specification matures and develops, these core characteristics MUST remain true.
 
-#### C should be sensitive to carbon awareness, energy efficiency, or hardware efficiency improvements to the application
+### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
 
+- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
+- If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
 
-#### Calculating Total Emissions, C
+### The SCI is easy to implement
 
-Total emissions, C, is the sum of operational and embodied emissions.
+To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
 
-Overall, if we calculate the total carbon emissions C of an application as X, and then we make the application carbon aware, a characteristic of the methodology of calculation is that the value of X should go down. If we make the application more energy efficient the value of X should go down. If we make the application more hardware efficient, the value of X should go down.
-
-The challenges with existing methods of calculation is that they are only sensitive to some of the above methods of making an application green. For instance there are methods of calculation of carbon emissions that are purely cost based, using those methods results in a value of C that will not not change if you make the application carbon aware or energy efficient.
-
-To calculate the carbon intensity we need to compare total emissions (C) against a baseline (R).
-
-`R` = Baseline, the other measure we will be comparing against (baseline, or carbon counterfactual) 
-
-` Total Emissions = C / R`
-
-
+- Anyone without much experience or training MUST be able to follow the SCI specification instructions.
+- Calculation of the SCI MUST be possible without incurring any cost, for instance, for data or services or tooling.
+- Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
 
 ## Exclusions
 
