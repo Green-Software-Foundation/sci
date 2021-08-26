@@ -88,12 +88,12 @@ DELETE THIS COMMENT
   <caption>Marginal </caption>
   <tbody>
     <tr>
-	<td><strong>Marginal Carbon Intensity </strong></td>
+	<td><strong>Marginal Carbon Intensity (I) </strong></td>
 	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
-	<td><strong>Definition-2</strong></td>
-	<td>Description definition-2</td>
+	<td><strong>Carbon Counterfactual (CC) /strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is used to quantify carbon savings from implementation of Green Software Engineering methods. Using this, we can compare this carbon against a counterfactual by applying the SCI methodology against the prior action. This tracks are if the suggested green runtime was accepted by the user or not and the carbon reduction for each of these. This way we can get a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
     </tr>
   </tbody>
 </table>
@@ -113,7 +113,7 @@ The list should be maintained in alphabetic order. DELETE This Row
 ```
 
 <table>
-<caption>Definitions</caption>
+<caption>Abbreviations</caption>
 <tbody>
   <tr>
     <td>GSF</td>
@@ -165,7 +165,10 @@ To calculate the carbon intensity we need the following:
 
 `CI = C / R` = Total carbon intensity rate per baseline
 
+**carbon counterfactual (`CC`) is the difference between two carbon intensities  :**
 
+`CC = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity. 
+This is used to quantify gains from implementation of Green Software Engineering methods. 
 
 ## Taxonomy & Terminology of Green Software
 
