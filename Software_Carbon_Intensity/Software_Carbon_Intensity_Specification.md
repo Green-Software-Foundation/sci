@@ -136,6 +136,13 @@ The specification can be applied to any software to measure and reduce its carbo
 
 The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
 
+## Software Sustainability Actions
+
+All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
+
+- **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
+- **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
+- **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
 ## Methodology Summary 
 
@@ -154,7 +161,7 @@ To calculate the carbon intensity we need the following:
 `O = E * I ` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
 
 `M` = Embodied emissions of a given piece of software
-
+****
 **These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
 
 `C = O + M ` = Total amount of carbon the software is emitting over a time period
@@ -165,11 +172,6 @@ To calculate the carbon intensity we need the following:
 
 `CI = C / R` = Total carbon intensity rate per baseline
 
-
-
-## Taxonomy & Terminology of Green Software
-
-Green Software broadly addresses emissions in these categories.
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
@@ -190,19 +192,10 @@ Location-based measures the grid carbon intensity (annual average) of a regional
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-Some categories of applications that apply Operational Emissions (O): 
-
-- **Carbon Aware Application**: Applications that change behaviour to use the cleanest energy possible, for instance a laptop that charged only when there is lots of renewable power currently available.
-- **Energy Efficient Applications:** Applications that use less energy, and thus causes less emissions, to perform the same function.
-
-` Operational emissions = Energy Measurement (kWh) * Marginal Carbon Intensity `
-
-
 ### Embodied Emissions  (`M`) 
 [placeholder]
 
-Some categories of applications that apply Embodied Emissions (Embodied): 
-- **Hardware Efficient Applications:** Applications that use the least physical resources possible to perform their function.
+
 
 ## Characteristics for calculating total carbon emissions (`C`)
 
