@@ -93,7 +93,9 @@ DELETE THIS COMMENT
     </tr>
     <tr>
 	<td><strong>Carbon Delta (D) </strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to quantify carbon savings from implementation of Green Software Engineering methods. This allows usage of SCI to compare two carbon intensities, which faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
+	<td>Carbon difference between an initial and modified carbon intensity. 
+		
+		This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
     </tr>
   </tbody>
 </table>
