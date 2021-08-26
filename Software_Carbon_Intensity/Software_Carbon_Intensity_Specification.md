@@ -93,7 +93,7 @@ DELETE THIS COMMENT
     </tr>
     <tr>
 	<td><strong>Carbon Counterfactual (CC) </strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is used to quantify carbon savings from implementation of Green Software Engineering methods. Using this, we can compare this carbon against a counterfactual by applying the SCI methodology against the prior action. This tracks are if the suggested green runtime was accepted by the user or not and the carbon reduction for each of these. This way we can get a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to quantify carbon savings from implementation of Green Software Engineering methods. This allows comparison of a prior action against another (against a counterfactual) by applying the SCI methodology to both. This faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
     </tr>
   </tbody>
 </table>
