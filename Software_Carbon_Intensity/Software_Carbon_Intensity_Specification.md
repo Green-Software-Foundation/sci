@@ -73,12 +73,12 @@ DELETE THIS COMMENT
   <caption>Marginal </caption>
   <tbody>
     <tr>
-	<td><strong>Marginal Carbon Intensity </strong></td>
+	<td><strong>Marginal Carbon Intensity (I) </strong></td>
 	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
-	<td><strong>Definition-2</strong></td>
-	<td>Description definition-2</td>
+	<td><strong>Carbon Delta (D)</strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
     </tr>
   </tbody>
 </table>
@@ -98,7 +98,7 @@ The list should be maintained in alphabetic order. DELETE This Row
 ```
 
 <table>
-<caption>Definitions</caption>
+<caption>Abbreviations</caption>
 <tbody>
   <tr>
     <td>GSF</td>
@@ -151,11 +151,16 @@ To calculate the carbon intensity we need the following:
 
 `C = O + M ` = Total amount of carbon the software is emitting over a time period
 
-`R` = Baseline as a demoninator  (e.g. carbon per additional user, api-call, ML job, etc) 
+`R` = Baseline as a demoninator (e.g. carbon per additional user, api-call, ML job, etc) 
 
 **carbon intensity (`CI`) compares this carbon against a baseline :**
 
 `CI = C / R` = Total carbon intensity rate per baseline
+
+**carbon delta (`D`) is the difference between two carbon intensities :**
+
+`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
+
 
 
 ### Operational Emissions  (`O`) 
