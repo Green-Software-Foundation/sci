@@ -92,8 +92,8 @@ DELETE THIS COMMENT
 	<td>This is the emissions intensity of the marginal power plant(s) which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
     </tr>
     <tr>
-	<td><strong>Carbon Counterfactual (CC) </strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to quantify carbon savings from implementation of Green Software Engineering methods. This allows comparison of a prior action against another (against a counterfactual) by applying the SCI methodology to both. This faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
+	<td><strong>Carbon Delta (D) </strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to quantify carbon savings from implementation of Green Software Engineering methods. This allows usage of SCI to compare two carbon intensities, which faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z % </td>
     </tr>
   </tbody>
 </table>
@@ -165,9 +165,9 @@ To calculate the carbon intensity we need the following:
 
 `CI = C / R` = Total carbon intensity rate per baseline
 
-**carbon counterfactual (`CC`) is the difference between two carbon intensities  :**
+**carbon delta (`D`) is the difference between two carbon intensities  :**
 
-`CC = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to quantify gains from implementation of Green Software Engineering methods. 
+`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
 
 ## Taxonomy & Terminology of Green Software
 
