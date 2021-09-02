@@ -133,9 +133,11 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 
 This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
 
+The calculation of software carbon intensity must include include all supporting infrastructure and systems that significantly contributes to the software operation. Supporting infrastructure and systems may include compute resources, storage, networking equipment, memory, monitoring, idle machines, logging, scanning, testing, operations, and backup. The entity calculating software carbon intensity must report what is included within this boundary.  
+
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
-To calculate the carbon intensity we need the following:
+To calculate the carbon intensity the following information is needed:
 
 `O`= Operational emissions of a given piece of software
 
