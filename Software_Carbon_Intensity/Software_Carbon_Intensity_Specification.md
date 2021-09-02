@@ -129,6 +129,8 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 - **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
 - **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
+Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions. 
+
 ## Methodology Summary 
 
 This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
@@ -165,8 +167,6 @@ To calculate the carbon intensity we need the following:
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
-
-Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects should be reflected in the total operational emissions. 
 
 #### Energy Measurement (`E`) 
 This is a reflection of the energy consumption consumed by a given piece of software for a given task. This could be applied for several taxonomies:  
