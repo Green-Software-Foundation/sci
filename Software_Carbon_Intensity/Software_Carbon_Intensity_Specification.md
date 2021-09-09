@@ -183,7 +183,7 @@ To calculate the operational emissions associate with software, multiply the ele
 Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects should be reflected in the total operational emissions. 
 
 #### Energy Measurement (`E`) 
-This is a measurement of the energy consumption consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours of all supporting infastructure and systems. This could be applied for several taxonomies:  
+This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
 - Datacenter
 - Indiviudual machine (e.g. VM/Node)
 - Indiviudual service (e.g. API call, ML training job)
