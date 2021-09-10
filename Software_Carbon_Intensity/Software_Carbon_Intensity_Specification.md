@@ -167,7 +167,7 @@ To calculate the carbon intensity the following information is needed:
 
 `C = O + M ` = Total amount of carbon the software is emitting over a time period
 
-`R` = Baseline as a demoninator (e.g. carbon per additional user, api-call, ML job, etc) 
+`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
 
 **carbon intensity (`CI`) compares this carbon against a baseline :**
 
@@ -199,6 +199,10 @@ The only figure that matters if you’re trying to optimize the scheduling of yo
 ### Embodied Emissions  (`M`) 
 [placeholder]
 
+
+### Preset List for Baselines
+[placeholder]
+
 ## Core Characteristics
 
 As the SCI specification matures and develops, these core characteristics MUST remain true.
@@ -226,7 +230,9 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 ### Reporting the SCI value
 
-You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
+- You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
+- You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
+
 
 
 ## Boundaries 
