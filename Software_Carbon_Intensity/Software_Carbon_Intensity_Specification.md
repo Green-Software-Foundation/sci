@@ -220,6 +220,10 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 - Calculation of the SCI MUST be possible without incurring any cost, for instance, for data or services or tooling.
 - Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
 
+### The SCI encourages the use of granular data
+
+In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where granular data is not available, annual mean marginal values SHALL be used which are the lowest acceptable level of granularity.
+
 ### Reporting the SCI value
 
 You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
