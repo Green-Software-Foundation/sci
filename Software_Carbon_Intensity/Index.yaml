@@ -1,5 +1,5 @@
 ---
-title: "SSoftware Carbon Intensity Specification"
+title: "Software Carbon Intensity Specification"
 status: "Draft"
 version: "1.0"
 organisationName: "Green Software Foundation"
@@ -9,6 +9,6 @@ logo: "images/gsf_logo.png"
 documentName: "Software_Carbon_Intensity_Specification"
 files:
   - License.md
-  - Software_Carbon_Intensity.md
+  - Software_Carbon_Intensity_Specification.md
   - Appendix_A.md
 ---
