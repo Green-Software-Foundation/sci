@@ -144,9 +144,12 @@ The calculation of software carbon intensity MUST include all supporting infrast
 - idle machines
 - logging
 - scanning
+= building
 - testing
 - operations
 - backup
+- failover
+
 The entity calculating software carbon intensity MUST report what is included within this boundary.  
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
