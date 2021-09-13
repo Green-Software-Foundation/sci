@@ -144,11 +144,12 @@ The calculation of software carbon intensity MUST include all supporting infrast
 - idle machines
 - logging
 - scanning
-= building
+- building
 - testing
+- training
 - operations
 - backup
-- failover
+- redundancy and failover
 
 The entity calculating software carbon intensity MUST report what is included within this boundary.  
 
