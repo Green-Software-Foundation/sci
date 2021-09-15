@@ -149,7 +149,8 @@ The calculation of software carbon intensity MUST include all supporting infrast
 - training
 - operations
 - backup
-- redundancy and failover
+- resources to support redundancy
+- resources to support failover
 
 The entity calculating software carbon intensity MUST report what is included within this boundary.  
 
