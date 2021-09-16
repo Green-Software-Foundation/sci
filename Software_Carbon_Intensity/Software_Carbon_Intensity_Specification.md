@@ -218,7 +218,7 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 
 ### The SCI encourages the use of granular data
 
-In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
+In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
 
 ### Reporting the SCI value
 
