@@ -144,9 +144,9 @@ The calculation of software carbon intensity MUST include all supporting infrast
 - idle machines
 - logging
 - scanning
-- building
+- build and deploy pipelines
 - testing
-- training
+- training ML models
 - operations
 - backup
 - resources to support redundancy
