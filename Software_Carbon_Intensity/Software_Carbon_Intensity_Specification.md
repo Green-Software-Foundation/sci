@@ -131,11 +131,11 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 
 Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions. 
 
-## Methodology Summary 
+## Software Boundary
 
-This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
+The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
 
-The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. Supporting infrastructure and systems MAY include:
+Supporting infrastructure and systems MAY include:
 - compute resources
 - storage
 - networking equipment
@@ -153,6 +153,10 @@ The calculation of software carbon intensity MUST include all supporting infrast
 - resources to support failover
 
 The entity calculating software carbon intensity MUST report what is included within this boundary.  
+
+## Methodology Summary 
+
+This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
