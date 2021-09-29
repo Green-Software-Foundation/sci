@@ -202,7 +202,20 @@ Location-based measures the grid carbon intensity (annual average) of a regional
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
 ### Embodied Emissions  (`M`) 
-[placeholder]
+Embodied carbon (otherwise referred to as "Embedded Carbon") is the amount of carbon pollution emitted during the creation and disposal of a hardware device. When calculating the carbon emissions for software, include the embodied carbon of the supporting infrastructure inside your software boundary.
+
+`M = Total Embodied Emissions * Time Reserved/Expected Lifespan * Reserved Usage`
+
+Where:
+
+- **Total Embodied Emissions** is the sum of LCA emissions for all components.
+- **Expected Lifespan** is the anticipated time that the equipment will be installed.
+- **Reserved Usage** is the share of hardware has been reserved for use by the software.
+- **Time Reserved** is the length of time the hardware has been reserved for use by the software.
+
+You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
+
+You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
 
 ### Preset List for Baselines
