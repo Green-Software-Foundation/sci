@@ -156,32 +156,55 @@ The entity calculating software carbon intensity MUST report what is included wi
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
-To calculate the carbon intensity the following information is needed:
+Software Carbon Intensity (SCI) can be calculated like so:
 
-`O`= Operational emissions of a given piece of software
+`SCI = ((E * I) + M)/R`
 
-`E`= Energy consumed by a given piece of software
+Where:
 
-`I`= Location-based marginal carbon emissions
+- `E` = Energy consumed by a given piece of software
 
-`O = E * I ` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
+- `I`= Location-based marginal carbon emissions
 
-`M` = Embodied emissions of a given piece of software
-****
-**These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
+- `M` = Embodied emissions of a given piece of software
 
-`C = O + M ` = Total amount of carbon the software is emitting over a time period
+- `R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
 
-`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
+The equation can be further refined to 
 
-**carbon intensity (`CI`) compares this carbon against a baseline :**
+`SCI = (O + M)/R`
 
-`CI = C / R` = Total carbon intensity rate per baseline
+Where:
 
-**carbon delta (`D`) is the difference between two carbon intensities :**
+- `O` = E * I = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
 
-`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
+And once more this can be further refined into:
 
+`SCI = C / R`
+
+Where:
+
+- `C = O + M` = Total amount of carbon the software is emitting over a time period.
+
+### Telemetry vs Benchmark Based
+
+There are two approaches for calculating the `C` of software, telemetry based and benchmark based. 
+
+In reporting the SCI, you MUST acknowledge if you used a telemetry-based approach or a benchmark-based approach. 
+
+#### Telemetry Based
+For some applications, for instance, if you are a SasS provider, measuring the total carbon emissions of your product in production over a long period is possible through telemetry.
+
+In the telemetry approach, you first calculate the total carbon emitted by your application over a time period and then divide it by your baseline to obtain an intensity. For example, suppose you are a SaaS provider. In that case, you may calculate your `C` of your application over the last month to be X kg through telemetry installed on your entire fleet of servers and the applications your customers have installed. Over the same period, you have served Y users. Then you might calculate your SCI as `(X/Y)` per User.
+
+#### Benchmark Based
+Telemetry may not be possible for other applications, such as mobile applications or open-source applications where obtaining telemetry regarding software use is difficult or not desired.  In those scenarios, you may choose to use a software benchmark approach to the calculation of `C`. A software benchmark is an act of running a computer program to assess its relative performance, generally by running several standard tests and trials against it.
+
+For example, open-source software maintainers have little information regarding who uses their software and what context. Instead, they may choose to develop a software benchmark and measure the `C` of their software against that benchmark. In that context, the choice of `R` would be the name and version of the benchmark they used. For example, they may develop a benchmark called `BenchmarkV1.0` and calculate `C` as `X`g, in which case the SCI would be `X`g per `BenchmarkV1.0`.
+
+If you chose a benchmark based approach, you SHOULD make the benchmark you used open-source. 
+
+You MUST report the version of the benchmark used in your calculations. If you change the nature of the benchmark in any way that might affect the calculation of `C`, its version number MUST increment. 
 
 
 ### Operational Emissions  (`O`) 
