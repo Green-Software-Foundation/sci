@@ -1,0 +1,14 @@
+{
+  "name": "Markdown Editing",
+  "runArgs": ["--init"],
+  "dockerFile": "Dockerfile",
+  "settings": {},
+  "extensions": [
+    "yzhang.markdown-all-in-one",
+    "streetsidesoftware.code-spell-checker",
+    "DavidAnson.vscode-markdownlint",
+    "shd101wyy.markdown-preview-enhanced",
+    "bierner.github-markdown-preview"
+  ],
+  "remoteUser": "vscode"
+}
