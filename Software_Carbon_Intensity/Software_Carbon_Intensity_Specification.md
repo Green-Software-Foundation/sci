@@ -208,14 +208,14 @@ The only figure that matters if you’re trying to optimize the scheduling of yo
 ### Embodied Emissions  (`M`) 
 Embodied carbon (otherwise referred to as "Embedded Carbon") is the amount of carbon pollution emitted during the creation and disposal of a hardware device. When calculating the carbon emissions for software, include the embodied carbon of the supporting infrastructure inside your software boundary.
 
-`M = Total Embodied Emissions * Time Reserved/Expected Lifespan * Reserved Usage`
+`M = TE * TR/EL * RU`
 
 Where:
 
-- **Total Embodied Emissions** is the sum of LCA emissions for all components.
-- **Expected Lifespan** is the anticipated time that the equipment will be installed.
-- **Reserved Usage** is the share of hardware has been reserved for use by the software.
-- **Time Reserved** is the length of time the hardware has been reserved for use by the software.
+- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TR` = Time Reserved, the length of time the hardware has been reserved for use by the software.
+- `EL` = Expected Lifespan, the anticipated time that the equipment will be installed.
+- `RU` = Reserved Usage, the share of hardware has been reserved for use by the software.
 
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
