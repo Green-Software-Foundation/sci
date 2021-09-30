@@ -1,0 +1,60 @@
+name: Automerge RNAs after 7 days
+
+on:
+  schedule:
+    - cron: 0 * * * *
+
+  pull_request_target:
+    types:
+      - opened
+      - synchronized
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
+
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  applytag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/stale@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-pr-message: 'The pull request has been labelled as ready for automerge, as it has been open for 7 days without objection.'
+        days-before-stale: 7
+        days-before-issue-stale: -1
+        # we don't want this to run on issues, only PRs
+        days-before-close: -1
+        # we don't want anything closed
+        stale-pr-label: 'automerge'
+        any-of-labels: 'minor-0,minor-1,minor-2,medium,major-5,major-3,consistency-14'
+        # TODO: Check labels with @atg-abhishek
+        exempt-pr-labels: 'question,wontfix,invalid,duplicate,objection'
+        remove-stale-when-updated: false
+        ignore-updates: true
+        debug-only: true
+        # use the create date only
+
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: reitermarkus/automerge@v2
+        with:
+          token: ${{ secrets.MERGE_GITHUB_TOKEN }}
+          merge-method: rebase
+          do-not-merge-labels: question,wontfix,invalid,duplicate
+          required-labels: automerge
+          pull-request: ${{ github.event.inputs.pull-request }}
+          dry-run: true
+          # enabled for testing right now

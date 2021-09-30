@@ -1,8 +1,3 @@
-# This is related to issue #48, and supports:
-# - Contributing to the SCI should invite a user to add to the citation file
-# - Approved PRs in the RNA process should automatically merged
-# - Notify mailing list when label is applied
-
 name: Notify users based on issue labels
 
 on:
@@ -20,6 +15,6 @@ jobs:
         fromMailAddress: 'chris.lloyd-jones@avanade.com' #'no-reply@greensoftware.foundation'
         toMailAddress: 'chris.lloyd-jones@avanade.com'#'standards-wg@greensoftware.foundation'
         subject: 'A new issue was labeled for RNA'
-        labelsToMonitor: 'question,minor-0,minor-1,minor-2,medium,major-5,major-3,consistency-14'
+        labelsToMonitor: 'minor-0,minor-1,minor-2,medium,major-5,major-3,consistency-14'
 # TODO: Check labels with @atg-abhishek
 # TODO: Check from/to addresses with @seanmcilroy29
