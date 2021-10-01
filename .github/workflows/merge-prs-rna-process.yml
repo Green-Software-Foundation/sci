@@ -62,7 +62,8 @@ jobs:
           MERGE_DELETE_BRANCH: true
           
           
-    # TODO: Email on consistency created
-    # TODO: Send follow-up reminder beforehand
-    # TODO: Close issue when consistency review times out
-    # TODO: Close issue when RNA times out
+    # TODO: Email & slack on consistency label added to an issue
+    # TODO: Send follow-up reminder beforehand, 2 days before closure
+    # TODO: Send slack notification, 2 days before closure
+    # TODO: Lock issue when consistency review times out
+    # TODO: Lock issue when RNA times out
