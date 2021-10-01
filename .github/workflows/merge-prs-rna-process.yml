@@ -60,3 +60,8 @@ jobs:
           # TODO: Only merge if one approval is added
           UPDATE_LABELS: "automerge"
           MERGE_DELETE_BRANCH: true
+          
+          
+    # TODO: Email on consistency created
+    # TODO: Send follow-up reminder beforehand
+    # TODO: Close issue when RNA is approved
