@@ -156,56 +156,42 @@ The entity calculating software carbon intensity MUST report what is included wi
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
 
-Software Carbon Intensity (SCI) can be calculated like so:
+To calculate the carbon intensity the following information is needed:
 
-`SCI = ((E * I) + M)/R`
+`O`= Operational emissions of a given piece of software
 
-Where:
+`E`= Energy consumed by a given piece of software
 
-- `E` = Energy consumed by a given piece of software
+`I`= Location-based marginal carbon emissions
 
-- `I`= Location-based marginal carbon emissions
+`O = E * I ` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
 
-- `M` = Embodied emissions of a given piece of software
+`M` = Embodied emissions of a given piece of software
+****
+**These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
 
-- `R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
+`C = O + M ` = Total amount of carbon the software is emitting over a time period
 
-The equation can be further refined to 
+`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
 
-`SCI = (O + M)/R`
+**carbon intensity (`CI`) compares this carbon against a baseline :**
 
-Where:
+`CI = C / R` = Total carbon intensity rate per baseline
 
-- `O` = E * I = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
+**carbon delta (`D`) is the difference between two carbon intensities :**
 
-And once more this can be further refined into:
+`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
 
-`SCI = C / R`
+### Lab-based alternatives to Real-world measurements
+The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
 
-Where:
+First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
 
-- `C = O + M` = Total amount of carbon the software is emitting over a time period.
+You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of R units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application in the wild and then divide by the number of users serviced in the same time period to get `C` per `User`.
 
-### Telemetry vs Benchmark Based
+Or you MAY model what one unit of R looks like and measure the total `C` for executing one unit of R in a controlled lab environment. For instance, you may create a benchmark application that models a user interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `User`.
 
-There are two approaches for calculating the `C` of software, telemetry based and benchmark based. 
-
-In reporting the SCI, you MUST acknowledge if you used a telemetry-based approach or a benchmark-based approach. 
-
-#### Telemetry Based
-For some applications, for instance, if you are a SasS provider, measuring the total carbon emissions of your product in production over a long period is possible through telemetry.
-
-In the telemetry approach, you first calculate the total carbon emitted by your application over a time period and then divide it by your baseline to obtain an intensity. For example, suppose you are a SaaS provider. In that case, you may calculate your `C` of your application over the last month to be X kg through telemetry installed on your entire fleet of servers and the applications your customers have installed. Over the same period, you have served Y users. Then you might calculate your SCI as `(X/Y)` per User.
-
-#### Benchmark Based
-Telemetry may not be possible for other applications, such as mobile applications or open-source applications where obtaining telemetry regarding software use is difficult or not desired.  In those scenarios, you may choose to use a software benchmark approach to the calculation of `C`. A software benchmark is an act of running a computer program to assess its relative performance, generally by running several standard tests and trials against it.
-
-For example, open-source software maintainers have little information regarding who uses their software and what context. Instead, they may choose to develop a software benchmark and measure the `C` of their software against that benchmark. In that context, the choice of `R` would be the name and version of the benchmark they used. For example, they may develop a benchmark called `BenchmarkV1.0` and calculate `C` as `X`g, in which case the SCI would be `X`g per `BenchmarkV1.0`.
-
-If you chose a benchmark based approach, you SHOULD make the benchmark you used open-source. 
-
-You MUST report the version of the benchmark used in your calculations. If you change the nature of the benchmark in any way that might affect the calculation of `C`, its version number MUST increment. 
-
+You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
