@@ -206,16 +206,37 @@ Location-based measures the grid carbon intensity (annual average) of a regional
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
 ### Embodied Emissions  (`M`) 
-Embodied carbon (otherwise referred to as "Embedded Carbon") is the amount of carbon pollution emitted during the creation and disposal of a hardware device. When calculating the carbon emissions for software, include the embodied carbon of the supporting infrastructure inside your software boundary.
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
 
-`M = TE * TR/EL * RU`
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation. 
+
+That fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
+
+To calculate the time-share, amortize the total embodied carbon over the expected life span of your device and then extrapolate based on the time reserved for your usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of 4 years and you reserved use for 1hr, the time-share embodied emissions would be 1000 * 1/(4*365*24) or around 28g of the total.
+
+To calculate resource-share, we look at the share of total available resources reserved for use by your software. For instance, the percentage of total virtual CPUs reserved for your software is a good choice for the resource-share metric in the virtualized cloud space.
+
+To calculate the share of `M` for a software application, we use:
+
+`M = TE * (TR/EL) * (RR/TR)`
 
 Where:
 
 - `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
-- `TR` = Time Reserved, the length of time the hardware has been reserved for use by the software.
+- `TR` = Time Reserved, the length of time the hardware is reserved for use by the software.
 - `EL` = Expected Lifespan, the anticipated time that the equipment will be installed.
-- `RU` = Reserved Usage, the share of hardware has been reserved for use by the software.
+- `RR` = Resources Reserved, the number of resources reserved for use by the software.
+- `TR` = Total Resources, the total number of resources available.
+
+We can further refine the equation to
+
+`M = TE * TS * RS`
+
+Where:
+
+- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TS = TR/EL` = Time Share, the share of the total life span of the hardware reserved for use by the software.
+- `RS = RR/TR` = Resource Share, the share of the total available resources of the hardware reserved for use by the software.
 
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
