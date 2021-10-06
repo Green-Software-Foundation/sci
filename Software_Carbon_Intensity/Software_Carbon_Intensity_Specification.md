@@ -232,7 +232,7 @@ Where:
 
 - `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
 - `TS = TR/EL` = Time-share, the share of the total life span of the hardware reserved for use by the software.
-- `RS = RR/TR` = Resource Share, the share of the total available resources of the hardware reserved for use by the software.
+- `RS = RR/TR` = Resource-share, the share of the total available resources of the hardware reserved for use by the software.
 
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
