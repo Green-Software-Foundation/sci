@@ -234,7 +234,7 @@ We can further refine the equation to
 
 Where:
 
-- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
 - `TS = TR/EL` = Time-share, the share of the total life span of the hardware reserved for use by the software.
 - `RS = RR/TR` = Resource-share, the share of the total available resources of the hardware reserved for use by the software.
 
