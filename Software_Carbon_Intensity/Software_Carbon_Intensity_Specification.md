@@ -187,7 +187,7 @@ The goal is to calculate how much `C` is emitted per **one unit** of `R`. This i
 
 First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
 
-You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application in the wild and then divide by the number of users serviced in the same time period to get `C` per `User`.
+You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
 
 Or, you MAY model what one unit of `R` looks like and measure the total `C` for executing one unit of `R` in a controlled lab environment. For instance, you may create a benchmark application that models a `User` interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `User`.
 
