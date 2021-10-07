@@ -1,26 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this standard, please cite it as below."
 authors:
-- family-names: "Gupta"
-  given-names: "Abhishek"
-  orcid: "https://orcid.org/0000-0002-3814-9084"
-- family-names: "Richardson"
-  given-names: "Henry"
-- family-names: "Hussain"
-  given-names: "Asim"
-- family-names: "Knight"
-  given-names: "Vaughan"
-- family-names: "Buchanan"
-  given-names: "Will"
-- family-names: "Lloyd-Jones"
-  given-names: "Chris"
-  orcid: "https://orcid.org/0000-0001-7995-7865"
-- family-names: "Lewis-Toakley"
-  given-names: "Dan"
-- family-names: "Prewitt"
-  given-names: "Taylor"
-- family-names: "Bergman"
-  given-names: "Sara"
+- family-names: "Green Software Foundation"
+  given-names: ""
 title: "Software Carbon Intensity Standard"
 version: 1.0.0
 date-released: 2021-11-01
