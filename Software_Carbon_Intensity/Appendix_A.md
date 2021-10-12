@@ -91,10 +91,10 @@ Meeting latency SLOs involves either increasing the compute power allocated to t
 Hence from a specification point of view, the SCI score can be integrated into the SLO examples as follows 
 
 Availability SLO example with SCI
-•	90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window and ensuring that the overall SCI does not go higher than x%
+•	90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window and ensuring that the overall SCI variance does not go higher than x%
 
 Latency SLO example with SCI
-•	100% of requests in the last 5 minutes as measured at load balancer are served in less than 900ms and ensuring that the overall SCI does not go higher than x%
+•	100% of requests in the last 5 minutes as measured at load balancer are served in less than 900ms and ensuring that the overall SCI variance does not go higher than x%
 
 **How can we monitor SCI impact?**
 Performance tests are great ways to measure SCI impact on SRE. Today they are used primarily to see if the application meets Service level objectives. We can add a couple of addition of performance tests (not a lot as that would mean transferring the SCI from prod environment to performance environments and cycles) to monitor for performance and adjusting the performance goal downwards (mostly!) to ensure SCI variances are not breached. 
