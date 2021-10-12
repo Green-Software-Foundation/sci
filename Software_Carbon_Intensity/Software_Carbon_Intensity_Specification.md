@@ -1,6 +1,6 @@
 ## Scope
 
-This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 
 ## References
 ### Normative References
@@ -14,7 +14,7 @@ This document, the Software Carbon Intensity technical specification, describes 
     </tr>
     <tr>
       <td><strong>[RFC5234]</strong></td>
-      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, Janury 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
+      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
     </tr>
   </tbody>
 </table>
@@ -44,7 +44,7 @@ All sections and appendixes, except "Scope" and "Introduction", are normative un
     </tr>
     <tr>
 	<td><strong>Carbon Delta (D)</strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
     </tr>
   </tbody>
 </table>
@@ -154,13 +154,13 @@ Or, you MAY model what one unit of `R` looks like and measure the total `C` for 
 You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy Measurement (`E`) 
 This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
 - Datacenter
-- Indiviudual machine (e.g. VM/Node)
-- Indiviudual service (e.g. API call, ML training job)
+- Individual machine (e.g. VM/Node)
+- Individual service (e.g. API call, ML training job)
 - Execution of code 
 
 #### Location-Based Marginal Carbon Intensity Measurement (`I`)
@@ -223,7 +223,8 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-footprint view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in  mind the [exclusions](#exclusions) mentioned in this specification. 
+- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+
 ### The SCI is easy to implement
 
 To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
@@ -242,10 +243,9 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
 
-
 ## Boundaries 
 
-[placholder]
+[placeholder]
 
 ## Exclusions
 
@@ -258,5 +258,5 @@ Because this standard lays out a consequential methodology for calculating the e
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Infrastructure Meaures 
+### Infrastructure Measures 
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
