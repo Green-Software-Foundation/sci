@@ -5,22 +5,6 @@ This document, the Software Carbon Intensity technical specification, describes 
 ## References
 ### Normative References
 
-```
-The policy for reference lists is:
-1. GSF documents listed should have at least one approved version – draft-only docs should not be referenced.
-An exception exists for documents approved with or after the referenced doc is approved (maybe part of the same enabler package). In short – approved docs should not reference unapproved docs.
-2. The name + version (no date) for GSF specifications are generally sufficient – dates should be used only if there is a specific reason to limit the usage.
-3. References to other affiliate docs should similarly provide sufficient information to uniquely determine the needed document and should provide the appropriate source information.
-4. The URL for GSF material (new GSF and affiliate) should always be http://www.greensoftware.foundation
-    
-Models to use:
-	[REFLABEL]	<General Model> "Ref Title", Ref information (source, date, id), URL:http//<ref-source>/ 
-	[GSFDOC]	<GSF Model> "GSF Document Title",{ Version x.y,} Green Software Foundation™, GSF <docname>{    <version>}, URL:http//www.openmobilealliance.org/ 
-
-If there are no entries in the table – enter 'none' to be precise.
-
-DELETE THIS COMMENT
-```
 <table>
   <caption>Normative References </caption>
   <tbody>
@@ -34,10 +18,6 @@ DELETE THIS COMMENT
     </tr>
   </tbody>
 </table>
-
-```
-Add/Remove reference rows as needed - DELETE This Row 
-```
 
 ### Informative References
 
@@ -53,24 +33,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
 
-```
-If needed, describe or declare using appropriate normative references the additional conventions that are used. DELETE THIS COMMENT
-```
-
 ### Definitions
 
-```
-Add definitions in new rows of the following table as needed. The following examples show how dictionary references should be made as well as locally defined terms. This table should be maintained in sorted alphabetic order based on the labels of the terms.
-
-Examples:
-	Entity              Use definition #1 from [GSFDICT]
-	Interactive Service Use definition from [GSFDICT]
-	Local Term          The definition description would be presented directly
-
-DELETE THIS COMMENT
-```
 <table>
-  <caption>Marginal </caption>
+  <caption></caption>
   <tbody>
     <tr>
 	<td><strong>Marginal Carbon Intensity (I) </strong></td>
@@ -83,22 +49,12 @@ DELETE THIS COMMENT
   </tbody>
 </table>
 
-```
-Add/Remove definition rows as needed - DELETE This Row
-
-```
-
 Kindly consult [GSFDICT] for more definitions used in this document.
 
 ### Abbreviations
 
-```
-Add abbreviations as needed. No special notation should be made regarding terms copied from the Dictionary.  
-The list should be maintained in alphabetic order. DELETE This Row
-```
-
 <table>
-<caption>Abbreviations</caption>
+<caption></caption>
 <tbody>
   <tr>
     <td>GSF</td>
@@ -304,100 +260,3 @@ Because this standard lays out a consequential methodology for calculating the e
 
 ### Infrastructure Meaures 
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
-
-
-
-
-### Version 1.0
-
-```
-This section provides a high level, concise and informative description of the main functionality supported in the initial version of the specification. The description should be brief; the target length should be a few paragraphs. 
-When the enabler or reference release is finished, this description should be aligned with the final functionality. 
-
-DELETE THIS COMMENT
-```
-
-### Version (x.y)
-
-```
-This section should be included for each new major or minor version of the specification.
-
-It should provide a high level, concise and informative description of the new or modified functionality introduced in this version of the specification, compared to the previous version. The description should be brief, and the target length should be a few paragraphs. When the enabler or reference release is finished, this description should be 
-aligned with the final functionality differences.
-
-DELETE THIS COMMENT
-```
-
-#### Version (x.y.z)
-
-```
-Service indicator (z) for the document. It is incremented every time a corrective update is made to the approved document version by the WG. This section should describe the main changes made to the specification at a high level compared to the previous version. The description should be brief, and the target length should be one paragraph.
-
-DELETE THIS COMMENT
-```
-
-## Sections As Needed
-
-```
-Sections for the normative specification text. Fill in as needed. The following validates the styles used for the headers. DELETE THIS COMMENT 
-```
-
-### Example Level 2
-(Add text here.)
-
-#### Example Level 3
-(Add text here.)
-
-##### Example Level 4
-(Add text here.)
-
-<figure>
-	<img src="images/governance.svg" alt="GSF governance">
-	<figcaption>GSF governance</figcaption> 
-</figure>	
-
-
-<table>
-  <caption>Example Table</caption>
-  <thead>
-      <tr>
-	  <th>Item</th>
-	  <th>Function</th>
-	  <th>Reference</th>
-      </tr>	      
-  </thead>	    
-  <tbody>
-    <tr>
-	<td>Row 1</td>
-	<td>Grid 1,1 data</td>
-	<td>Grid 1,2 data</td>	    
-    </tr>
-    <tr>
-	<td>Row 2</td>
-	<td>Grid 2,1 data</td>
-	<td>Grid 2,2 data</td>	    
-    </tr>
-  </tbody>
-</table>
-
-## Appendix Change History (Informative)
-
-### Approved Version x.y History
-
-<table>
-    <caption>Approved Version x.y History</caption>
-    <thead>
-        <tr>
-            <th>Reference</th>
-            <th>Date</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>    
-        <tr>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td>No prior version</td>
-        </tr>
-    </tbody>
-</table>
