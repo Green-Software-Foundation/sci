@@ -242,11 +242,6 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
-
-## Boundaries 
-
-[placeholder]
-
 ## Exclusions
 
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following MUST NOT be included in the calculation: 
