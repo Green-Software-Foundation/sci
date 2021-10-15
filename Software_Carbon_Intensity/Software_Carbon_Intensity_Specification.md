@@ -157,7 +157,7 @@ You MAY need to use a mixture of both for some components in your application us
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy Measurement (`E`) 
-This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
+This is a measurement of the energy consumed by a given piece of software for a given task. This MUST be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
 - Datacenter
 - Individual machine (e.g. VM/Node)
 - Individual service (e.g. API call, ML training job)
@@ -249,7 +249,7 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 ## Exclusions
 
-Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following MUST NOT be included in the calculation: 
 
 ### Market-based Measures 
 **“Market-based measures"** are achieved through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following: 
