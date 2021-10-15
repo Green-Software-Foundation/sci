@@ -2,7 +2,7 @@
 
 **What is SLI and SLO?**
 Reliability is the concept of a system having the quality of being trustworthy or of performing consistently well. Today most applications have a Service level objective (SLO) to facilitate monitoring. SLOs typically have 3 constraints:
-1)	Service level indicator or SLI.
+1)	Service level indicator (SLI)
 2)	The target metric or Objective in percentile 
 3)	The observation window
 SLI + Objective +Observation window = SLO
