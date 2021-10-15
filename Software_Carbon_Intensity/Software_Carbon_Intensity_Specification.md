@@ -154,7 +154,7 @@ Or, you MAY model what one unit of `R` looks like and measure the total `C` for 
 You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates SHOULD be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy Measurement (`E`) 
 This is a measurement of the energy consumed by a given piece of software for a given task. This MUST be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
