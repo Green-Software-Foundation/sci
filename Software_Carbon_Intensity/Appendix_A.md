@@ -47,7 +47,7 @@ However, we may not be able to apply this uniformly for all software systems. So
 1) Architecture of Software
 Different application architectures need monitoring differently. Consider, for example, the following workloads:
 
-	1) Web based multi-tier application or Long running process deployed on either cloud or on-premise
+	1) Web-based, multi-tier application or long-running process deployed on either cloud or on-premise
 	2) Mobile app connecting to backend APIs on cloud or on-premise
 	3) Desktop app connecting to backend APIs on cloud or on-premise
 	4) AI based machine learning model experiments
