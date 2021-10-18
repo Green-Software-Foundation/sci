@@ -45,7 +45,7 @@ For this metric, the definition of scope around which the SCI will operate is im
 However, we may not be able to apply this uniformly for all software. Software varies by architecture , environment, hosting type (dedicated infrastructure vs shared infrastructure vs serverless ) and the implementation of SRE monitoring for SCI varies by these factors .We will discuss these factors below:
 
 1) Architecture of Software
-Different application architectures need monitoring differently. Consider for example the following workloads:
+Different application architectures need monitoring differently. Consider, for example, the following workloads:
 
 	1) Web based multi-tier application or Long running process deployed on either cloud or on-premise
 	2) Mobile app connecting to backend APIs on cloud or on-premise
