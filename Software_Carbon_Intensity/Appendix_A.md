@@ -50,7 +50,7 @@ Different application architectures need monitoring differently. Consider, for e
 	1) Web-based, multi-tier application or long-running process deployed on either cloud or on-premise
 	2) Mobile app connecting to backend APIs on cloud or on-premise
 	3) Desktop app connecting to backend APIs on cloud or on-premise
-	4) AI based machine learning model experiments
+	4) Experiments running training jobs of machine learning models
 	5) Open Source or Closed Source Framework SDKs
 	6) Server less applications
 
