@@ -52,7 +52,7 @@ Different application architectures need monitoring differently. Consider, for e
 	3) Desktop app connecting to backend APIs on cloud or on-premise
 	4) Experiments running training jobs of machine learning models
 	5) Open Source or Closed Source Framework SDKs
-	6) Server less applications
+	6) Serverless applications
 
 From a pure monitoring perspective of the SRE metric , doing it on server based workloads in the above list may be the first step . For e.g Web based multi-tier applications have either Virtual machines or EC2s connecting to APIs and databases and hence we can monitor the Operational emissions of these server components.  Similarly we can calculate the metric for backend server APIs and serverless components of the Mobile and desktop apps.
 
