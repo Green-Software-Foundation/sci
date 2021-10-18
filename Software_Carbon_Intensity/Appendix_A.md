@@ -56,7 +56,7 @@ Different application architectures need monitoring differently. Consider, for e
 
 From a pure monitoring perspective of the SRE metric, doing it on server based workloads in the above list may be the first step. For e.g. web-based, multi-tier applications have Virtual Machines connecting to APIs and databases and hence we can monitor the `Operational Emissions` of these server components.  Similarly, we can calculate the metric for backend server APIs and serverless components of mobile and desktop apps.
 
-There would be challenges however in doing the same for desktop devices and mobile platforms as the emissions calculations would need to know at a rough level the total number of  mobile devices or desktops , their types etc to calculate roughly the value for the desktop apps.   Hence for the first release of specifications, we can propose that monitoring will be for a subset of the above workloads i.e for workloads which have majorly server components.
+There would be challenges, however, in doing the same for desktop devices and mobile platforms as the emissions calculations would need to know, at a rough level, the total number of mobile devices or desktops, their types, etc. to calculate the value for the desktop apps. Hence, we can say that monitoring will be for a subset of the above workloads, i.e. for workloads which have majorly server components.
 
 
 2) Hosting Infrastructure - Dedicated Vs Shared
