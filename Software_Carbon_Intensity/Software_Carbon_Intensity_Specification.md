@@ -112,46 +112,35 @@ The entity calculating software carbon intensity MUST report what is included wi
 
 ## Methodology Summary 
 
-This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
+The SCI is a rate, carbon emissions per one unit of `R`. The equation used to calculate the Software Carbon Intensity (SCI) of a software system is:
 
-Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product and allows for the computation of a marginal rate.
+`SCI = ((E * I) + M) per R`
 
-To calculate the carbon intensity the following information is needed:
+Where:
 
-`O`= Operational emissions of a given piece of software
+- `E` = Energy consumed by a software system
 
-`E`= Energy consumed by a given piece of software
+- `I`= Location-based marginal carbon emissions
 
-`I`= Location-based marginal carbon emissions
+- `M` = Embodied emissions of a software system
 
-`O = E * I ` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
+- `R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
 
-`M` = Embodied emissions of a given piece of software
-****
-**These are used to calculate total carbon emissions (`C`) and carbon intensity (`CI`):**
+The equation can be further refined to 
 
-`C = O + M ` = Total amount of carbon the software is emitting over a time period
+`SCI = (O + M) per R`
 
-`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
+Where:
 
-**carbon intensity (`CI`) compares this carbon against a baseline :**
+- `O = E * I` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
 
-`CI = C / R` = Total carbon intensity rate per baseline
+And once more this can be further refined into:
 
-**carbon delta (`D`) is the difference between two carbon intensities :**
+`SCI = C per R`
 
-`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
+Where:
 
-### Lab-based alternatives to Real-world measurements
-The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
-
-First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
-
-You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
-
-Or, you MAY model what one unit of `R` looks like and measure the total `C` for executing one unit of `R` in a controlled lab environment. For instance, you may create a benchmark application that models a `User` interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `User`.
-
-You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
+- `C = O + M` = Total amount of carbon the software is emitting over a time period.
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
@@ -207,9 +196,19 @@ You MUST include an estimate of all the embodied emissions for the hardware used
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
-
 ### Preset List for Baselines
 [placeholder]
+
+### Lab-based alternatives to Real-world measurements
+The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
+
+First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
+
+You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
+
+Or, you MAY model what one unit of `R` looks like and measure the total `C` for executing one unit of `R` in a controlled lab environment. For instance, you may create a benchmark application that models a `User` interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `User`.
+
+You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
 ## Core Characteristics
 
