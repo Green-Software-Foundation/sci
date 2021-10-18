@@ -26,7 +26,7 @@ SCI for applications (CI)= (Energy used by the application * Located based margi
 
 Here the baseline is per API call, per additional user, per additional ML job etc.
 
-From an SRE principle and alignment then, organizations would like to track carbon emissions from their applications using the SCI score and raise alerts on breach, i.e. if it increases beyond a certain percentage . If an application has a SCI score of x, organizations would then track variance from this value and configure monitoring principles .
+From an SRE principle and alignment then, organizations would like to track carbon emissions from their applications using the SCI score and raise alerts on breach, i.e. if it increases beyond a certain percentage . If an application has a SCI score of x, organizations would then track variance from this value and configure monitoring thresholds.
 
 **How would you then correctly define the metric as per SRE principles?**
 
