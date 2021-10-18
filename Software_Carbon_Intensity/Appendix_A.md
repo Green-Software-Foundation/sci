@@ -77,7 +77,7 @@ Similarly for the other common workload scenarios like web or desktop applicatio
 
 
 **Conclusion**
-Some of the deductions we have made at the end of this article:
+Some of the deductions we have made:
 
 1) Total carbon emissions (C) is the metric we will monitor at an SRE level .
 2) The application of this metric can be done at multiple scope levels - environment, hosting infrastructure type, and application architecture
