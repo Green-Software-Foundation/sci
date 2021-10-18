@@ -65,17 +65,25 @@ Kindly consult [GSFDICT] for more definitions used in this document.
 
 ## Introduction
 
-#### Problem Statement
+What you cannot measure, you cannot improve.
 
-The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick. This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
+The Software Carbon Intensity (SCI) Standard defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
 
-#### Applications Of This Specification
+The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud. 
 
-The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
+Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score.
 
-#### Target Audience
+The SCI encourages calculation using granular real-world data, which is challenging to obtain in some of these environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources required to calculate the SCI at lower resolutions and will provide tools and guidance for getting this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your hosting suppliers and requesting it.
 
-The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
+Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
+
+The steps required to calculate and report an SCI score are:
+
+- **What**: Decide on the software boundary, what components of a software system to include.
+- **Scale**: The SCI is a rate, carbon emissions per one unit of a baseline called R. The next step is to pick the baseline which best describes how the application scales. 
+- **How**: For each software component listed in the software boundary, decide on the measurement method, real-world measurements based on telemetry, or lab-based measurements based on models.
+- **Measure**: Calculate a rate, an SCI, for every software component. The SCI of the whole application is the average of the SCIs for every software component in the system.
+- **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
 
 ## Software Sustainability Actions
 
