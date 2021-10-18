@@ -5,12 +5,12 @@ Reliability is the concept of a system having the quality of being trustworthy o
 1)	Service level indicator (SLI)
 2)	The target metric or Objective in percentile 
 3)	The observation window
-SLI + Objective +Observation window = SLO
+Hence "Service Level Indicator" coupled with  "Objective in percentile" and  "Observation window" is "Service Level Objective" 
 SLIs have an event, a success criterion, and specify where and how you record success or failure. It is specified as the proportion of events that were good. 
 
-Example: Percentage of query requests that return an error code other than 5XX or a timeout measured on the Query Gateway Frontend
+Example: Percentage of query requests that return an error code other than 5XX or a timeout measured on the Query Gateway Frontend. A Query gateway frontend is a load balancer that helps to distribute and/or throttle requests to a server
 
-SLIs exist to help engineering teams make better decisions. Your SLO performance is critical information to have when you’re making decisions about how hard and fast you can push your systems. SLOs are also important data points for other engineers when they’re making assumptions about their dependencies on your service or system. Lastly, your larger organization should use your SLIs and SLOs to make informed decisions about investment levels and about balancing reliability work against engineering velocity.
+SLIs exist to help engineering teams make better decisions. Your SLO performance is critical information to have when you’re making decisions about how hard and fast you can push your systems. SLOs are also important data points for other engineers when they’re making assumptions about their dependencies on your service or system. Lastly, your  organization at large should use your SLIs and SLOs to make informed decisions about investment levels and about balancing reliability work against engineering velocity.
 Availability SLO example
 •	90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window ( _Here 90% HTTP requests succeeded is the SLI , Return error code other than 5xx or timeout is the Objective and 30 days is the observation window_)
 
