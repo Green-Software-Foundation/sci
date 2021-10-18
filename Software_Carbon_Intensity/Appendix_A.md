@@ -42,7 +42,7 @@ Thus we can consider that the metric we will use for the site reliability engine
 
 **Scope of Metric**
 For this metric, the definition of scope around which the SCI will operate is important. Scope is the boundary area (https://github.com/srini1978/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#software-boundary) within which we will apply the monitoring. Since we are talking about software systems, the boundary here is the software boundary as defined in the SCI specification. 
-However, we may not be able to apply this uniformly for all software. Software varies by architecture , environment, hosting type (dedicated infrastructure vs shared infrastructure vs serverless ) and the implementation of SRE monitoring for SCI varies by these factors .We will discuss these factors below:
+However, we may not be able to apply this uniformly for all software systems. Software systems vary by architecture, environment, hosting type (dedicated infrastructure vs shared infrastructure vs serverless) and the implementation of SRE monitoring for SCI varies by these factors. We discuss these factors below:
 
 1) Architecture of Software
 Different application architectures need monitoring differently. Consider, for example, the following workloads:
