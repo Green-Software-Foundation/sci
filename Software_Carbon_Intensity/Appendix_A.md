@@ -63,7 +63,7 @@ There would be challenges, however, in doing the same for desktop devices and mo
 
 Monitoring techniques will also vary based on the hosting mode for the software. For those with dedicated infrastructure, the SCI will just be the sum total of Operational Emission values across the different layers. In the equation for SCI ( SCI per unit of baseline = (E*I) + M ), the value of M does not make an impact when calculating delta carbon intensity = Current CI- Original CI since the hardware is exclusively reserved for the purpose of the said software. Hence the monitoring technique can potentially look for variations in the Operational Emissions value .
 
-The situation is different when we consider Shared infrastructure servers, multi-tenant databases, SaaS software shared by multiple customers. Here multiple micro-services could share the same PaaS compute platforms and storage services which by design is carbon friendly. In these cases, the percentage of allocation of infrastructure  is necessary information to be able to calculate the carbon intensity value for the specific customer software. Hence we need to include the Embodied Emissions (M) value in the monitoring metric . 
+The situation is different when we consider shared infrastructure servers, multi-tenant databases, SaaS software shared by multiple customers. Here, multiple micro-services could share the same PaaS compute platforms and storage services which by design may be carbon friendly. In these cases, the percentage allocation of infrastructure is required information to be able to calculate the carbon intensity value for the specific customer's software system. Hence, we need to include the Embodied Emissions (M) value in the monitoring metric. 
 
 
 3) Application Environment Types
