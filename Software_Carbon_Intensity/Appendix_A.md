@@ -8,7 +8,7 @@ Reliability is the concept of a system having the quality of being trustworthy o
 SLI + Objective +Observation window = SLO
 SLIs have an event, a success criterion, and specify where and how you record success or failure. It is specified as the proportion of events that were good. 
 
-Example: Percentage of Query requests that return an error code other than 5XX or a timeout measured on the Query Gateway Frontend
+Example: Percentage of query requests that return an error code other than 5XX or a timeout measured on the Query Gateway Frontend
 
 SLIs exist to help engineering teams make better decisions. Your SLO performance is critical information to have when you’re making decisions about how hard and fast you can push your systems. SLOs are also important data points for other engineers when they’re making assumptions about their dependencies on your service or system. Lastly, your larger organization should use your SLIs and SLOs to make informed decisions about investment levels and about balancing reliability work against engineering velocity.
 Availability SLO example
