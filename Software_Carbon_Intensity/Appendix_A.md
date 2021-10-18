@@ -22,7 +22,7 @@ Latency SLO examples:
 **How organizations can re-define SRE considering SCI.**
 Software carbon intensity is a relative score between applications to be more carbon efficient, carbon aware and hardware efficient.
 
-SCI for applications (CI)= (Energy used by the application * Located based marginal carbon emissions) + Embodied Carbon per baseline
+SCI for applications (CI)= ((Energy used by the application * Located based marginal carbon emissions) + Embodied Carbon) per baseline (https://github.com/srini1978/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#methodology-summary)
 
 Here the baseline is per API call, per additional user, per additional ML job etc.
 
@@ -38,7 +38,7 @@ When this incident (as per SRE principles, this is an incident that should be mo
 
 Hence for the initial version of the specification, we can raise the level of abstraction for monitoring of SCI at an application level rather than at the individual component level. i.e we will keep the baseline for software carbon intensity at the "application level" rather than a batch job, ML job, API call, etc. 
 
-Thus we can consider that the metric we will use for the site reliability engineer will be the Total carbon emissions (C) value. The formula for this metric is :C= O+ M where O= E*I
+Thus we can consider that the metric we will use for the site reliability engineer will be the Software Carbon Intensity value per application
 
 **Scope of Metric**
 For this metric, the definition of scope around which the SCI will operate is important. Scope is the boundary area (https://github.com/srini1978/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#software-boundary) within which we will apply the monitoring. Since we are talking about software systems, the boundary here is the software boundary as defined in the SCI specification. 
@@ -61,7 +61,7 @@ There would be challenges, however, in doing the same for desktop devices and mo
 
 2) Hosting Infrastructure - Dedicated Vs Shared
 
-Monitoring techniques will also vary based on the hosting mode for the software. For those with dedicated infrastructure, the SCI will just be the sum total of Operational Emission values across the different layers. In the equation for SCI ( SCI per unit of baseline = (E*I) + M ), the value of M does not make an impact when calculating delta carbon intensity = Current CI- Original CI since the hardware is exclusively reserved for the purpose of the said software. Hence the monitoring technique can potentially look for variations in the Operational Emissions value .
+Monitoring techniques will also vary based on the hosting mode for the software. For those with dedicated infrastructure, the SCI will just be the sum total of Operational Emission values across the different layers. In the equation for SCI ( SCI per unit of baseline = (E*I) + M ), the value of M does not make an impact when calculating delta carbon intensity = Current CI- Original CI since the hardware is exclusively reserved for the purpose of the said software. Hence the monitoring technique can potentially look for variations in the Operational Emissions value and this will be sufficient.
 
 The situation is different when we consider shared infrastructure servers, multi-tenant databases, SaaS software shared by multiple customers. Here, multiple micro-services could share the same PaaS compute platforms and storage services which by design may be carbon friendly. In these cases, the percentage allocation of infrastructure is required information to be able to calculate the carbon intensity value for the specific customer's software system. Hence, we need to include the Embodied Emissions (M) value in the monitoring metric. 
 
