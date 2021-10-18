@@ -85,7 +85,7 @@ Some of the deductions we have made:
 Availability SLOs: Availability SLOs can be met either by software changes and redundant application design patterns or hardware redundancy. However, in the most common of scenarios, it is met by having hot standby and/or warm/cold standby infrastructure configurations. This directly impacts the “Embodied carbon” co-efficient in the above equation and hence tradeoffs have to be defined between meeting Availability SLO and allowed variance in SCI. 
 
 Latency SLOs:
-Meeting latency SLOs involves either increasing the compute power allocated to the workload, spending developer cycles to fix performance issues, allocating the workload to synchronous services rather than async services that can run in energy efficient time sand also scaling the hardware required. Hence attempting to meet aggressive latency SLOs involves impacting all the co-efficient of the above equation:  carbon efficiency, carbon aware and hardware efficiency.
+Meeting latency SLOs involves either increasing the compute power allocated to the workload, spending developer cycles to fix performance issues, allocating the workload to synchronous services rather than async services that can run in energy efficient time sand also scaling the hardware required. Hence, attempting to meet aggressive latency SLOs involves impacting all the coefficients of the SCI equation: carbon efficiency, carbon awareness, and hardware efficiency.
 
 Hence, from a specification point of view, the SCI value can be integrated into the SLO examples as follows: 
 
