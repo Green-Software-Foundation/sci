@@ -41,7 +41,7 @@ Hence for the initial version of the specification, we can raise the level of ab
 Thus we can consider that the metric we will use for the site reliability engineer will be the Total carbon emissions (C) value. The formula for this metric is :C= O+ M where O= E*I
 
 **Scope of Metric**
-For this metric, the definition of scope around which SCI will operate is very important. Scope is the boundary area where we will apply the monitoring. Since we are talking about software, the boundary here is the software boundary as defined in the SCI specification. 
+For this metric, the definition of scope around which the SCI will operate is important. Scope is the boundary area within which we will apply the monitoring. Since we are talking about software systems, the boundary here is the software boundary as defined in the SCI specification. 
 However, we may not be able to apply this uniformly for all software. Software varies by architecture , environment, hosting type (dedicated infrastructure vs shared infrastructure vs serverless ) and the implementation of SRE monitoring for SCI varies by these factors .We will discuss these factors below:
 
 1) Architecture of Software
