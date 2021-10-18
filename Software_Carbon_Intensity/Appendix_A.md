@@ -88,7 +88,7 @@ Availability SLOs: Availability SLOs can be met either by software changes and r
 Latency SLOs:
 Meeting latency SLOs involves either increasing the compute power allocated to the workload, spending developer cycles to fix performance issues, allocating the workload to synchronous services rather than async services that can run in energy efficient time sand also scaling the hardware required. Hence attempting to meet aggressive latency SLOs involves impacting all the co-efficient of the above equation:  carbon efficiency, carbon aware and hardware efficiency.
 
-Hence from a specification point of view, the SCI score can be integrated into the SLO examples as follows 
+Hence, from a specification point of view, the SCI value can be integrated into the SLO examples as follows: 
 
 Availability SLO example with SCI
 •	90% of HTTP requests as reported by the load balancer succeeded in the last 30 day window and ensuring that the overall SCI variance does not go higher than x%
