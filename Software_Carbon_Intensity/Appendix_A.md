@@ -80,7 +80,7 @@ Similarly for the other common workload scenarios like web or desktop applicatio
 Some of the deductions we have made at the end of this article:
 
 1) Total carbon emissions (C) is the metric we will monitor at an SRE level .
-2) The application of this metric can be done at multiple scope levels - Environment , Hosting infrastructure type and Application architecture
+2) The application of this metric can be done at multiple scope levels - environment, hosting infrastructure type, and application architecture
 3) In future iterations of the specification, work to be done to understand the SRE impact of the C metric for other SLO attributes like latency, availability. A brief write up below:
 
 Availability SLOs: Availability SLOs can be met either by software changes and redundant application design patterns or hardware redundancy. However, in the most common of scenarios, it is met by having hot standby and/or warm/cold standby infrastructure configurations. This directly impacts the “Embodied carbon” co-efficient in the above equation and hence tradeoffs have to be defined between meeting Availability SLO and allowed variance in SCI. 
