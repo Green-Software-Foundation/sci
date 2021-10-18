@@ -67,7 +67,7 @@ The situation is different when we consider Shared infrastructure servers, multi
 
 
 3) Application Environment Types
-The usage of the above SRE metric also changes by environment. This statement is tied to the Application architecture factor somewhat but broadly, the concept is that for the purpose of carbon tracking and monitoring, measurement should be done for all environments like development, testing, QA, Performance and Production. This is because the carbon emission of the software increases manifold for lower environments like development and QA for workloads like machine learning models. 
+The usage of the above SRE metric also changes by environment. This statement is tied to the Application architecture factor somewhat but broadly, the concept is that for the purpose of carbon tracking and monitoring, measurement should be done for all environments like development, testing, QA, Performance and Production. 
 
 Multiple iterations of running AI experiments in lower environments should be tracked for carbon emissions and hence the scope of the metric should be monitored at the environment level. 
 
