@@ -73,7 +73,6 @@ Multiple iterations of running AI experiments in lower environments should be tr
 
 Similarly, for the other common workload scenarios like web or desktop applications, multiple performance tests are executed to achieve the SLO targets for throughput and/or latency. Through the process of trying to achieve these targets, the compute and storage resources are used more intensively than they would be in a production environment. Hence, tracking the metric is recommended at the environment scope as well.
 
-**<to be added>**
 
 
 **Conclusion**
