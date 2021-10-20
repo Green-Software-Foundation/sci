@@ -268,69 +268,33 @@ Because this standard lays out a consequential methodology for calculating the e
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
 
 ## Reporting Requirements
-To comply with this specification and implement carbon transparency, an entity MUST meet these reporting requirements.
 
-### Data elements to be reported
-The following list contains the REQUIRED and OPTIONAL data elements to be reported. Some data elements are defined elsewhere in the specification as REQUIRED, and are included again for completeness.
-
-| Name | Identifier | Optionality | Format | Notes |
-| - | - | - | - | - |
-| Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary) | sci/software-boundary | MUST | List | An array of names, or an array of key-value pairs.
-| [Software Carbon Intensity](#reporting-the-sci-value) - `CI`| sci/ci | MUST | Numeric | The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-| [Software Carbon Intensity](#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `R` baseline value| sci/r | MUST | Numeric |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `R` baseline source| sci/r-source | MUST | Text | The text should refer to one of the identifiers in the [pre-set list](#preset-list-for-baselines). If it does not, then a freetext comment SHALL be added in `sci/r-source-comment`. |
-| [Software Carbon Intensity](#reporting-the-sci-value) - reason for not selecting `R` baseline from provided items| sci/r-source-comment | SHALL | Text | This item SHALL be provided, only where the `sci/r-source` element does not contain one of the identifiers in the [pre-set list](#preset-list-for-baselines). |
-| Product Name, entity name, or Software Product | metadata/name | MUST | Text | |
-| Contact name | metadata/contact-name | MUST | Text | The point of contact responsible and accountable for the report. |
-| Contact email | metadata/contact-email | MUST | Text | The point of contact responsible and accountable for the report. |
-| Organization | metadata/organization | SHOULD | Text | This SHALL be populated where the report is not by an individual contributor, otherwise it is not required. |
-| GUID | metadata/guid | MUST | GUID | Following a format in [RFC4122], provided to uniquely identify this particular product, resource, or service. |
-| Version | metadata/version | MAY | Text | |
-| Date of Calculation | metadata/calculation-date | MUST | Date | Following a format described in [RFC3339], [a subset](https://ijmacd.github.io/rfc3339-iso8601/) of ISO 8601 |
-| Further information on calculation | metadata/calculation-information | MAY | Text | More information on your calculation methodology can be provided as freetext, or as a URL to an external document or software repository. |
-| Further information on report | metadata/report-information-url | MAY | URL | More information on your calculation methodology may be provided, and this SHALL be a URL to an external document or software repository.  |
-
-
-<!--
-
-- Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary)
--
-  - `CI` MUST be reported
-  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided
-  - The `R` baseline used MUST be reported
-  - If the `R` baseline used wa not selected from the  for baselines, then a reason for that choice MUST be provided
-- Metadata for the SCI value being reported
-  - Product name MUST be reported
-  - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided
-  - Organization SHOULD be provided, where the report is not by an individual contributor
-  - A GUID, following a format described in [RFC4122], MUST be provided to uniquely identify this particular product, resource, or service.
-  - A software version for the software product about which this report is made, MAY be provided.
-  - The date the calculation was made, following a format described in [RFC3339], MUST be provided.
-  - More information on your calculation methodology MAY be provided, as a freetext comment, limited to 300 characters.
-  - More information on your report MAY be provided, as a URL linking to an external document or software repository.
-
-
--->
-
-### Data format for reporting
-The format of your report MUST be machine-readable, and SHOULD be in a commonly used format. Examples of commonly used formats include YAML and JSON. Other formats can be selected, but they MUST allow for the same identifiers to be parsed.
-
-Examples of valid machine-readable submissions can be found in Appendix A.
+To comply with this specification and implement carbon transparency, an entity MUST meet these reporting requirements. Reports MUST be made in YAML format, for machine comprehensibility. Additional human readable reports MAY be made and linked to in other formats.
 
 You MAY link to a human readable representation of your report in the further information field, for example, in HTML or PDF format, to provide additional context to your report, or the calculation behind your report.
 
 This human-readable representation SHALL live outside the GSF, and MAY be referenced in the metadata for your report.
 
-### Submitting a report
-Reports can be made to the `GSF`  using a [Pull Request](https://guides.github.com/introduction/flow/).
+### Report structure and required data elements
+The data elements have mandatory key names, which can be found in Appendix A, along with examples of validly formed YAML reporting files .
+#### Mandatory reporting elements
+- Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary)
+- The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
+  - `CI` MUST be reported
+  - The `R` baseline used MUST be reported
+  - If the `R` baseline used wa not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided
+- Metadata for the SCI value being reported
+  - Product name MUST be reported
+  - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided
+  - A GUID, following a format described in [RFC4122], MUST be provided to uniquely identify this particular product, resource, or service.
+  - The date the calculation was made, following a format described in [RFC3339], MUST be provided.
+  - The version of the SCI specification which you are reporting against MUST be provided.
 
-Only one machine-readable submission MUST exist per unique GUID. Each GUID MUST reference and relate to only one product name.
-
-When a new SCI report is made, to replace an existing report for a unique product or entity, the pull request MUST update or replace the same file.
-
-Each report must be placed into a unique folder, named after the GUID associated with the product or entity.
-
-[Pull Requests](https://guides.github.com/introduction/flow/) should point at this repository:
-``` NOTE - ADD GH REPO URL HERE ```
+#### Optional reporting requirements
+- The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
+  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided
+- Metadata for the SCI value being reported
+  -  Organization SHOULD be provided, where the report is not by an individual contributor
+  -  A software version for the software product about which this report is made, MAY be provided.
+  -  More information on your calculation methodology MAY be provided, as a freetext comment.
+  -  More information on your report MAY be provided, as a URL linking to an external document or software repository.
