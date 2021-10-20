@@ -71,7 +71,7 @@ The purpose of this specification will be to enable standardization across indus
 
 #### Applications Of This Specification
 
-The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
+The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology.
 
 #### Target Audience
 
@@ -85,11 +85,11 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 - **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
 - **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
-Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions. 
+Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions.
 
 ## Software Boundary
 
-The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
+The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation.
 
 Supporting infrastructure and systems MAY include:
 - compute resources
@@ -108,9 +108,9 @@ Supporting infrastructure and systems MAY include:
 - resources to support redundancy
 - resources to support failover
 
-The entity calculating software carbon intensity MUST report what is included within this boundary.  
+The entity calculating software carbon intensity MUST report what is included within this boundary.
 
-## Methodology Summary 
+## Methodology Summary
 
 This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
 
@@ -132,7 +132,7 @@ To calculate the carbon intensity the following information is needed:
 
 `C = O + M ` = Total amount of carbon the software is emitting over a time period
 
-`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
+`R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc)
 
 **carbon intensity (`CI`) compares this carbon against a baseline :**
 
@@ -140,12 +140,12 @@ To calculate the carbon intensity the following information is needed:
 
 **carbon delta (`D`) is the difference between two carbon intensities :**
 
-`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
+`D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods.
 
 ### Lab-based alternatives to Real-world measurements
 The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
 
-First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
+First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`.
 
 You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
 
@@ -153,27 +153,27 @@ Or, you MAY model what one unit of `R` looks like and measure the total `C` for 
 
 You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
-### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
+### Operational Emissions  (`O`)
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand.
 
-#### Energy Measurement (`E`) 
-This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
+#### Energy Measurement (`E`)
+This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:
 - Datacenter
 - Individual machine (e.g. VM/Node)
 - Individual service (e.g. API call, ML training job)
-- Execution of code 
+- Execution of code
 
 #### Location-Based Marginal Carbon Intensity Measurement (`I`)
 The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh. This requires 'Marginal' carbon (defined above), and This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims. 
+Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims.
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-### Embodied Emissions  (`M`) 
-Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
+### Embodied Emissions  (`M`)
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device.
 
-When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation. 
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation.
 
 This fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
 
@@ -223,7 +223,7 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-footprint view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
 ### The SCI is easy to implement
 
@@ -243,20 +243,46 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
 
-## Boundaries 
+## Boundaries
 
 [placeholder]
 
 ## Exclusions
 
-Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation:
 
-### Market-based Measures 
-**“Market-based measures"** are achieved through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following: 
-- Carbon offsets 
-- Electricity Attribute Certificates (EACs) 
+### Market-based Measures
+**“Market-based measures"** are achieved through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following:
+- Carbon offsets
+- Electricity Attribute Certificates (EACs)
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Infrastructure Measures 
+### Infrastructure Measures
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+
+## Reporting Requirements
+For an entity to be compliant with this specification, and implementing carbon transparency, certain reporting requirements MUST be met.
+
+### Data elements to be reported
+The following list contains the REQUIRED and OPTIONAL data eleemnts to be reported. Some data elements are defined elsewhere in the specification as REQUIRED, and are included again for completeness.
+
+- Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary)
+- The [Software Carbom Intensity](#reporting-the-sci-value) of the entity itself:
+  - `CI` MUST be reported
+  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided
+  - The `R` baseline used MUST be reported
+  - If the `R` baseline used wa not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided
+- Metadata for the SCI value being reported
+  - Product name MUST be reported
+  - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided
+  - Organization SHOULD be provided, where the report is not by an individual contributor
+  - GUID,
+
+<!-- | Data Element | Optionality | Notes |
+| - | - | - |
+| Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary) | MUST | |
+| [Software Carbon Intensity](#reporting-the-sci-value) - `CI`| MUST |  -->
+
+
+### Format for reporting
