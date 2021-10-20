@@ -271,7 +271,7 @@ Because this standard lays out a consequential methodology for calculating the e
 For an entity to be compliant with this specification, and implementing carbon transparency, certain reporting requirements MUST be met.
 
 ### Data elements to be reported
-The following list contains the REQUIRED and OPTIONAL data eleemnts to be reported. Some data elements are defined elsewhere in the specification as REQUIRED, and are included again for completeness.
+The following list contains the REQUIRED and OPTIONAL data elements to be reported. Some data elements are defined elsewhere in the specification as REQUIRED, and are included again for completeness.
 
 | Name | Identifier | Optionality | Format | Notes |
 | - | - | - | - | - |
@@ -285,10 +285,10 @@ The following list contains the REQUIRED and OPTIONAL data eleemnts to be report
 | Product Name, entity name, or Software Product | metadata/name | MUST | Text | |
 | Contact name | metadata/contact-name | MUST | Text | The point of contact responsible and accountable for the report. |
 | Contact email | metadata/contact-email | MUST | Text | The point of contact responsible and accountable for the report. |
-| Organization | metadata/name | SHOULD | Text | This SHALL be populated where the report is not by an individual contributor, otherwise it is not required. |
-| GUID | metadata/name | MUST | Guid | Following a format in [RFC4122], provided to uniquely identify this particular product, resource, or service. |
-| Version | metadata/name | MAY | Text | |
-| Date of Calculation| metadata/name | MUST | Date | Following a format described in [RFC3339] |
+| Organization | metadata/organization | SHOULD | Text | This SHALL be populated where the report is not by an individual contributor, otherwise it is not required. |
+| GUID | metadata/guid | MUST | GUID | Following a format in [RFC4122], provided to uniquely identify this particular product, resource, or service. |
+| Version | metadata/version | MAY | Text | |
+| Date of Calculation | metadata/calculation-date | MUST | Date | Following a format described in [RFC3339], [a subset](https://ijmacd.github.io/rfc3339-iso8601/) of ISO 8601 |
 | Further information on calculation | metadata/calculation-information | MAY | Text | More information on your calculation methodology can be provided as freetext, or as a URL to an external document or software repository. |
 | Further information on report | metadata/report-information-url | MAY | URL | More information on your calculation methodology may be provided, and this SHALL be a URL to an external document or software repository.  |
 
