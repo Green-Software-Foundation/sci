@@ -1,26 +1,10 @@
 ## Scope
 
-This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 
 ## References
 ### Normative References
 
-```
-The policy for reference lists is:
-1. GSF documents listed should have at least one approved version – draft-only docs should not be referenced.
-An exception exists for documents approved with or after the referenced doc is approved (maybe part of the same enabler package). In short – approved docs should not reference unapproved docs.
-2. The name + version (no date) for GSF specifications are generally sufficient – dates should be used only if there is a specific reason to limit the usage.
-3. References to other affiliate docs should similarly provide sufficient information to uniquely determine the needed document and should provide the appropriate source information.
-4. The URL for GSF material (new GSF and affiliate) should always be http://www.greensoftware.foundation
-    
-Models to use:
-	[REFLABEL]	<General Model> "Ref Title", Ref information (source, date, id), URL:http//<ref-source>/ 
-	[GSFDOC]	<GSF Model> "GSF Document Title",{ Version x.y,} Green Software Foundation™, GSF <docname>{    <version>}, URL:http//www.openmobilealliance.org/ 
-
-If there are no entries in the table – enter 'none' to be precise.
-
-DELETE THIS COMMENT
-```
 <table>
   <caption>Normative References </caption>
   <tbody>
@@ -30,14 +14,10 @@ DELETE THIS COMMENT
     </tr>
     <tr>
       <td><strong>[RFC5234]</strong></td>
-      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, Janury 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
+      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
     </tr>
   </tbody>
 </table>
-
-```
-Add/Remove reference rows as needed - DELETE This Row 
-```
 
 ### Informative References
 
@@ -53,24 +33,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
 
-```
-If needed, describe or declare using appropriate normative references the additional conventions that are used. DELETE THIS COMMENT
-```
-
 ### Definitions
 
-```
-Add definitions in new rows of the following table as needed. The following examples show how dictionary references should be made as well as locally defined terms. This table should be maintained in sorted alphabetic order based on the labels of the terms.
-
-Examples:
-	Entity              Use definition #1 from [GSFDICT]
-	Interactive Service Use definition from [GSFDICT]
-	Local Term          The definition description would be presented directly
-
-DELETE THIS COMMENT
-```
 <table>
-  <caption>Marginal </caption>
+  <caption></caption>
   <tbody>
     <tr>
 	<td><strong>Marginal Carbon Intensity (I) </strong></td>
@@ -78,27 +44,17 @@ DELETE THIS COMMENT
     </tr>
     <tr>
 	<td><strong>Carbon Delta (D)</strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and faciliates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
     </tr>
   </tbody>
 </table>
-
-```
-Add/Remove definition rows as needed - DELETE This Row
-
-```
 
 Kindly consult [GSFDICT] for more definitions used in this document.
 
 ### Abbreviations
 
-```
-Add abbreviations as needed. No special notation should be made regarding terms copied from the Dictionary.  
-The list should be maintained in alphabetic order. DELETE This Row
-```
-
 <table>
-<caption>Abbreviations</caption>
+<caption></caption>
 <tbody>
   <tr>
     <td>GSF</td>
@@ -186,16 +142,25 @@ To calculate the carbon intensity the following information is needed:
 
 `D = CI(initial) - CI(modified)` = Carbon difference between an initial and modified carbon intensity, and is an optional parameter to quantify gains from implementation of Green Software Engineering methods. 
 
+### Lab-based alternatives to Real-world measurements
+The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
 
+First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
+
+You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
+
+Or, you MAY model what one unit of `R` looks like and measure the total `C` for executing one unit of `R` in a controlled lab environment. For instance, you may create a benchmark application that models a `User` interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `User`.
+
+You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions assoicated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy Measurement (`E`) 
 This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
 - Datacenter
-- Indiviudual machine (e.g. VM/Node)
-- Indiviudual service (e.g. API call, ML training job)
+- Individual machine (e.g. VM/Node)
+- Individual service (e.g. API call, ML training job)
 - Execution of code 
 
 #### Location-Based Marginal Carbon Intensity Measurement (`I`)
@@ -206,7 +171,41 @@ Location-based measures the grid carbon intensity (annual average) of a regional
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
 ### Embodied Emissions  (`M`) 
-[placeholder]
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
+
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation. 
+
+This fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
+
+To calculate the time-share, amortize the total embodied carbon over the expected life span of your device and then extrapolate based on the time reserved for your usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of 4 years and you reserved use for 1hr, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28g of the total.
+
+To calculate resource-share, we look at the share of total available resources reserved for use by your software. For instance, the percentage of total virtual CPUs reserved for your software is a good choice for the resource-share metric in the virtualized cloud space.
+
+To calculate the share of `M` for a software application, we use:
+
+`M = TE * (TR/EL) * (RR/TR)`
+
+Where:
+
+- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TR` = Time Reserved, the length of time the hardware is reserved for use by the software.
+- `EL` = Expected Lifespan, the anticipated time that the equipment will be installed.
+- `RR` = Resources Reserved, the number of resources reserved for use by the software.
+- `TR` = Total Resources, the total number of resources available.
+
+We can further refine the equation to
+
+`M = TE * TS * RS`
+
+Where:
+
+- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
+- `TS = TR/EL` = Time-share, the share of the total life span of the hardware reserved for use by the software.
+- `RS = RR/TR` = Resource-share, the share of the total available resources of the hardware reserved for use by the software.
+
+You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
+
+You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
 
 ### Preset List for Baselines
@@ -224,7 +223,8 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-footprint view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in  mind the [exclusions](#exclusions) mentioned in this specification. 
+- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+
 ### The SCI is easy to implement
 
 To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
@@ -243,10 +243,9 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
 
-
 ## Boundaries 
 
-[placholder]
+[placeholder]
 
 ## Exclusions
 
@@ -259,102 +258,5 @@ Because this standard lays out a consequential methodology for calculating the e
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Infrastructure Meaures 
+### Infrastructure Measures 
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
-
-
-
-
-### Version 1.0
-
-```
-This section provides a high level, concise and informative description of the main functionality supported in the initial version of the specification. The description should be brief; the target length should be a few paragraphs. 
-When the enabler or reference release is finished, this description should be aligned with the final functionality. 
-
-DELETE THIS COMMENT
-```
-
-### Version (x.y)
-
-```
-This section should be included for each new major or minor version of the specification.
-
-It should provide a high level, concise and informative description of the new or modified functionality introduced in this version of the specification, compared to the previous version. The description should be brief, and the target length should be a few paragraphs. When the enabler or reference release is finished, this description should be 
-aligned with the final functionality differences.
-
-DELETE THIS COMMENT
-```
-
-#### Version (x.y.z)
-
-```
-Service indicator (z) for the document. It is incremented every time a corrective update is made to the approved document version by the WG. This section should describe the main changes made to the specification at a high level compared to the previous version. The description should be brief, and the target length should be one paragraph.
-
-DELETE THIS COMMENT
-```
-
-## Sections As Needed
-
-```
-Sections for the normative specification text. Fill in as needed. The following validates the styles used for the headers. DELETE THIS COMMENT 
-```
-
-### Example Level 2
-(Add text here.)
-
-#### Example Level 3
-(Add text here.)
-
-##### Example Level 4
-(Add text here.)
-
-<figure>
-	<img src="images/governance.svg" alt="GSF governance">
-	<figcaption>GSF governance</figcaption> 
-</figure>	
-
-
-<table>
-  <caption>Example Table</caption>
-  <thead>
-      <tr>
-	  <th>Item</th>
-	  <th>Function</th>
-	  <th>Reference</th>
-      </tr>	      
-  </thead>	    
-  <tbody>
-    <tr>
-	<td>Row 1</td>
-	<td>Grid 1,1 data</td>
-	<td>Grid 1,2 data</td>	    
-    </tr>
-    <tr>
-	<td>Row 2</td>
-	<td>Grid 2,1 data</td>
-	<td>Grid 2,2 data</td>	    
-    </tr>
-  </tbody>
-</table>
-
-## Appendix Change History (Informative)
-
-### Approved Version x.y History
-
-<table>
-    <caption>Approved Version x.y History</caption>
-    <thead>
-        <tr>
-            <th>Reference</th>
-            <th>Date</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>    
-        <tr>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td>No prior version</td>
-        </tr>
-    </tbody>
-</table>
