@@ -268,7 +268,7 @@ Because this standard lays out a consequential methodology for calculating the e
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
 
 ## Reporting Requirements
-For an entity to be compliant with this specification, and implementing carbon transparency, certain reporting requirements MUST be met.
+To comply with this specification and implement carbon transparency, an entity MUST meet these reporting requirements.
 
 ### Data elements to be reported
 The following list contains the REQUIRED and OPTIONAL data elements to be reported. Some data elements are defined elsewhere in the specification as REQUIRED, and are included again for completeness.
@@ -315,7 +315,7 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 -->
 
 ### Data format for reporting
-The format of your report MUST be machine readable, and SHOULD be in a commonly used format. Examples of commonly used formats include YAML and JSON.
+The format of your report MUST be machine-readable, and SHOULD be in a commonly used format. Examples of commonly used formats include YAML and JSON. Other formats can be selected, but they MUST allow for the same identifiers to be parsed.
 
 Examples of valid machine-readable submissions can be found in Appendix A.
 
@@ -326,7 +326,7 @@ This human-readable representation SHALL live outside the GSF, and MAY be refere
 ### Submitting a report
 Reports can be made to the `GSF`  using a [Pull Request](https://guides.github.com/introduction/flow/).
 
-Only one machine readable submission MUST exist per unique GUID. Each GUID MUST reference and relate to only one product name.
+Only one machine-readable submission MUST exist per unique GUID. Each GUID MUST reference and relate to only one product name.
 
 When a new SCI report is made, to replace an existing report for a unique product or entity, the pull request MUST update or replace the same file.
 
