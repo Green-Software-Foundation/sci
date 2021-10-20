@@ -278,23 +278,23 @@ This human-readable representation SHALL live outside the GSF, and MAY be refere
 ### Report structure and required data elements
 The data elements have mandatory key names, which can be found in Appendix A, along with examples of validly formed YAML reporting files .
 #### Mandatory reporting elements
-- Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary)
+- Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary).
 - The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-  - `CI` MUST be reported
-  - The `R` baseline used MUST be reported
-  - If the `R` baseline used wa not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided
-- Metadata for the SCI value being reported
-  - Product name MUST be reported
-  - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided
+  - `CI` MUST be reported.
+  - The `R` baseline used MUST be reported.
+  - If the `R` baseline used wa not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided.
+- Metadata for the SCI value being reported.
+  - Product name MUST be reported.
+  - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided.
   - A GUID, following a format described in [RFC4122], MUST be provided to uniquely identify this particular product, resource, or service.
   - The date the calculation was made, following a format described in [RFC3339], MUST be provided.
   - The version of the SCI specification which you are reporting against MUST be provided.
 
 #### Optional reporting requirements
 - The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided
-- Metadata for the SCI value being reported
-  -  Organization SHOULD be provided, where the report is not by an individual contributor
+  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided.
+- Metadata for the SCI value being reported.
+  -  Organization SHOULD be provided, where the report is not by an individual contributor.
   -  A software version for the software product about which this report is made, MAY be provided.
   -  More information on your calculation methodology MAY be provided, as a freetext comment.
   -  More information on your report MAY be provided, as a URL linking to an external document or software repository.

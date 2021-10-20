@@ -10,7 +10,7 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 
 | Name | Identifier | Optionality | Format | Notes |
 | - | - | - | - | - |
-| Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary) | sci/software-boundary | MUST | List | An array of names, or an array of key-value pairs.
+| Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary) | sci/software-boundary | MUST | Text | A description of the software boundary for the entity. |
 | [Software Carbon Intensity](#reporting-the-sci-value) - `CI`| sci/ci | MUST | Numeric | The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
 | [Software Carbon Intensity](#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
 | [Software Carbon Intensity](#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
@@ -35,8 +35,7 @@ File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
 
 ```yaml
 sci:
-  software-boundary:
-    - software-package-name
+  software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
   ci: 0.5
   c: 5
   r: 1
@@ -58,8 +57,7 @@ File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
 
 ```yaml
 sci:
-  software-boundary:
-    - software-package-name
+  software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
   ci: 0.5
   c-missing-comment: A compelling and descriptive reason for why C is missing.
   r: 1
@@ -80,8 +78,7 @@ metadata:
 File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
 ```yaml
 sci:
-  software-boundary:
-    - software-package-name
+  software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
   ci: 0.5
   c: 5
   r: 1
