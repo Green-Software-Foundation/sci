@@ -16,6 +16,9 @@ This document, the Software Carbon Intensity technical specification, describes 
       <td><strong>[RFC5234]</strong></td>
       <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
     </tr>
+    <tr><td><strong>[RFC4122]</strong></td>
+    <td>"A Universally Unique IDentifier (UUID) URN Namespace",  Leach, Mealling, et al, July 2005, URL: https://www.ietf.org/rfc/rfc4122.txt</td>
+    </tr>
   </tbody>
 </table>
 
