@@ -65,7 +65,7 @@ Kindly consult [GSFDICT] for more definitions used in this document.
 
 ## Introduction
 
-What you cannot measure, you cannot improve.
+> "If you can't measure it, you can't improve it." - Peter Drucker
 
 The Software Carbon Intensity (SCI) Standard defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
 
