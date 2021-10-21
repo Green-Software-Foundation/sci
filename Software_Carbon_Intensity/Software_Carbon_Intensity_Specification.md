@@ -215,14 +215,6 @@ You MAY use simple models to estimate embodied emissions; however, you SHOULD us
 ### Preset List for Baselines
 [placeholder]
 
-| Baseline Name / Identifier | Description | Value |
-| - | - | - |
-| Example | Example | Value |
-```
-Added as placeholder, as baselines are required for reporting.
-```
-
-
 ## Core Characteristics
 
 As the SCI specification matures and develops, these core characteristics MUST remain true.
