@@ -2,67 +2,6 @@
 
 This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 
-## References
-### Normative References
-
-<table>
-  <caption>Normative References </caption>
-  <tbody>
-    <tr>
-      <td><strong>[RFC2119]</strong></td>
-      <td>"Key words for use in RFCs to Indicate Requirement Levels", S. Bradner, March 1997, URL:http://www.ietf.org/rfc/rfc2119.txt</td>
-    </tr>
-    <tr>
-      <td><strong>[RFC5234]</strong></td>
-      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
-    </tr>
-  </tbody>
-</table>
-
-### Informative References
-
-|||
-| ----------- | ----------- |
-| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
-| **Principles of Green Software Engineering** | https://principles.green |
-
-## Terminology and Conventions
-### Conventions
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119].
-
-All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
-
-### Definitions
-
-<table>
-  <caption></caption>
-  <tbody>
-    <tr>
-	<td><strong>Marginal Carbon Intensity (I) </strong></td>
-	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
-    </tr>
-    <tr>
-	<td><strong>Carbon Delta (D)</strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
-    </tr>
-  </tbody>
-</table>
-
-Kindly consult [GSFDICT] for more definitions used in this document.
-
-### Abbreviations
-
-<table>
-<caption></caption>
-<tbody>
-  <tr>
-    <td>GSF</td>
-    <td>Green Software Foundation</td>
-  </tr>
-</tbody>
-</table>
-
 ## Introduction
 
 #### Problem Statement
@@ -77,6 +16,49 @@ The specification can be applied to any software to measure and reduce its carbo
 
 The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
 
+## Core Characteristics
+
+As the SCI specification matures and develops, these core characteristics MUST remain true.
+
+
+### The SCI is a score, not a total 
+
+### The SCI has a bias toward actions
+Strong bias to incentivise action towards reduction. The three actions that reduce carbon emissions of software are using less energy, using less hardware and using energy more intelligently (carbon awareness). The SCI is designed to encourage those actions.
+
+### The SCI is consequential not attributional
+We don't focus on identifying who is responsible for emitting carbon (attributional), if you can perform an action that has the consequence of reducing carbon emissions then you should perform that action (consequential)
+
+### The focus of the SCI is on reduction, not neutralisation
+You cannot reduce your score by buying Offsets, RECs, you can only reduce your score by emitting less carbon through using less energy, less hardware or using energy more intelligently.
+
+### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
+
+- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
+- If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
+
+### The SCI takes a systems-footprint view
+
+- The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
+- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+
+### The SCI is easy to implement
+
+To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
+
+- Anyone without much experience or training MUST be able to follow the SCI specification instructions.
+- Calculation of the SCI MUST be possible without incurring any cost, for instance, for data or services or tooling.
+- Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
+
+### The SCI encourages the use of granular data
+
+In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
+
+### Reporting the SCI value
+
+- You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
+- You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
+
 ## Software Sustainability Actions
 
 All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
@@ -87,28 +69,6 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 
 Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions. 
 
-## Software Boundary
-
-The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
-
-Supporting infrastructure and systems MAY include:
-- compute resources
-- storage
-- networking equipment
-- memory
-- monitoring
-- idle machines
-- logging
-- scanning
-- build and deploy pipelines
-- testing
-- training ML models
-- operations
-- backup
-- resources to support redundancy
-- resources to support failover
-
-The entity calculating software carbon intensity MUST report what is included within this boundary.  
 
 ## Methodology Summary 
 
@@ -207,45 +167,29 @@ You MUST include an estimate of all the embodied emissions for the hardware used
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
+## Software Boundary
 
-### Preset List for Baselines
-[placeholder]
+The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
 
-## Core Characteristics
+Supporting infrastructure and systems MAY include:
+- compute resources
+- storage
+- networking equipment
+- memory
+- monitoring
+- idle machines
+- logging
+- scanning
+- build and deploy pipelines
+- testing
+- training ML models
+- operations
+- backup
+- resources to support redundancy
+- resources to support failover
 
-As the SCI specification matures and develops, these core characteristics MUST remain true.
+The entity calculating software carbon intensity MUST report what is included within this boundary.  
 
-### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
-
-- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
-- If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
-
-### The SCI takes a systems-footprint view
-
-- The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
-
-### The SCI is easy to implement
-
-To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
-
-- Anyone without much experience or training MUST be able to follow the SCI specification instructions.
-- Calculation of the SCI MUST be possible without incurring any cost, for instance, for data or services or tooling.
-- Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
-
-### The SCI encourages the use of granular data
-
-In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
-
-### Reporting the SCI value
-
-- You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
-- You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
-
-
-## Boundaries 
-
-[placeholder]
 
 ## Exclusions
 
@@ -260,3 +204,64 @@ Because this standard lays out a consequential methodology for calculating the e
 
 ### Infrastructure Measures 
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+
+# References
+### Normative References
+
+<table>
+  <caption>Normative References </caption>
+  <tbody>
+    <tr>
+      <td><strong>[RFC2119]</strong></td>
+      <td>"Key words for use in RFCs to Indicate Requirement Levels", S. Bradner, March 1997, URL:http://www.ietf.org/rfc/rfc2119.txt</td>
+    </tr>
+    <tr>
+      <td><strong>[RFC5234]</strong></td>
+      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
+    </tr>
+  </tbody>
+</table>
+
+### Informative References
+
+|||
+| ----------- | ----------- |
+| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
+| **Principles of Green Software Engineering** | https://principles.green |
+
+## Terminology and Conventions
+### Conventions
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119].
+
+All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
+
+### Definitions
+
+<table>
+  <caption></caption>
+  <tbody>
+    <tr>
+	<td><strong>Marginal Carbon Intensity (I) </strong></td>
+	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
+    </tr>
+    <tr>
+	<td><strong>Carbon Delta (D)</strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
+    </tr>
+  </tbody>
+</table>
+
+Kindly consult [GSFDICT] for more definitions used in this document.
+
+### Abbreviations
+
+<table>
+<caption></caption>
+<tbody>
+  <tr>
+    <td>GSF</td>
+    <td>Green Software Foundation</td>
+  </tr>
+</tbody>
+</table>
