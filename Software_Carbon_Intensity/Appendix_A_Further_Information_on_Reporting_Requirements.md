@@ -11,7 +11,7 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 | Name | Identifier | Optionality | Format | Notes |
 | - | - | - | - | - |
 | Supporting infrastructure and systems contained within the [Software Boundary](Software_Carbon_Intensity_Specification#software-boundary) | sci/software-boundary | MUST | Text | A description of the software boundary for the entity. |
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `CI`| sci/ci | MUST | Numeric | The [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) of the entity itself.
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `SCI`| sci/sci | MUST | Numeric | The [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) of the entity itself.
 | [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
 | [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
 | [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline value| sci/r | MUST | Numeric |
@@ -22,7 +22,7 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 | Contact email | metadata/contact-email | MUST | Text | The point of contact responsible and accountable for the report. |
 | Organization | metadata/organization | SHOULD | Text | This SHALL be populated where the report is not by an individual contributor, otherwise it is not required. |
 | GUID | metadata/guid | MUST | GUID | Following a format in [RFC4122], provided to uniquely identify this particular product, resource, or service. |
-| Software or Product Version | metadata/entity-version | MAY | Text | |
+| Software or Product Version | metadata/entity-version | MUST | Text | |
 | SCI Specification Version | metadata/sci-version | MUST | Numeric | The version of the SCI specification against which this report is being made. |
 | Date of Calculation | metadata/calculation-date | MUST | Date | Following a format described in [RFC3339], [a subset](https://ijmacd.github.io/rfc3339-iso8601/) of ISO 8601 |
 | Further information on calculation | metadata/calculation-information | MAY | Text | More information on your calculation methodology can be provided as freetext, or as a URL to an external document or software repository. |
