@@ -30,7 +30,7 @@ The SCI cannot be reduced by buying Offsets, RECs, it can only be reduced by emi
 
 ### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
 
-- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, [software sustainability actions](#software sustainability actions)
+- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under the [actions](#actions) section.
 - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
 
 ### The SCI takes a systems-footprint view
@@ -55,7 +55,7 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
-## Software Sustainability Actions
+## Actions
 
 All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
 
@@ -163,7 +163,7 @@ You MUST include an estimate of all the embodied emissions for the hardware used
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
-## Software Boundary
+## Boundaries
 
 The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
 
