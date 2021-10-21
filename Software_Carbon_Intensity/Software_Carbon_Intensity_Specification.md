@@ -112,7 +112,7 @@ The entity calculating software carbon intensity MUST report what is included wi
 
 ## Methodology Summary 
 
-The SCI is a rate, carbon emissions per one unit of `R`. The equation used to calculate the Software Carbon Intensity (SCI) of a software system is:
+The Software Carbon Intensity (SCI) is a rate, carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
 
 `SCI = ((E * I) + M) per R`
 
