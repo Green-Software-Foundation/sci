@@ -140,7 +140,7 @@ And once more this can be further refined into:
 
 Where:
 
-- `C = O + M` = Total amount of carbon the software is emitting over a time period.
+- `C = O + M` = Amount of carbon the software is emitting.
 
 ### Operational Emissions  (`O`) 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
