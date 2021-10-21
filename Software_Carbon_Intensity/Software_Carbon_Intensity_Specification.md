@@ -268,13 +268,13 @@ You MAY link to a human readable representation of your report in the further in
 This human-readable representation SHALL live outside the GSF, and MAY be referenced in the metadata for your report.
 
 ### Report structure and required data elements
-The data elements have mandatory key names, which can be found in Appendix A, along with examples of validly formed YAML reporting files .
+The data elements have mandatory key names, [which can be found in Appendix A, along with examples of validly formed YAML reporting files](Appendix_A_Further_Information_on_Reporting_Requirements.md).
 #### Mandatory reporting elements
 - Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary).
 - The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
   - `SCI` MUST be reported.
-  - The `R` baseline used MUST be reported.
-  - If the `R` baseline used was not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided.
+  - `R` value MUST be reported.
+  - The `R` baseline used MUST be reported - either from the [pre-set list](#preset-list-for-baselines) for baselines, or a similar baseline.
 - Metadata for the SCI value being reported.
   - Product name MUST be reported.
   - Contact details, including a name and email, for a point of contact responsible for the report MUST be provided.
@@ -283,9 +283,7 @@ The data elements have mandatory key names, which can be found in Appendix A, al
   - The version of the SCI specification which you are reporting against MUST be provided.
   -  A software version for the software product about which this report is made, MUST be provided.
 #### Optional reporting requirements
-- The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-  - `C` SHOULD be reported, but where it is not reported, a reason MUST be provided.
 - Metadata for the SCI value being reported.
   -  Organization SHOULD be provided, where the report is not by an individual contributor.
   -  More information on your calculation methodology MAY be provided, as a freetext comment.
-  -  More information on your report MAY be provided, as a URL linking to an external document or software repository.
+  -  More information on your report MAY be provided, and this MUST be a URL to an external document or software repository.

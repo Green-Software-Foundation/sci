@@ -12,11 +12,8 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 | - | - | - | - | - |
 | Supporting infrastructure and systems contained within the [Software Boundary](Software_Carbon_Intensity_Specification#software-boundary) | sci/software-boundary | MUST | Text | A description of the software boundary for the entity. |
 | [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `SCI`| sci/sci | MUST | Numeric | The [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) of the entity itself.
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline value| sci/r | MUST | Numeric |
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline source| sci/r-source | MUST | Text | The text should refer to one of the identifiers in the [pre-set list](Software_Carbon_Intensity_Specification#preset-list-for-baselines). If it does not, then a freetext comment SHALL be added in `sci/r-source-comment`. |
-| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - reason for not selecting `R` baseline from provided items| sci/r-source-comment | SHALL | Text | This item SHALL be provided, only where the `sci/r-source` element does not contain one of the identifiers in the [pre-set list](Software_Carbon_Intensity_Specification#preset-list-for-baselines). |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline value | sci/r | MUST | Numeric |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline source| sci/r-source | MUST | Text | The text CAN refer to one of the identifiers in the [pre-set list](Software_Carbon_Intensity_Specification#preset-list-for-baselines), but it can also refer to a similar concept. |
 | Product Name, entity name, or Software Product | metadata/name | MUST | Text | |
 | Contact name | metadata/contact-name | MUST | Text | The point of contact responsible and accountable for the report. |
 | Contact email | metadata/contact-email | MUST | Text | The point of contact responsible and accountable for the report. |
@@ -28,16 +25,15 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 | Further information on calculation | metadata/calculation-information | MAY | Text | More information on your calculation methodology can be provided as freetext, or as a URL to an external document or software repository. |
 | Further information on report | metadata/report-information-url | MAY | URL | More information on your calculation methodology MAY be provided, and this MUST be a URL to an external document or software repository.  |
 
-## YAML File Examples
+## YAML File Example
 
-### 1. Generic Example where baseline was selected
+### 1. Generic Example without an additional report
 File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
 
 ```yaml
 sci:
   software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
-  ci: 0.5
-  c: 5
+  sci: 0.5
   r: 1
   r-source: machine-learning-baseline
 metadata:
@@ -52,14 +48,13 @@ metadata:
   calculation-information: 'https://github.com/Green-Software-Foundation/software_carbon_intensity'
 
 ```
-### 2. Where C is missing
+### 2. Generic Example with an additional report
 File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
 
 ```yaml
 sci:
   software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
-  ci: 0.5
-  c-missing-comment: A compelling and descriptive reason for why C is missing.
+  sci: 0.5
   r: 1
   r-source: machine-learning-baseline
 metadata:
@@ -72,23 +67,23 @@ metadata:
   sci-version: 1.0
   calculation-date: '2021-10-20'
   calculation-information: 'https://github.com/Green-Software-Foundation/software_carbon_intensity'
+  report-information-url: 'https://github.com/Green-Software-Foundation/software_carbon_intensity'
 
 ```
-### 3. Where a pre-provided baseline was not selected
+
+### 3. Generic Example by an individual contributor
 File name: `25c78b6d-b049-424d-87c1-28f07e41bb23/report.yaml`
+
 ```yaml
 sci:
   software-boundary: 'The software boundary of this report is limited to a single markdown file, as it is provided for example only.'
-  ci: 0.5
-  c: 5
+  sci: 0.5
   r: 1
-  r-source: another-source
-  r-source-comment: 'A baseline was not selected, for the purpose of example.'
+  r-source: machine-learning-baseline
 metadata:
   name: Example Report
-  contact-name: Responsible Point of Contact
+  contact-name: Individual Point of Contact
   contact-email: report-example@greensoftware.foundation
-  organization: GSF
   guid: 25c78b6d-b049-424d-87c1-28f07e41bb23
   entity-version: '0.1'
   sci-version: 1.0
