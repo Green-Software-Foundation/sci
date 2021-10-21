@@ -10,13 +10,13 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 
 | Name | Identifier | Optionality | Format | Notes |
 | - | - | - | - | - |
-| Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary) | sci/software-boundary | MUST | Text | A description of the software boundary for the entity. |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `CI`| sci/ci | MUST | Numeric | The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-| [Software Carbon Intensity](#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `R` baseline value| sci/r | MUST | Numeric |
-| [Software Carbon Intensity](#reporting-the-sci-value) - `R` baseline source| sci/r-source | MUST | Text | The text should refer to one of the identifiers in the [pre-set list](#preset-list-for-baselines). If it does not, then a freetext comment SHALL be added in `sci/r-source-comment`. |
-| [Software Carbon Intensity](#reporting-the-sci-value) - reason for not selecting `R` baseline from provided items| sci/r-source-comment | SHALL | Text | This item SHALL be provided, only where the `sci/r-source` element does not contain one of the identifiers in the [pre-set list](#preset-list-for-baselines). |
+| Supporting infrastructure and systems contained within the [Software Boundary](Software_Carbon_Intensity_Specification#software-boundary) | sci/software-boundary | MUST | Text | A description of the software boundary for the entity. |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `CI`| sci/ci | MUST | Numeric | The [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) of the entity itself.
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C`| sci/c | SHOULD | Numeric | Where `C` is not reported, a reason MUST be provided |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `C` comment where not provided | sci/c-missing-comment | SHALL | Text | This item SHALL be provided, only where the `sci/c` element is missing. It should describe the reason why `c` is missing. |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline value| sci/r | MUST | Numeric |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - `R` baseline source| sci/r-source | MUST | Text | The text should refer to one of the identifiers in the [pre-set list](Software_Carbon_Intensity_Specification#preset-list-for-baselines). If it does not, then a freetext comment SHALL be added in `sci/r-source-comment`. |
+| [Software Carbon Intensity](Software_Carbon_Intensity_Specification#reporting-the-sci-value) - reason for not selecting `R` baseline from provided items| sci/r-source-comment | SHALL | Text | This item SHALL be provided, only where the `sci/r-source` element does not contain one of the identifiers in the [pre-set list](Software_Carbon_Intensity_Specification#preset-list-for-baselines). |
 | Product Name, entity name, or Software Product | metadata/name | MUST | Text | |
 | Contact name | metadata/contact-name | MUST | Text | The point of contact responsible and accountable for the report. |
 | Contact email | metadata/contact-email | MUST | Text | The point of contact responsible and accountable for the report. |
