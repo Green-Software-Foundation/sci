@@ -26,7 +26,7 @@ The following list contains the REQUIRED and OPTIONAL data elements to be report
 | SCI Specification Version | metadata/sci-version | MUST | Numeric | The version of the SCI specification against which this report is being made. |
 | Date of Calculation | metadata/calculation-date | MUST | Date | Following a format described in [RFC3339], [a subset](https://ijmacd.github.io/rfc3339-iso8601/) of ISO 8601 |
 | Further information on calculation | metadata/calculation-information | MAY | Text | More information on your calculation methodology can be provided as freetext, or as a URL to an external document or software repository. |
-| Further information on report | metadata/report-information-url | MAY | URL | More information on your calculation methodology may be provided, and this SHALL be a URL to an external document or software repository.  |
+| Further information on report | metadata/report-information-url | MAY | URL | More information on your calculation methodology MAY be provided, and this MUST be a URL to an external document or software repository.  |
 
 ## YAML File Examples
 
