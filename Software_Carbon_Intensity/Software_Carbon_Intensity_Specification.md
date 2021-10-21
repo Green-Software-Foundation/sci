@@ -19,26 +19,26 @@ The target audience for this are technical stakeholders (e.g. software architect
 
 As the SCI specification matures and develops, these core characteristics MUST remain true.
 
-### The SCI is a score, not a total 
+#### The SCI is a score, not a total 
 The SCI is designed to encourage those actions that help reduce the score. The three actions that reduce carbon emissions of software are using less energy, using less hardware and using energy more intelligently (carbon awareness). 
 
-### The SCI is consequential, not attributional
+#### The SCI is consequential, not attributional
 If an action can be performed that has the consequence of reducing carbon emissions, then it should be performed (consequential). The SCI does not focus identifying who is responsible for emitting carbon (attributional). 
 
-### The focus of the SCI is on reduction, not neutralisation
+#### The focus of the SCI is on reduction, not neutralisation
 The SCI cannot be reduced by buying Offsets, RECs, it can only be reduced by emitting less carbon 
 
-### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
+#### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
 
 - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under the [actions](#actions) section.
 - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
 
-### The SCI takes a systems-footprint view
+#### The SCI takes a systems-footprint view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
 - Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
 
-### The SCI is easy to implement
+#### The SCI is easy to implement
 
 To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
 
@@ -46,11 +46,11 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 - Calculation of the SCI MUST be possible without incurring any cost, for instance, for data or services or tooling.
 - Where possible, teams SHOULD consider investing more time or money in calculating their SCI number to increase its accuracy.
 
-### The SCI encourages the use of granular data
+#### The SCI encourages the use of granular data
 
 In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
 
-### Reporting the SCI value
+#### Reporting the SCI value
 
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
