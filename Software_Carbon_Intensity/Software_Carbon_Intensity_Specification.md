@@ -124,7 +124,7 @@ Where:
 
 - `M` = Embodied emissions of a software system
 
-- `R` = Baseline as a denominator (e.g. carbon per additional user, API-call, ML job, etc) 
+- `R` = Baseline (e.g. carbon per additional user, API-call, ML job, etc) 
 
 The equation can be further refined to 
 
