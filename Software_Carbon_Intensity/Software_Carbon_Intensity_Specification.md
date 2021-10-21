@@ -258,6 +258,8 @@ Kindly consult [GSFDICT] for more definitions used in this document.
   <tr>
     <td>GSF</td>
     <td>Green Software Foundation</td>
+  </tr>
+  <tr>
     <td>SCI</td>
     <td>Software Carbon Intensity</td>
   </tr>
