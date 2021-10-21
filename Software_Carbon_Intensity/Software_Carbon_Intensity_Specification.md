@@ -1,8 +1,7 @@
-## Scope
+## Introduction
+#### Scope
 
 This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
-
-## Introduction
 
 #### Problem Statement
 
@@ -20,21 +19,18 @@ The target audience for this are technical stakeholders (e.g. software architect
 
 As the SCI specification matures and develops, these core characteristics MUST remain true.
 
-
 ### The SCI is a score, not a total 
+The SCI is designed to encourage those actions that help reduce the score. The three actions that reduce carbon emissions of software are using less energy, using less hardware and using energy more intelligently (carbon awareness). 
 
-### The SCI has a bias toward actions
-Strong bias to incentivise action towards reduction. The three actions that reduce carbon emissions of software are using less energy, using less hardware and using energy more intelligently (carbon awareness). The SCI is designed to encourage those actions.
-
-### The SCI is consequential not attributional
-We don't focus on identifying who is responsible for emitting carbon (attributional), if you can perform an action that has the consequence of reducing carbon emissions then you should perform that action (consequential)
+### The SCI is consequential, not attributional
+If an action can be performed that has the consequence of reducing carbon emissions, then it should be performed (consequential). The SCI does not focus identifying who is responsible for emitting carbon (attributional). 
 
 ### The focus of the SCI is on reduction, not neutralisation
-You cannot reduce your score by buying Offsets, RECs, you can only reduce your score by emitting less carbon through using less energy, less hardware or using energy more intelligently.
+The SCI cannot be reduced by buying Offsets, RECs, it can only be reduced by emitting less carbon 
 
 ### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
 
-- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
+- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, [software sustainability actions](#software sustainability actions)
 - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
 
 ### The SCI takes a systems-footprint view
