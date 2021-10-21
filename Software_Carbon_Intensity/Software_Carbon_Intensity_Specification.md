@@ -280,7 +280,7 @@ The data elements have mandatory key names, which can be found in Appendix A, al
 #### Mandatory reporting elements
 - Supporting infrastructure and systems contained within the [Software Boundary](#software-boundary).
 - The [Software Carbon Intensity](#reporting-the-sci-value) of the entity itself.
-  - `CI` MUST be reported.
+  - `SCI` MUST be reported.
   - The `R` baseline used MUST be reported.
   - If the `R` baseline used was not selected from the [pre-set list](#preset-list-for-baselines) for baselines, then a reason for that choice MUST be provided.
 - Metadata for the SCI value being reported.
