@@ -108,8 +108,6 @@ Supporting infrastructure and systems MAY include:
 - resources to support redundancy
 - resources to support failover
 
-The entity calculating software carbon intensity MUST report what is included within this boundary.  
-
 ## Methodology Summary 
 
 This standard can be used to calculate the real-world emissions associated with software by measuring the total change in global emissions associated with a particular piece of software.
@@ -236,12 +234,6 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 ### The SCI encourages the use of granular data
 
 In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
-
-### Reporting the SCI value
-
-- You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
-- You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
-
 
 ## Boundaries 
 
