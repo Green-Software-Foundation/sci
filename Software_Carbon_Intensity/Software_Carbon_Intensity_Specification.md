@@ -6,7 +6,7 @@ This document, the Software Carbon Intensity technical specification, describes 
 
 ### Version Alpha
 
-The goal of the alpha release of the Software Carbon Intensity (SCI) Specification is to agree on a baseline understanding of how to calculate an SCI score. The core characteristics, exclusions, software boundaries, and the methodology associated with the calculation. The intention is to gather feedback through the application of the SCI to various case studies and use cases.
+The goal of the Alpha release of the Software Carbon Intensity (SCI) Specification is to agree on a baseline understanding of how to calculate an SCI score. The core characteristics, exclusions, software boundaries, and the methodology associated with the calculation. The intention is to gather feedback through the application of the SCI to various case studies and use cases.
 
 Alpha signals that we are ready for early feedback, that this is not the final version and that this will change based on the feedback. It’s a milestone on the journey to 1.0.
 
