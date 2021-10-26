@@ -65,17 +65,25 @@ Kindly consult [GSFDICT] for more definitions used in this document.
 
 ## Introduction
 
-#### Problem Statement
+> "If you can't measure it, you can't improve it." - Peter Drucker
 
-The purpose of this specification will be to enable standardization across industry empowering individuals and organizations to make more informed choices in the software solutions that they pick. This solves the problem of incompatible and opaque metrics that are potentially _gameable_ today making it difficult for the end-consumer to make a choice that is aligned with what they are looking for in terms of meeting their environmental goals when purchasing / using software solutions. It will also help developers and users compare one software solution offering against another on environmental impacts.
+The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
 
-#### Applications Of This Specification
+The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud. 
 
-The specification can be applied to any software to measure and reduce its carbon emissions by creating a standardized and practical methodology. 
+Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score ([see exclusions section](#exclusions)).
 
-#### Target Audience
+The SCI encourages calculation using granular real-world data, which is challenging to obtain in some of these environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources required to calculate the SCI at lower resolutions and will provide tools and guidance for getting this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your suppliers (be they hardware, hosting or other) and requesting it.
 
-The target audience for this are technical stakeholders (e.g. software architects, developers, and maintainers) who ideally can use this as a methodology so that they can understand the characteristics of their software solution and minimize the associated emissions.
+Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
+
+The steps required to calculate and report an SCI score are:
+
+1. **What**: Decide on the software boundary, i.e. the components of a software system to include.
+1. **Scale**: The SCI is a rate, carbon emissions per one functional unit. The next step is to pick the functional unit which best describes how the application scales. 
+1. **How**: For each software component listed in the software boundary, decide on the measurement method, real-world measurements based on telemetry, or lab-based measurements based on models.
+1. **Measure**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
+1. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
 
 ## Software Sustainability Actions
 
@@ -143,17 +151,17 @@ Where:
 - `C = O + M` = Amount of carbon the software is emitting.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates should be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates SHOULD be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy Measurement (`E`) 
-This is a measurement of the energy consumed by a given piece of software for a given task. This must be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
+This is a measurement of the energy consumed by a given piece of software for a given task. This MUST be a measurement of energy consumption in kilowatt hours (kWh) of all supporting infrastructure and systems. This could be applied to several taxonomies:  
 - Datacenter
 - Individual machine (e.g. VM/Node)
 - Individual service (e.g. API call, ML training job)
 - Execution of code 
 
 #### Location-Based Marginal Carbon Intensity Measurement (`I`)
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh. This requires 'Marginal' carbon (defined above), and This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed, for a standard unit of gCO2eq/kWh. This requires 'Marginal' carbon (defined above), and this is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
 Location-based measures the grid carbon intensity (annual average) of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims. 
 
@@ -196,8 +204,22 @@ You MUST include an estimate of all the embodied emissions for the hardware used
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
-### Preset List for Baselines
-[placeholder]
+### Preset List for Functional Units (R)
+Your choice of functional unit describes how your application scales. For instance if your application scales by User then pick a functional unit of User.
+	
+	A suggested list of functional units includes:
+- API call/request 
+- Benchmark 
+- User
+- Machine
+- Minute/time unit
+- Device
+- Physical site
+- Data volume
+- Batch/Scheduled Job 
+- Transaction
+- Database read/write
+
 
 ### Lab-based alternatives to Real-world measurements
 The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
@@ -219,7 +241,7 @@ As the SCI specification matures and develops, these core characteristics MUST r
 - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI MUST be sensitive to those actions described in this document under **Software Sustainability Actions**, precisely carbon awareness, energy efficiency, or hardware efficiency.
 - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X MUST go down.
 
-### The SCI takes a systems-footprint view
+### The SCI takes a systems-impact view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
 - Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
@@ -241,14 +263,9 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
 
-
-## Boundaries 
-
-[placeholder]
-
 ## Exclusions
 
-Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following must not be included in the calculation: 
+Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the following MUST NOT be included in the calculation: 
 
 ### Market-based Measures 
 **“Market-based measures"** are achieved through renewables matching (e.g. PPA for solar near a datacenter) that helps lower the grid carbon intensity for everyone in the area. From a carbon accounting perspective PPAs, RECs etc can allow datacenters to get to “100% renewable”, even if the grid is not 100% renewable 24x7 from a grid perspective. Market-based measures includes, but is not limited to the following: 
