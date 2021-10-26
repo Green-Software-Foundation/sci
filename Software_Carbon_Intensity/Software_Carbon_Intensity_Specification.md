@@ -218,7 +218,7 @@ Acceptable baselines include:
 - Device
 - Physical site
 - Data volume
-- Job 
+- Batch/Scheduled Job 
 - Transaction
 - Database read/write
 
