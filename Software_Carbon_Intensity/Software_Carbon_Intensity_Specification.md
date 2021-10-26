@@ -80,7 +80,7 @@ Suppose, there is a lack of access, capability, or rights to the necessary real-
 The steps required to calculate and report an SCI score are:
 
 1. **What**: Decide on the software boundary, i.e. the components of a software system to include.
-1. **Scale**: The SCI is a rate, carbon emissions per one unit of a baseline called `R`. The next step is to pick the baseline which best describes how the application scales. 
+1. **Scale**: The SCI is a rate, carbon emissions per one functional unit. The next step is to pick the functional unit which best describes how the application scales. 
 1. **How**: For each software component listed in the software boundary, decide on the measurement method, real-world measurements based on telemetry, or lab-based measurements based on models.
 1. **Measure**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
 1. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
