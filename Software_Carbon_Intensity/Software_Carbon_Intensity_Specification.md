@@ -116,8 +116,6 @@ Supporting infrastructure and systems MAY include:
 - resources to support redundancy
 - resources to support failover
 
-The entity calculating software carbon intensity MUST report what is included within this boundary.  
-
 ## Methodology Summary 
 
 The Software Carbon Intensity (SCI) is a rate, carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
@@ -258,10 +256,13 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 
 In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
 
+
+
 ### Reporting the SCI value
 
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
 - You SHOULD use a value for `R` from the specified [preset list](#preset-list-for-baselines) to compute `CI` but if you choose to use another value for `R`, you MUST provide a reason for that choice.
+
 
 ## Exclusions
 
