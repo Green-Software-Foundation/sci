@@ -209,7 +209,9 @@ You MAY use simple models to estimate embodied emissions; however, you SHOULD us
 
 
 ### Preset List for Functional Units (R)
-Acceptable baselines include:
+Your choice of functional unit describes how your application scales. For instance if your application scales by User then pick a functional unit of User.
+	
+	A suggested list of functional units includes:
 - API call/request 
 - Benchmark 
 - User
