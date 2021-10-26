@@ -208,7 +208,7 @@ You MUST include an estimate of all the embodied emissions for the hardware used
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
 
 
-### Preset List for Baselines (R)
+### Preset List for Functional Units (R)
 Acceptable baselines include:
 - API call/request 
 - Benchmark 
