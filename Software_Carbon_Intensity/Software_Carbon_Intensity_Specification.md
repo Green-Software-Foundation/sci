@@ -220,7 +220,6 @@ Acceptable baselines include:
 - Data volume
 - Job 
 - Transaction
-- Mining activity
 - Database read/write
 
 ## Core Characteristics
