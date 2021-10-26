@@ -238,6 +238,11 @@ Or, you MAY model what one unit of `R` looks like and measure the total `C` for 
 
 You MAY need to use a mixture of both for some components in your application using real-world measurements and for others using a lab-based model of `R`. However, you MUST use a consistent choice of `R` across all your components.
 
+### Comparing a SCI Score to a Baseline
+When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an indentical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
+
+[placeholder]
+
 ## Core Characteristics
 
 As the SCI specification matures and develops, these core characteristics MUST remain true.
