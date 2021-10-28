@@ -10,66 +10,6 @@ The goal of the Alpha release of the Software Carbon Intensity (SCI) Specificati
 
 Alpha signals that we are ready for early feedback, that this is not the final version and that this will change based on the feedback. It’s a milestone on the journey to 1.0.
 
-## References
-### Normative References
-
-<table>
-  <caption>Normative References </caption>
-  <tbody>
-    <tr>
-      <td><strong>[RFC2119]</strong></td>
-      <td>"Key words for use in RFCs to Indicate Requirement Levels", S. Bradner, March 1997, URL:http://www.ietf.org/rfc/rfc2119.txt</td>
-    </tr>
-    <tr>
-      <td><strong>[RFC5234]</strong></td>
-      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
-    </tr>
-  </tbody>
-</table>
-
-### Informative References
-
-|||
-| ----------- | ----------- |
-| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
-| **Principles of Green Software Engineering** | https://principles.green |
-
-## Terminology and Conventions
-### Conventions
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119].
-
-All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
-
-### Definitions
-
-<table>
-  <caption></caption>
-  <tbody>
-    <tr>
-	<td><strong>Marginal Carbon Intensity (I) </strong></td>
-	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
-    </tr>
-    <tr>
-	<td><strong>Carbon Delta (D)</strong></td>
-	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
-    </tr>
-  </tbody>
-</table>
-
-Kindly consult [GSFDICT] for more definitions used in this document.
-
-### Abbreviations
-
-<table>
-<caption></caption>
-<tbody>
-  <tr>
-    <td>GSF</td>
-    <td>Green Software Foundation</td>
-  </tr>
-</tbody>
-</table>
 
 ## Introduction
 
@@ -85,6 +25,7 @@ The SCI encourages calculation using granular real-world data, which is challeng
 
 Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
 
+## Steps to calculate and report
 The steps required to calculate and report an SCI score are:
 
 1. **What**: Decide on the software boundary, i.e. the components of a software system to include.
@@ -269,7 +210,6 @@ To achieve impact at scale, the SCI needs to encourage adoption through ease of 
 In calculating the SCI value, you SHOULD use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values SHALL be used which are the lowest acceptable level of granularity.
 
 
-
 ### Reporting the SCI value
 
 - You MUST report the `CI` value and you SHOULD report the `C` value but if you are unable to report the `C` value, you MUST provide a reason for why you are unable to do so.
@@ -289,3 +229,64 @@ Because this standard lays out a consequential methodology for calculating the e
 
 ### Infrastructure Measures 
 **“Infrastructure measures”** including any infrastructure that integrate renewables via a "direct wire connection" (e.g. a datacenter with solar panels on the roof and a battery storage located onsite). This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+
+### Definitions
+
+<table>
+  <caption></caption>
+  <tbody>
+    <tr>
+	<td><strong>Marginal Carbon Intensity (I) </strong></td>
+	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
+    </tr>
+    <tr>
+	<td><strong>Carbon Delta (D)</strong></td>
+	<td>Carbon difference between an initial and modified carbon intensity. This is an optional parameter used to capture a "what if", by comparing a real number against another situation. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %</td>
+    </tr>
+  </tbody>
+</table>
+
+Kindly consult [GSFDICT] for more definitions used in this document.
+
+### Abbreviations
+
+<table>
+<caption></caption>
+<tbody>
+  <tr>
+    <td>GSF</td>
+    <td>Green Software Foundation</td>
+  </tr>
+</tbody>
+</table>
+
+## References
+### Normative References
+
+<table>
+  <caption>Normative References </caption>
+  <tbody>
+    <tr>
+      <td><strong>[RFC2119]</strong></td>
+      <td>"Key words for use in RFCs to Indicate Requirement Levels", S. Bradner, March 1997, URL:http://www.ietf.org/rfc/rfc2119.txt</td>
+    </tr>
+    <tr>
+      <td><strong>[RFC5234]</strong></td>
+      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
+    </tr>
+  </tbody>
+</table>
+
+### Informative References
+
+|||
+| ----------- | ----------- |
+| **[GSFDICT]** | https://github.com/Green-Software-Foundation/Dictionary |
+| **Principles of Green Software Engineering** | https://principles.green |
+
+## Terminology and Conventions
+### Conventions
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119].
+
+All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
