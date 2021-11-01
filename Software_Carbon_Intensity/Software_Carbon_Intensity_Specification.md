@@ -214,7 +214,6 @@ You MAY use simple models to estimate embodied emissions; however, you SHOULD us
 ### Comparing a SCI Score to a Baseline
 When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an indentical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
 
-[placeholder]
 
 ## Core Characteristics
 
