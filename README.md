@@ -6,7 +6,7 @@ Created and managed by the [Standards Working Group](https://github.com/Green-So
 
 
 ## Project Scope
-This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-wold, physical emissions reductions, also known as abatement.
+This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 
 Electricity has a carbon intensity depending on where and when it is consumed. An intensity is a rate. It has a numerator and a denominator. A rate provides you with helpful information when considering the growth of a software product. This specification describes the carbon intensity of a software application or service.
 
@@ -21,7 +21,7 @@ The recommended approach for getting invlved with the specification is to:
 - Read the [development version](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md) of the specification.
 - Raise an issue, question, recommendation in the issues tab above and start a discussion with other members.
 - Once a form of agreement has been reached, then raise a pull request to update the specification with your recommended changes.
-- Let others know about you pull request by either commenting on the relevant issue or posting in the Standards Working Group slack channel.
+- Let others know about your pull request by either commenting on the relevant issue or posting in the Standards Working Group slack channel.
 - Pull requests are reviewed and merged during Standards Working Group meetings.
 - Only chairs of the Standards Working Group can merge pull requests.
 
