@@ -1,6 +1,6 @@
 # Software Carbon Intensity (SCI) Specification [CURRENTLY IN DRAFT]
 
-A specification that descibes how to calculate a carbon intensity for software applications. 
+A specification that describes how to calculate a carbon intensity for software applications. 
 
 Created and managed by the [Standards Working Group](https://github.com/Green-Software-Foundation/standards_wg) in the [greensoftware.foundation](https://greensoftware.foundation).
 
