@@ -171,7 +171,7 @@ Your choice of functional unit describes how your application scales. For instan
 ### Lab-based alternatives to Real-world measurements
 The goal is to calculate how much `C` is emitted per **one unit** of `R`. This is the carbon intensity of your software with respect to `R`.
 
-First, you decide on your baseline unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
+First, you decide on your functional unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`. 
 
 You MAY achieve this by measuring the total real-world carbon emissions of your component `C` over a time period and dividing by the number of `R` units in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
 
