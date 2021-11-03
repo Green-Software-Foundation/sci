@@ -42,8 +42,6 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 - **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
 - **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
-Carbon aware software will optimize the timing and location of operation to minimize emissions associated with operation. This could consist of moving computation to regions with cleaner grid emissions or delaying jobs to cleaner periods (or a combination of both). Energy efficient software will also run on hardware that requires less energy to operate or the software can be re-architected to require less energy to execute. All combined, these effects are reflected in the total operational emissions. 
-
 ## Software Boundary
 
 The calculation of software carbon intensity MUST include all supporting infrastructure and systems that significantly contributes to the software operation. 
