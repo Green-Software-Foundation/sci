@@ -196,8 +196,6 @@ The third step in generating your SCI score is deciding the approach to take whe
 
 We strongly advise speaking to your suppliers (be they hardware, hosting, or other) and requesting the data you need in the resolution you require for quantifying your SCI score.
 
-Alternatively, your choice to measure or calculate is informed by whether you have the *capability* and the *rights* to make the measurements yourself. To measure real-world data requires a capability, for example, root access to the operating system to install tooling or physical access to the hardware. Gathering data from those measurements to a centralized hub for processes also requires rights, for example, retrieving granular carbon intensity information from a client application would need the rights to the GPS location of the user.
-
 ### Measurement
 
 You MAY quantify carbon emissions by measuring the total real-world carbon emissions of your component (`C`) over a time period and dividing by the number of functional units (`R`) in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
