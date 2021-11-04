@@ -77,7 +77,7 @@ Where:
 - `C = O + M` = Amount of carbon the software is emitting.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. Because this standard uses a consequential approach, marginal emissions rates SHOULD be used for electricity consumption. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
 
 #### Energy (`E`)
 
@@ -95,6 +95,8 @@ This could be applied to several taxonomies:
 The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed.
 
 This MUST be in grams of carbon per kilowatt hours (gCO2eq/kWh).
+
+Because this standard uses a consequential approach, marginal emissions rates MUST be used for electricity consumption.
 
 Location-based measures the grid carbon intensity of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims.
 
