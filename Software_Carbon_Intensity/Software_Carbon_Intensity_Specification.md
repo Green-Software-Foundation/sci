@@ -164,7 +164,7 @@ Supporting infrastructure and systems MAY include:
 - resources to support redundancy
 - resources to support failover
 
-## Functional Unit
+## Functional Unit (`R`)
 
 The second step in generating your SCI score is deciding your functional unit. Your choice of functional unit describes how your application scales. First, you decide on your functional unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`.
 
