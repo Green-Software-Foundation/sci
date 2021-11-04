@@ -81,9 +81,7 @@ To calculate the operational emissions associate with software, multiply the ele
 
 #### Energy (`E`)
 
-This is the energy consumed by a software system for a functional unit of work. 
-
-This MUST be in kilowatt hours (kWh).
+This is the energy consumed by a software system for a functional unit of work. This MUST be in kilowatt hours (kWh).
 
 This could be applied to several taxonomies:  
 
