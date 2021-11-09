@@ -194,8 +194,6 @@ There are two main approaches to quantifying carbon emissions (`C`), [measuremen
 
 Each component in your software boundary MAY use either measurement or calculation to quantify the carbon emissions.
 
-The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
-
 We strongly advise speaking to your suppliers (be they hardware, hosting, or other) and requesting the data you need in the resolution you require for quantifying your SCI score.
 
 ### Measurement
