@@ -1,12 +1,12 @@
 ---
 title: "Software Carbon Intensity Specification"
 status: "Draft"
-version: "1.0"
+version: "Alpha"
 organisationName: "Green Software Foundation"
-date: "2021-11-01"
+date: "2021-11-11"
 copyrightDate: "2021"
 logo: "images/GSF_logo.png"
-documentName: "Software_Carbon_Intensity_Specification-V1_0"
+documentName: "Software_Carbon_Intensity_Specification-Alpha"
 files:
   - License.md
   - Software_Carbon_Intensity_Specification.md
