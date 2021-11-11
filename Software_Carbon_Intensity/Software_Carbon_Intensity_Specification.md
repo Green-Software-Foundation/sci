@@ -77,7 +77,7 @@ Where:
 - `C = O + M` = Amount of carbon the software is emitting.
 
 ### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associcated with a change in demand. 
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand. 
 
 #### Energy (`E`)
 
@@ -102,7 +102,7 @@ Location-based measures the grid carbon intensity of a regional balancing author
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
-### Embodied Emissions  (`M`)
+### Embodied Emissions (`M`)
 
 Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
 
@@ -168,7 +168,7 @@ Supporting infrastructure and systems MAY include:
 
 The second step in generating your SCI score is deciding your functional unit. Your choice of functional unit describes how your application scales. First, you decide on your functional unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`.
 
-For instance if your application scales by User then pick a functional unit of User.
+For instance, if your application scales by User then pick a functional unit of User.
 
 You MUST use a consistent choice of `R` across all the components in your software boundary.
 
@@ -208,7 +208,7 @@ You MAY model what one unit of `R` looks like and calculate the total carbon (`C
 
 ## Comparing a SCI Score to a Baseline
 
-When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an indentical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
+When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
 
 ## Core Characteristics
 
