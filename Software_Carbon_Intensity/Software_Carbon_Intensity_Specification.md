@@ -188,13 +188,13 @@ A suggested list of functional units includes:
 
 ## Quantification Method
 
+The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
+
 The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`. 
 
 There are two main approaches to quantifying carbon emissions (`C`), [measurement](#measurement) via real-world data or [calculation](#calculation) via models.
 
 Each component in your software boundary MAY use either measurement or calculation to quantify the carbon emissions.
-
-The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
 
 We strongly advise speaking to your suppliers (be they hardware, hosting, or other) and requesting the data you need in the resolution you require for quantifying your SCI score.
 
