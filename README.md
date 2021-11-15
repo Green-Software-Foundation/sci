@@ -37,5 +37,6 @@ Standard WG projects are licensed under the MIT License - see the [LICENSE.md](S
 ## Patent
 Standard WG projects operate under the W3C Patent Mode.
 
-# Helpdesk
-* helpdesk@greensoftware.io
+# Feedback
+* [GitHub discussions](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback)
+* <sci_feedback@greensoftware.foundation>
