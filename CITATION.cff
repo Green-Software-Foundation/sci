@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this standard, please cite it as below."
+authors:
+- family-names: "Green Software Foundation"
+  given-names: ""
+title: "Software Carbon Intensity Standard"
+version: 1.0.0
+date-released: 2021-11-01
+url: "https://github.com/green-software-foundation/software_carbon_intensity"
