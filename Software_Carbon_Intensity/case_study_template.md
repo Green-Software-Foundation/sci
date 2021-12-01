@@ -66,7 +66,16 @@ _
 
 ### (How) Quantification method
 
-_Describe how you are applying either a lab-based measurement based on models or calculating the a rate, an SCI value, for every software component of the system_
+_For each software component in your software boundary, decide whether you are going to **measure** using real-world data or **calculate** an estimate via models, provide a reason and any useful details for each choice.
+
+For example:
+- Front-end mobile application. 
+ - Calculate an estimate using a model that represents a single user using the application. 
+ - We do not have the right to export real-world measurements from individuals mobiles.
+ 
+- Back-end servers
+ - Calculate an estimate of the energy consumption using models which take as input the CPU utilization of servers.
+ - Calculate an estimate of the embodied carbon using the Treads low-resolution models based on AWS data.
 
 _Also, describe the reason for your choice_
 
