@@ -43,7 +43,15 @@ _For each of the following sub-sections, indicate **where** and **how** actions 
 
 ### (What) Software boundary
 
-_Describe the components that are included in the software systems along with those that have been excluded with **reasons for exclusion**_
+_Describe the components that are included in the software systems, if any major components are not included then please provide **reasons for exclusion**_.
+
+For example:
+- Front end mobile application
+- Network traffic between client mobile applications and servers
+- Network traffic between servers and database
+- Back-end servers.
+- Databases
+- Test infrastructure
 
 ### (Scale) Functional unit 
 
