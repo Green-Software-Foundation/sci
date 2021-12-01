@@ -55,7 +55,14 @@ For example:
 
 ### (Scale) Functional unit 
 
-_Describe the functional unit that best controls the scaling of the software system_
+_Describe the [functional unit](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#functional-unit-r) that best controls the scaling of the software system.
+
+The choice of functional unit applies to all components in your software boundary. 
+
+For example:
+- per API Call
+- per User
+_
 
 ### (How) Quantification method
 
