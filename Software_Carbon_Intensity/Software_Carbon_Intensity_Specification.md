@@ -18,7 +18,7 @@ Alpha signals that we are ready for early feedback, that this is not the final v
 
 The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
 
-The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud. 
+The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
 
 Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score ([see exclusions section](#exclusions)).
 
@@ -58,9 +58,9 @@ Where:
 
 - `M` = Embodied emissions of a software system
 
-- `R` = Functional unit (e.g. carbon per additional user, API-call, ML job, etc) 
+- `R` = Functional unit (e.g. carbon per additional user, API-call, ML job, etc)
 
-The equation can be further refined to 
+The equation can be further refined to
 
 `SCI = (O + M) per R`
 
@@ -76,14 +76,14 @@ Where:
 
 - `C = O + M` = Amount of carbon the software is emitting.
 
-### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand. 
+### Operational Emissions  (`O`)
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
 #### Energy (`E`)
 
 This is the energy consumed by a software system for a functional unit of work. This MUST be in kilowatt hours (kWh).
 
-This could be applied to several taxonomies:  
+This could be applied to several taxonomies:
 
 - Datacenter
 - Individual machine (e.g. VM/Node)
@@ -104,9 +104,9 @@ The only figure that matters if you’re trying to optimize the scheduling of yo
 
 ### Embodied Emissions (`M`)
 
-Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device.
 
-When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation. 
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation.
 
 This fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
 
@@ -190,7 +190,7 @@ A suggested list of functional units includes:
 
 The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
 
-The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`. 
+The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`.
 
 There are two main approaches to quantifying carbon emissions (`C`), [measurement](#measurement) via real-world data or [calculation](#calculation) via models.
 
@@ -208,7 +208,7 @@ You MAY model what one unit of `R` looks like and calculate the total carbon (`C
 
 ## Comparing a SCI Score to a Baseline
 
-When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
+When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.
 
 ## Core Characteristics
 
@@ -222,7 +222,7 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-impact view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
 ### The SCI is easy to implement
 
