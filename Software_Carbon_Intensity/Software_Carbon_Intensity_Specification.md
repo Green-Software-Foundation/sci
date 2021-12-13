@@ -120,7 +120,7 @@ To calculate the share of `M` for a software application, we use:
 
 Where:
 
-- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
 - `TR` = Time Reserved, the length of time the hardware is reserved for use by the software.
 - `EL` = Expected Lifespan, the anticipated time that the equipment will be installed.
 - `RR` = Resources Reserved, the number of resources reserved for use by the software.
@@ -132,7 +132,7 @@ We can further refine the equation to
 
 Where:
 
-- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
+- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
 - `TS = TR/EL` = Time-share, the share of the total life span of the hardware reserved for use by the software.
 - `RS = RR/TR` = Resource-share, the share of the total available resources of the hardware reserved for use by the software.
 
@@ -222,7 +222,7 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-impact view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
+- Such a systems view MUST be adopted by articulating the [boundaries](#software-boundary) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
 ### The SCI is easy to implement
 
