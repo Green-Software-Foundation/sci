@@ -16,7 +16,7 @@ Alpha signals that we are ready for early feedback, that this is not the final v
 
 > "If you can't measure it, you can't improve it." - Peter Drucker
 
-The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
+The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible. This specification is focused on helpding users and developers understand how to improve software to avoid the creation of emissions.
 
 The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
 
@@ -238,7 +238,7 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 ## Exclusions
 
-Our focus is reduction, not neutralization. One tonne of carbon not emitted into our atmosphere is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place. As such, you cannot reduce an SCI score through carbon neutralizations, either [market-based](#market-based-measures) or [infrastructure-based](#infrastructure-based-measures).
+Our focus is reduction, not neutralization. One tonne of carbon not emitted into our atmosphere is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place. As such, you cannot reduce an SCI score through carbon neutralizations, either [market-based](#market-based-measures) or [infrastructure-based](#infrastructure-based-measures). The specification excludes market-based measures because instruments (like RECs, GOs, PPAs, offsets, etc) are not an intrinsic characteristic of the software that can be improved by the developer. They are all mechanisms for reducing emissions after consumption has been established. 
 
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the SCI score MUST NOT include the following in the calculation:
 
@@ -254,9 +254,12 @@ Market-based measures are financial instruments designed to neutralize, offset c
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Infrastructure-based Measures
+### Interconnected Infrastructure-based Measures
 
-Infrastructure measures include any infrastructure that integrates renewables via a direct wire connection, such as a data center with solar panels on the roof and on-site battery storage. This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+Interconnected infrastructure-based measures include any infrastructure that integrates renewables via a direct wire connection, such as a data center with solar panels on the roof, but is still interconnected to the larger grid. These measures are excluded because if computation is increased, more electricity will just be pulled from the grid and the
+renewable energy infrastructure won't produce more energy to meet that demand. 
+
+If a data center is off-grid, such as a data center which is not interconnected with the larger grid, it MUST use an appropriate marginal carbon intensity value for the system it is connected to.   
 
 ### Definitions
 
