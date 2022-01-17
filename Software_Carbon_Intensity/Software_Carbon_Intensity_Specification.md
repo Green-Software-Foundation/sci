@@ -76,6 +76,10 @@ Where:
 
 - `C = O + M` = Amount of carbon the software is emitting.
 
+Where:
+
+-  All the elements in the SCI equation  scale by the same Functional unit of  `R` .
+
 ### Operational Emissions  (`O`)
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
