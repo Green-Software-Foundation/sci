@@ -16,9 +16,9 @@ Alpha signals that we are ready for early feedback, that this is not the final v
 
 > "If you can't measure it, you can't improve it." - Peter Drucker
 
-The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
+The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible. This specification is focused on helping users and developers understand how to improve software to avoid the creation of emissions.
 
-The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud. 
+The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
 
 Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score ([see exclusions section](#exclusions)).
 
@@ -39,7 +39,7 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 The steps required to calculate and report an SCI score are:
 
 1. **What**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
-1. **Scale**: The SCI is a rate, carbon emissions per one [functional unit](#functional-unit). The next step is to pick the functional unit which best describes how the application scales.
+1. **Scale**: The SCI is a rate, carbon emissions per one [functional unit](#functional-unit-r). The next step is to pick the functional unit which best describes how the application scales.
 1. **How**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method), real-world measurements based on telemetry, or lab-based measurements based on models.
 1. **Quantify**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
 1. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
@@ -58,9 +58,9 @@ Where:
 
 - `M` = Embodied emissions of a software system
 
-- `R` = Functional unit (e.g. carbon per additional user, API-call, ML job, etc) 
+- `R` = Functional unit (e.g. carbon per additional user, API-call, ML job, etc)
 
-The equation can be further refined to 
+The equation can be further refined to
 
 `SCI = (O + M) per R`
 
@@ -76,8 +76,12 @@ Where:
 
 - `C = O + M` = Amount of carbon the software is emitting.
 
-### Operational Emissions  (`O`) 
-To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand. 
+Where:
+
+-  All the elements in the SCI equation  scale by the same Functional unit of  `R` .
+
+### Operational Emissions  (`O`)
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
 #### Energy (`E`)
 
@@ -104,9 +108,9 @@ Units: this MUST be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
 ### Embodied Emissions (`M`)
 
-Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device.
 
-When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation. 
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation.
 
 This fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
 
@@ -120,7 +124,7 @@ To calculate the share of `M` for a software application, we use:
 
 Where:
 
-- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
+- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
 - `TR` = Time Reserved, the length of time the hardware is reserved for use by the software.
 - `EL` = Expected Lifespan, the anticipated time that the equipment will be installed.
 - `RR` = Resources Reserved, the number of resources reserved for use by the software.
@@ -132,7 +136,7 @@ We can further refine the equation to
 
 Where:
 
-- `TE` = Total Embodied Emissions, the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
+- `TE` = Total Embodied Emissions, the sum of LCA emissions for all hardware components.
 - `TS = TR/EL` = Time-share, the share of the total life span of the hardware reserved for use by the software.
 - `RS = RR/TR` = Resource-share, the share of the total available resources of the hardware reserved for use by the software.
 
@@ -192,7 +196,7 @@ A suggested list of functional units includes:
 
 The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
 
-The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`. 
+The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`.
 
 There are two main approaches to quantifying carbon emissions (`C`), [measurement](#measurement) via real-world data or [calculation](#calculation) via models.
 
@@ -210,7 +214,7 @@ You MAY model what one unit of `R` looks like and calculate the total carbon (`C
 
 ## Comparing a SCI Score to a Baseline
 
-When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.  
+When taking an action to reduce the carbon intensity of a piece of software, the intensity SHOULD be compared to a baseline. The baseline MUST be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional unit, etc. MUST remain the same between the baseline and proposed SCI.
 
 ## Core Characteristics
 
@@ -224,7 +228,7 @@ As the SCI specification matures and develops, these core characteristics MUST r
 ### The SCI takes a systems-impact view
 
 - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that create reductions at a system-wide level rather than just at a local level. Local level optimizations MAY lead to micro-improvements but MAY have negative downstream impacts at a macro-level that negate the impact of those actions.
-- Such a systems view MUST be adopted by articulating the [boundaries](#boundaries) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification. 
+- Such a systems view MUST be adopted by articulating the [boundaries](#software-boundary) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
 ### The SCI is easy to implement
 
@@ -240,7 +244,7 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 ## Exclusions
 
-Our focus is reduction, not neutralization. One tonne of carbon not emitted into our atmosphere is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place. As such, you cannot reduce an SCI score through carbon neutralizations, either [market-based](#market-based-measures) or [infrastructure-based](#infrastructure-based-measures).
+Our focus is reduction, not neutralization. One tonne of carbon not emitted into our atmosphere is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place. As such, you cannot reduce an SCI score through carbon neutralizations, either [market-based](#market-based-measures) or [infrastructure-based](#infrastructure-based-measures). The specification excludes market-based measures because instruments (like RECs, GOs, PPAs, offsets, etc) are not an intrinsic characteristic of the software that can be improved by the developer. They are all mechanisms for reducing emissions after consumption has been established. 
 
 Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the SCI score MUST NOT include the following in the calculation:
 
@@ -256,9 +260,11 @@ Market-based measures are financial instruments designed to neutralize, offset c
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Infrastructure-based Measures
+### Interconnected Infrastructure-based Measures
 
-Infrastructure measures include any infrastructure that integrates renewables via a direct wire connection, such as a data center with solar panels on the roof and on-site battery storage. This is conceptually closer to a Microgrid, where there is a higher % of renewable energy usage than the local grid carbon intensity.
+Interconnected infrastructure-based measures include any infrastructure that integrates renewables via a direct wire connection, such as a data center with solar panels on the roof, but is still interconnected to the larger grid. These measures are excluded because if computation is increased, more electricity will just be pulled from the grid and the renewable energy infrastructure won't produce more energy to meet that demand. 
+
+If a data center is off-grid, such as a data center which is not interconnected with the larger grid, it MUST use an appropriate marginal carbon intensity value for the system it is connected to.   
 
 ### Definitions
 
