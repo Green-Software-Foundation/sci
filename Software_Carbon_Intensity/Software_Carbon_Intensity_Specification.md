@@ -81,26 +81,26 @@ To calculate the operational emissions associate with software, multiply the ele
 
 #### Energy (`E`)
 
-This is the energy consumed by a software system for a functional unit of work. This MUST be in kilowatt hours (kWh).
-
-This could be applied to several taxonomies:  
+This is the energy consumed by a software system for a functional unit of work. This could be applied to several taxonomies:  
 
 - Datacenter
 - Individual machine (e.g. VM/Node)
 - Individual service (e.g. API call, ML training job)
 - Execution of code
 
+Units: this MUST be in kilowatt hours (kWh).
+
 #### Location-Based Marginal Carbon Intensity (`I`)
 
 The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed.
-
-This MUST be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
 Because this standard uses a consequential approach, marginal emissions rates MUST be used for electricity consumption.
 
 Location-based measures the grid carbon intensity of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims.
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
+
+Units: this MUST be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
 ### Embodied Emissions (`M`)
 
@@ -139,6 +139,8 @@ Where:
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
+
+Units: this MUST be in grams of carbon (gCO2eq).
 
 ## Software Boundary
 
