@@ -42,12 +42,12 @@ We did Load Test runs with Azure App service Premium configuration with 2 core �
 
 * App server for the Web application
 * Database server
-
+* Front end browser  .This is the browser client on the device that is displaying the application to the end users on their desktop/mobile/laptop etc
 ### Excluded
 
 The following components and their carbon emissions have been excluded from the SCI calculation.
  
-* Front end browser  .This is the browser client on the device that is displaying the application to the end users on their desktop/mobile/laptop etc._Will be added in the next version of the case study_
+
 * Network traffic between browser client  and application server ._We have the numbers in terms of the byte size that travelled across the network but don’t have the reference multiplication factor in terms of carbon emissions associated per byte. We have requested this info from SCI open data project_
 * Network traffic between application servers and databases. _We have the numbers in terms of the byte size that travelled across the network but don’t have the reference multiplication factor in terms of carbon emissions associated per byte. We have requested this info from SCI open data project_
 * Test infrastructure:  These include the load test resources that were used to simulate virtual users and http requests to the web server._Since the infrastructure and the associated energy usage do not fit into the same functional unit scale as defined in the SCI formula, these components will be excluded from the software’s SCI calculation._
@@ -153,6 +153,50 @@ For this component:
 * RR: A virtual machine with 2 vCPUs was used, this data was sourced from [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
 * TR: The bare metal host is split up into 16 vCPUs in total. This data was sourced from the [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
 
+
+### Front End Browser for Web application
+
+### Energy (`E`)
+
+The Quantification method used for calculating energy value is **Calculate**. We are measuring CPU utilization of the laptop client device and then using a model based on the Thermal Design Power (TDP) of the processors, number of cores etc to **estimate** the power consumption.
+
+The equation used to model the energy consumption is:
+
+P[kwH] = (Power consumed by CPU or Pc Number of cores + Power consumed by Memory or Pr + Power consumed by GPU or Pg Number of GPUs)/1000
+
+* CPU Utilization doesn’t scale linearly with power consumption, we will use the power curve as described in the [SCI Data Project “[E] Energy Estimation from Utilization Model” model](https://docs.google.com/spreadsheets/d/1Viv94rMKH-fJrfD9Nn9_qkiAg1PDfIfJUAHRX9slG7A/edit#gid=526989613)
+* TDP of laptop used (Laptop- 11th Generation Intel Core i7-1185G7 vPro /32 GB RAM) = 28 W 
+* From specs, we found that Power consumed by 4GB memory is close to 1.45 W and that by 8 GB memory is approximately 2.45 W. Also from this [article](https://medium.com/teads-engineering/estimating-aws-ec2-instances-power-consumption-c9745e347959) we can consider power consumed is approx 0.38 W/GB and for this scenario it is  close to 12.16 Watts.
+* No GPU was used hence Pg ~0
+
+
+### Carbon Intensity (`I`)
+
+* We will use regional yearly averages.
+* The region the application was run in was India.
+* We will source the Carbon Intensity from the SCI Data project and the [[I] Regional Yearly Marginal Carbon Intensity](https://docs.google.com/spreadsheets/d/1Viv94rMKH-fJrfD9Nn9_qkiAg1PDfIfJUAHRX9slG7A/edit#gid=1582216595) data set.
+
+### Embodied Carbon (`M`)
+
+The equation to calculate `M = TE * (TR/EL) * (RR/TR)`
+
+Where:
+
+* TE = Total Embodied Emissions, the sum of LCA emissions for all hardware components associated with the application server.
+* TR = Time Reserved, the length of time the hardware is reserved for use by the software.
+* EL = Expected Lifespan, the anticipated time that the equipment will be installed.
+* RR = Resources Reserved, the number of resources reserved for use by the software.
+* TR = Total Resources, the total number of resources available.
+
+For this component:
+
+* TE: We will source the embodied carbon estimates for the Dell laptop  from the [Dell site](https://i.dell.com/sites/content/corporate/corp-comm/en/Documents/dell-laptop-carbon-footprint-whitepaper.pdf) Data Set.
+* TR: 1 hr.
+* EL: We will assume a 4 year lifespan or 35,040 hrs.
+* RR: A dell laptop was used, and all resources are available for use of this application.
+* TR: A dell laptop was used, and all resources are available for use of this application.
+
+
 ## (Quantify) SCI Value Calculation
 
 *Show your work! For each of the components of your software system, show how you arrived at the SCI value. Guidance for this is available in the [Methodology summary](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#methodology-summary) section.
@@ -172,12 +216,12 @@ _The workings of E, include raw numbers and calculations._
 - TDP Coefficient = 0.32
 
 ```
-E = Server utilization * Number of hours * Number of cores * TDP * TDP co-efficient
-  = (0.18 * 1 hour * 2 cores * 205 TDP * 0.32 TDP co-efficient)/1000
-  = 0.023
+E =  Number of hours * Number of chips * TDP * TDP co-efficient (for the server utilization)
+  = ( 1 hour * 1 * 205 TDP * 0.32 TDP co-efficient)/1000
+  = 0.0656 kwH
 ```
 
-E =  **0.023 KwH** for a 1 hour period
+E =  **0.0656 KwH** for a 1 hour period
 
 ### Carbon Intensity (`I`)
 
@@ -197,9 +241,9 @@ M = 1205.52 * (1/35040) * (2/16) = 0.004305 KG =~ **4.305 gCO2e**
 
 ### SCI
 
-_The sum of the SCI calculation._
+_The sum of the SCI calculation for app server._
 
-SCI =  (E * I) + M = (0.02394 KwH * 951 gCO2e/kwH) + 4.305 gCO2e = **26.178 gCO2e**
+SCI =  (E * I) + M = (0.0656 KwH * 951 gCO2e/kwH) + 4.305 gCO2e = **66.6906 gCO2e**
 
 ### Database server for Web application
 
@@ -214,12 +258,12 @@ _The workings of E, include raw numbers and calculations._
 - TDP Coefficient = 0.32
 
 ```
-E = Server utilization * Number of hours * Number of cores * TDP * TDP co-efficient
-  = (0.10 * 1 hour * 2 cores * 150 TDP * 0.32 TDP co-efficient)/1000
-  = 0.0096
+E =  Number of hours * Number of chip * TDP * TDP co-efficient (Server utilization)
+  = (0.10 * 1 hour * 1 chip * 150 TDP * 0.32 TDP co-efficient)/1000
+  = 0.048
 ```
 
-E =  **0.0096 KwH** for a 1 hour period
+E =  **0.048 KwH** for a 1 hour period
 
 ### Carbon Intensity (`I`)
 
@@ -237,16 +281,78 @@ I = **951 gCO2e/kWh**
 
 M = 1433.12 * (1/35040) * (2/16) = 0.005112 KG =~ **5.112 gCO2e**
 
+
+
 ### SCI
 
-_The sum of the SCI calculation._
+_The sum of the SCI calculation for database server._
 
-SCI =  (E * I) + M = (0.0096 KwH * 951 gCO2e/kwH) + 5.112 gCO2e = **14.2416 gCO2e**
+SCI =  (E * I) + M = (0.048 KwH * 951 gCO2e/kwH) + 5.112 gCO2e = **50.76 gCO2e**
+
+### Front end browser for the Web application
+
+#### Energy (`E`) for CPU
+
+_The workings of E, include raw numbers and calculations._
+
+- Server utilization = 0%
+- Number of hours = 1
+- Number of cores = 2
+- TDP = 28W
+- TDP Coefficient = 0.12
+
+```
+E =  Number of hours * Number of chip * TDP * TDP co-efficient (Server utilization)
+  = (1 hour * 1 chip * 28W TDP * 0.12 TDP co-efficient)/1000
+  = 0.00336
+```
+
+E =  **0.00336 KwH** for a 1 hour period
+
+#### Energy (`E`) for Memory
+
+_The workings of E, include raw numbers and calculations._
+
+- Server utilization = 0.1%
+- Number of hours = 1
+- Number of cores = 2
+- TDP = 12.16
+- TDP Coefficient = 0.12
+
+```
+E =  Number of hours * Number of chip * TDP * TDP co-efficient (Server utilization)
+  = (1 hour * 1 chip * 12.16 TDP * 0.12 TDP co-efficient)/1000
+  = 0.01216
+```
+
+E =  **0.01216 KwH** for a 1 hour period
+
+### Carbon Intensity (`I`)
+
+I = **951 gCO2e/kWh**
+
+### Embodied Carbon (`M`)
+
+`M = TE * (TR/EL) * (RR/TR)`
+
+- TE = 350 kgCo2e
+- TR = 1 hour
+- EL = 35040
+- RR = 1
+- TR = 1
+
+M = 350 * (1/35040) * (1/1) = 0.009988 KG =~ **9.98 gCO2e**
 
 
+
+### SCI
+
+_The sum of the SCI calculation for client device._
+
+SCI =  (E * I) + M = ((0.0036+0.01216 * 951 gCO2e/kwH) + 9.98 gCO2e = **24.96 gCO2e**
 
 ## SCI Total
 
 _The total SCI for the whole application._
 
-SCI = SCI(App server for Web application) +  SCI for database server =  **40.4196 gCO2e**
+SCI = SCI(App server for Web application) +  SCI for database server +SCI for the client device =  **142.4186 gCO2e** per R (500 users in 1 hour period)
