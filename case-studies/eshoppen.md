@@ -43,14 +43,13 @@ We did Load Test runs with Azure App service Premium configuration with 2 core �
 * App server for the Web application
 * Database server
 * Front end browser  .This is the browser client on the device that is displaying the application to the end users on their desktop/mobile/laptop etc
+ * Network traffic between browser client  and application server and back
+ * Network traffic between application servers and databases. 
+
 ### Excluded
 
 The following components and their carbon emissions have been excluded from the SCI calculation.
- 
-
-* Network traffic between browser client  and application server ._We have the numbers in terms of the byte size that travelled across the network but don’t have the reference multiplication factor in terms of carbon emissions associated per byte. We have requested this info from SCI open data project_
-* Network traffic between application servers and databases. _We have the numbers in terms of the byte size that travelled across the network but don’t have the reference multiplication factor in terms of carbon emissions associated per byte. We have requested this info from SCI open data project_
-* Test infrastructure:  These include the load test resources that were used to simulate virtual users and http requests to the web server._Since the infrastructure and the associated energy usage do not fit into the same functional unit scale as defined in the SCI formula, these components will be excluded from the software’s SCI calculation._
+* Test infrastructure:  These include the load test resources that were used to simulate virtual users and http requests to the web server._Since the infrastructure and the associated energy usage do not fit into the same functional unit scale as defined in the SCI formula, these components will be excluded from the software’s SCI calculation. However the calculation for this infrastructure can be done in the same manner in which we have done for the production infrastructure with a different scaling factor_
 
 
 ## (Scale) Functional Unit
@@ -196,6 +195,11 @@ For this component:
 * RR: A dell laptop was used, and all resources are available for use of this application.
 * TR: A dell laptop was used, and all resources are available for use of this application.
 
+### Networking infrastructure 
+
+The Quantification method for calculating energy emissions from Networking infrastructure is "Calculate". As part of the load test the Data in and Data out measurement of the App server and database server in GB are measured. This value is multiplied by the "Emissions/GB" data from SCI open data project. https://github.com/Green-Software-Foundation/sci-data/issues/13. 
+
+The disclaimer here is : the above calculation assumes that the networking infrastructure does not emit any emissions where no data is transferred over the wire. This can be revisited in the future by having a similar concept to how we have TDP co-efficient for CPU utilization. 
 
 ## (Quantify) SCI Value Calculation
 
@@ -351,8 +355,20 @@ _The sum of the SCI calculation for client device._
 
 SCI =  (E * I) + M = ((0.0036+0.01216 * 951 gCO2e/kwH) + 9.98 gCO2e = **24.96 gCO2e**
 
+### Networking infrastructure for the  Web application
+
+Based on the load tests conducted Data in = 1.16 GB. Data out = 14.3 GB
+Taking data of 0.000KwH /GB we get 0.01529 kwH
+
+Energy of networking infrastructure = 0.01529 kwH
+Regional carbon intensity = I = **951 gCO2e/kWh**
+Embodied emissions data of networking infrastruture not yet available. 
+
+SCI of networking infrastructure = 14.54 gCo2eq
+
+
 ## SCI Total
 
 _The total SCI for the whole application._
 
-SCI = SCI(App server for Web application) +  SCI for database server +SCI for the client device =  **142.4186 gCO2e** per R (500 users in 1 hour period)
+SCI = SCI(App server for Web application) +  SCI for database server +SCI for the client device + SCI of networking infrastructure  =  **156.9586 gCO2e** per R (500 users in 1 hour period)
