@@ -26,6 +26,8 @@ The SCI encourages calculation using granular real-world data, which is challeng
 
 Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
 
+There are standard reference numbers that would be needed through the process of calculation of SCI score for example emissions per GB transferred , manufacturing emissions per GB of RAM. Wherever possible, these numbers can be obtained from SCI open data project https://github.com/Green-Software-Foundation/sci-data . If reference numbers are not available, then  a request for data can be made.
+
 ## Software Sustainability Actions
 
 All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
