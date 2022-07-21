@@ -163,6 +163,9 @@ Supporting infrastructure and systems MAY include:
 - backup
 - resources to support redundancy
 - resources to support failover
+- End user devices
+- IoT devices
+- Edge devices
 
 ## Functional Unit (`R`)
 
