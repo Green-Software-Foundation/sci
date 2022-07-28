@@ -17,7 +17,7 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 - Check the [issues tab](https://github.com/Green-Software-Foundation/software_carbon_intensity/issues) for active and closed conversations regarding the spec.
 
 ## Contributing
-The recommended approach for getting invlved with the specification is to:
+The recommended approach for getting involved with the specification is to:
 - Read the [development version](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md) of the specification.
 - Raise an issue, question, recommendation in the issues tab above and start a discussion with other members.
 - Once a form of agreement has been reached, then raise a pull request to update the specification with your recommended changes.
