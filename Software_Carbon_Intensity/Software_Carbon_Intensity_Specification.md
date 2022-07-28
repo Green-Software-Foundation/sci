@@ -170,7 +170,7 @@ Supporting infrastructure and systems MAY include:
 - resources to support redundancy
 - resources to support failover
 
-If your boundary includes on-premise and/or cloud data center operations, E should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE(Power Usage Effectiveness) value.
+If your boundary includes on-premise and/or cloud data center operations, E should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
 
 ## Functional Unit (`R`)
 
