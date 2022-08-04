@@ -22,6 +22,14 @@ The SCI is for everyone. It is possible to calculate an SCI score for any softwa
 
 Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score ([see exclusions section](#exclusions)).
 
+As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during designing, developing and delivering software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
+- For a software programmer, this would imply writing energy efficient code.
+- For a AL/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardwares for training
+- For database engineer, this would comprise of choices like schema design, choice of storage, query optimizations.
+- For DevOps, this would require creating a carbon-aware pipeline, when to schedule builds and leverage clean energy.
+- For QA engineers, it would be about creating energy efficient test automation and performance testing scripts across browsers and devices.
+- For an architect, this would imply choices like serverless or event driven architectures, infrastructure optimization and design for carbon-aware systems.
+
 The SCI encourages calculation using granular real-world data, which is challenging to obtain in some of these environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources required to calculate the SCI at lower resolutions and will provide tools and guidance for getting this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your suppliers (be they hardware, hosting or other) and requesting it.
 
 Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
