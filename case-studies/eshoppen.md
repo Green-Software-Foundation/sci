@@ -355,6 +355,10 @@ _The sum of the SCI calculation for client device._
 
 SCI =  (E * I) + M = ((0.0036+0.01216 * 951 gCO2e/kwH) + 9.98 gCO2e = **24.96 gCO2e**
 
+This is for one client device. For the modeling and functional unit we have chosen (500 users per 1 hour ), we need to multiply this value by 500. 
+
+Hence SCI for all client devices = **12,480 gCO2e**
+
 ### Networking infrastructure for the  Web application
 
 Based on the load tests conducted Data in = 1.16 GB. Data out = 14.3 GB
@@ -371,4 +375,4 @@ SCI of networking infrastructure = 14.54 gCo2eq
 
 _The total SCI for the whole application._
 
-SCI = SCI(App server for Web application) +  SCI for database server +SCI for the client device + SCI of networking infrastructure  =  **156.9586 gCO2e** per R (500 users in 1 hour period)
+SCI = SCI(App server for Web application) +  SCI for database server +SCI for 500 client devices + SCI of networking infrastructure  =  **12611.9986 gCO2e** per R (500 users in 1 hour period)
