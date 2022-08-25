@@ -2,7 +2,7 @@
 
 ## Scope
 
-This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future.
+This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they can use to minimize carbon emissions.
 
 ## Versions
 
@@ -22,17 +22,17 @@ Reducing an SCI score is only possible through the elimination of emissions thro
 
 The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
 
-As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during designing, developing and delivering software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
+As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during the design, development and delivery of software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
 - For a software programmer, this would imply writing energy efficient code.
 - For a AL/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardwares for training
 - For database engineer, this would comprise of choices like schema design, choice of storage, query optimizations.
 - For DevOps, this would require creating a carbon-aware pipeline, when to schedule builds and leverage clean energy.
 - For QA engineers, it would be about creating energy efficient test automation and performance testing scripts across browsers and devices.
-- For an architect, this would imply choices like serverless or event driven architectures, infrastructure optimization and design for carbon-aware systems.
+- For an architect, this would imply choices like serverless or event driven architectures, infrastructure optimization, and design for carbon-aware systems.
 
-The SCI encourages calculation using granular real-world data, which is challenging to obtain in some of these environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources required to calculate the SCI at lower resolutions and will provide tools and guidance for getting this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your suppliers (be they hardware, hosting or other) and requesting it.
+The SCI encourages calculation using granular real-world data, which is challenging to obtain in some of these environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources needed to calculate the SCI at lower resolutions and will provide tools and guidance for getting this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your suppliers (be they hardware, hosting or other) and requesting it.
 
-Suppose, there is a lack of access, capability, or rights to the necessary real-world data. In that case, the SCI allows for data generated through modeling using best estimates instead.
+In situations where there is a lack of access, capability, or rights to the necessary real-world data the SCI allows for data generated through modeling using best estimates instead.
 
 ## Software Sustainability Actions
 
@@ -46,9 +46,10 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 
 The steps required to calculate and report an SCI score are:
 
-1. **What**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
+
+1. **Bound**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
 1. **Scale**: The SCI is a rate, carbon emissions per one [functional unit](#functional-unit-r). The next step is to pick the functional unit which best describes how the application scales.
-1. **How**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method), real-world measurements based on telemetry, or lab-based measurements based on models.
+1. **Define**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method), real-world measurements based on telemetry, or lab-based measurements based on models.
 1. **Quantify**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
 1. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
 
