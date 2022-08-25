@@ -46,11 +46,12 @@ All actions that can reduce the carbon emissions of a piece of software fall int
 
 The steps required to calculate and report an SCI score are:
 
+
+1. **Bound**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
 1. **Scale**: The SCI is a rate, carbon emissions per one [functional unit](#functional-unit-r). The next step is to pick the functional unit which best describes how the application scales.
-2. **Bound**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
-4. **Define**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method), real-world measurements based on telemetry, or lab-based measurements based on models.
-5. **Quantify**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
-6. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
+1. **Define**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method), real-world measurements based on telemetry, or lab-based measurements based on models.
+1. **Quantify**: Calculate a rate, an SCI value, for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
+1. **Report**. The SCI has standards for reporting that must be met, including a disclosure of the software boundary and the calculation methodology.
 
 ## Methodology Summary
 
