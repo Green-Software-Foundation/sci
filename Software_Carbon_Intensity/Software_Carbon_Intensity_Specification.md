@@ -104,11 +104,9 @@ Units: this MUST be in kilowatt hours (kWh).
 
 #### Location-Based Marginal Carbon Intensity (`I`)
 
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed.
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this standard uses a consequential approach, marginal emissions rates MUST be used for electricity consumption. 
 
-Because this standard uses a consequential approach, marginal emissions rates MUST be used for electricity consumption.
-
-Location-based measures the grid carbon intensity of a regional balancing authority. From a developer perspective, only the location-based info is important for having an impact on reducing carbon emissions. This excludes market-based measures, and is distinct from 100% renewable energy claims.
+Location-based marginal emissions factors measures the grid carbon intensity of a grid region. If your electricity consumption is connected to a grid, then you MUST use the marginal emissions rate of that grid, which excludes any [market-based measures](#market-based-measures). If your electricity consumption is not connected to a larger regional grid, you MUST use an approriate emissions factor for that system. From a developer perspective, only the location-based info is important for having an impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures), and is distinct from 100% renewable energy claims.
 
 The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
 
@@ -256,7 +254,7 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 Our focus is elimination, not offsetting. One tonne of carbon eliminated, that means not emitted into our atmosphere, is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place.
 
-Only actions that eliminate emissions reduce an SCI score. As such, you cannot reduce an SCI score through carbon offsets, such as [market-based measures](#market-based-measures) or [infrastructure-based measures](#interconnected-infrastructure-based measures).
+Only actions that eliminate emissions reduce an SCI score. As such, you cannot reduce an SCI score through carbon offsets, such as [market-based measures](#market-based-measures).
 
 ### Market-based Measures
 
@@ -269,12 +267,6 @@ Market-based measures are financial instruments designed to neutralize, offset c
 - Electricity Attribute Certificates (EACs)
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
-
-### Interconnected Infrastructure-based Measures
-
-Interconnected infrastructure-based measures include any infrastructure that integrates renewables via a direct wire connection, such as a data center with solar panels on the roof, but is still interconnected to the larger grid. These measures are excluded because if computation is increased, more electricity will just be pulled from the grid and the renewable energy infrastructure won't produce more energy to meet that demand. 
-
-If a data center is off-grid, such as a data center which is not interconnected with the larger grid, it MUST use an appropriate marginal carbon intensity value for the system it is connected to.   
 
 ### Definitions
 
