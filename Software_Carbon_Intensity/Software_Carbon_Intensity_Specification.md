@@ -16,11 +16,11 @@ Alpha signals that we are ready for early feedback, that this is not the final v
 
 > "If you can't measure it, you can't improve it." - Peter Drucker
 
-Software systems cause emissions though the hardware that it operates on, both through the energy the hardware consumes and the emissions associated with manufacturing the hardware. The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible. This specification is focused on helping users and developers understand how to improve software to avoid the creation of emissions.
+Software systems cause emissions though the hardware that it operates on, both through the energy the hardware consumes and the emissions associated with manufacturing the hardware. The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible.
+
+Reducing an SCI score is only possible through the elimination of emissions through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources.Neutralization or avoidance offsets do not reduce an SCI score ([see exclusions section](#exclusions)). This makes the SCI an ideal strategy organizations can adopt to meet climate targets focussed on eliminating emissions, such as a [Net-zero target](https://sciencebasedtargets.org/net-zero).
 
 The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
-
-Reducing an SCI score is only possible through changes to a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralisations such as carbon offsets do not reduce an SCI score ([see exclusions section](#exclusions)).
 
 As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during designing, developing and delivering software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
 - For a software programmer, this would imply writing energy efficient code.
@@ -254,9 +254,9 @@ In calculating the SCI value, you SHOULD use the highest granularity data availa
 
 ## Exclusions
 
-Our focus is reduction, not neutralization. One tonne of carbon not emitted into our atmosphere is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place. As such, you cannot reduce an SCI score through carbon neutralizations, either [market-based](#market-based-measures) or [infrastructure-based](#infrastructure-based-measures). The specification excludes market-based measures because instruments (like RECs, GOs, PPAs, offsets, etc) are not an intrinsic characteristic of the software that can be improved by the developer. They are all mechanisms for reducing emissions after consumption has been established. 
+Our focus is elimination, not offsetting. One tonne of carbon eliminated, that means not emitted into our atmosphere, is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place.
 
-Because this standard lays out a consequential methodology for calculating the emissions associated with a piece of software, the SCI score MUST NOT include the following in the calculation:
+Only actions that eliminate emissions reduce an SCI score. As such, you cannot reduce an SCI score through carbon offsets, such as [market-based measures](#market-based-measures) or [infrastructure-based measures](#interconnected-infrastructure-based measures).
 
 ### Market-based Measures
 
