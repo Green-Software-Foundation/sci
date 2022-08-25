@@ -146,33 +146,13 @@ You MAY use simple models to estimate embodied emissions; however, you SHOULD us
 
 Units: this MUST be in grams of carbon (gCO2eq).
 
-## Composable
+### Functional Unit Conversion
 
 An aggregate SCI score can be composed of multiple component SCI scores.
 
-For example, if you have calculated the SCI scores of various components of your software system like so:
+Then as long as the Functional Unit of R is the same across all the component SCI scores, you can sum them up to calculate the aggregate SCI.To sum multiple component SCI scores into one aggregate score, the Functional Unit R MUST be the same across all components.
 
-    SCI_NETWORK = ((E_NETWORK * I_NETWORK) + M_NETWORK) per R
-    SCI_SERVER = ((E_SERVER * I_SERVER) + M_SERVER) per R
-    SCI_CLIENT = ((E_CLIENT * I_CLIENT) + M_CLIENT) per R
-
-Then as long as the Functional Unit of `R` is the same across all the component SCI scores, you can sum them up to calculate the aggregate SCI score like so:
-
-    SCI_SYSTEM =  (SCI_NETWORKING +  SCI_SERVER + SCI_CLIENT) per R
-
-To sum multiple component SCI scores into one aggregate score, the Functional Unit `R` MUST be the same across all components.
-
-### Scaling Component Functional Units
-
-If the Functional Unit of a software component is not the same as the aggregate Functional Unit, then the component SCI score needs to be scaled to match that of the aggregate SCI Functional Unit.
-
-Following the example above, if the Functional Unit of `SCI_NETWORK` is `GB` and the Functional Unit of `SCI_SYSTEM` is `User`, then you need to scale `SCI_NETWORK` to be per `User` instead of per `GB`. 
-
-One solution is to model how many `GB` is used by one `User` and scale `SCI_NETWORK` by that value. For example, if each `User` uses on average `0.25 GB` the aggregate SCI score would be:
-
-`SCI_SYSTEM =  (0.25 * SCI_NETWORKING +  SCI_SERVER + SCI_CLIENT) per R`
-
-You MUST disclose details of any scaling used in calculating your SCI score.
+If the Functional Unit of a software component is not the same as the aggregate Functional Unit, then the component SCI score needs to be converted to match that of the aggregate SCI Functional Unit. You MUST disclose details of any unit conversion factors used in calculating your SCI score."
 
 ## Software Boundary
 
