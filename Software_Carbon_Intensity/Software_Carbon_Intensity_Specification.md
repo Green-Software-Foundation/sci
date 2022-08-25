@@ -150,7 +150,7 @@ Units: this MUST be in grams of carbon (gCO2eq).
 
 An aggregate SCI score can be composed of multiple component SCI scores.
 
-Then as long as the Functional Unit of R is the same across all the component SCI scores, you can sum them up to calculate the aggregate SCI.To sum multiple component SCI scores into one aggregate score, the Functional Unit R MUST be the same across all components.
+Then as long as the Functional Unit of R is the same across all the component SCI scores, you can sum them up to calculate the aggregate SCI. To sum multiple component SCI scores into one aggregate score, the Functional Unit R MUST be the same across all components.
 
 If the Functional Unit of a software component is not the same as the aggregate Functional Unit, then the component SCI score needs to be converted to match that of the aggregate SCI Functional Unit. You MUST disclose details of any unit conversion factors used in calculating your SCI score."
 
