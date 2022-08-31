@@ -115,7 +115,7 @@ Units: this MUST be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
 ### Embodied Emissions (`M`)
 
-Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device.
+Embodied carbon (otherwise referred to as “Embedded Carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device. 
 
 When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation.
 
@@ -150,6 +150,8 @@ Where:
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
 You MAY use simple models to estimate embodied emissions; however, you SHOULD use the most granular data possible and ideally emissions data from a devices life cycle analysis when calculating your embodied carbon.
+
+Since the purpose of the SCI is the elimination of emissions `M` MUST NOT include any any [market-based measures](#market-based-measures).
 
 Units: this MUST be in grams of carbon (gCO2eq).
 
