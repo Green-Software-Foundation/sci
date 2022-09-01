@@ -36,7 +36,7 @@ In situations where there is a lack of access, capability, or rights to the nece
 
 ## Software Sustainability Actions
 
-All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken in developing software applications.
+All actions that can reduce the carbon emissions of a piece of software fall into one of three categories. The SCI specification intends to encourage more of these actions to be taken during the development and maintenance of software applications.
 
 - **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
 - **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
