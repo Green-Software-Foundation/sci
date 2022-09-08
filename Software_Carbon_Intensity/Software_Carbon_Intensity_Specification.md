@@ -59,40 +59,31 @@ The steps required to calculate and report an SCI score are:
 
 The Software Carbon Intensity (SCI) is a rate; carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
 
-`SCI = ((E * I) + M) per R`
-
-Where:
-
-- `E` = Energy consumed by a software system
-
-- `I`= Location-based marginal carbon emissions
-
-- `M` = Embodied emissions of a software system
-
-- `R` = Functional unit (e.g. carbon per additional user, API-call, ML job, etc)
-
-The equation can be further refined:
-
-`SCI = (O + M) per R`
-
-Where:
-
-- `O = E * I` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
-
-This equation can be refined even further:
-
 `SCI = C per R`
 
 Where:
 
-- `C = O + M` = Amount of carbon the software is emitting.
+- The total amount of carbon `C` the software causes to be emitted.
+- All the elements in the SCI equation scale by the same Functional unit of `R` (e.g. carbon per additional user, API-call, ML job, etc).
+
+This can be expanded to:
+
+`SCI = (O + M) per R`
 
 Where:
-
--  All the elements in the SCI equation scale by the same functional unit `R` .
+- `O` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
+- `M` = Embodied emissions of a software system
 
 ### Operational Emissions  (`O`)
-To calculate the operational emissions associated with software, we multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
+To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
+
+To calculate the operational emissions `O` for a software application, we use:
+
+`O = (E * I)`
+
+Where:
+- `E` = Energy consumed by a software system
+- `I` = Location-based marginal carbon emissions
 
 #### Energy (`E`)
 
