@@ -42,7 +42,7 @@ All actions that serve to reduce the carbon emissions of a piece of software fit
 - **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
 - **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
-The SCI specification intends to encourage more of these actions in the development of software applications.
+The SCI specification intends to encourage more of these actions to be taken during the development and maintenance of software applications.
 
 ## Procedure
 
