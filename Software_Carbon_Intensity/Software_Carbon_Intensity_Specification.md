@@ -96,7 +96,7 @@ Units: this MUST be in kilowatt hours (kWh).
 
 #### Location-Based Marginal Carbon Intensity (`I`)
 
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this standard uses a impact-based approach, marginal emissions rates MUST be used for electricity consumption. 
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this standard uses a consequential approach, marginal emissions rates MUST be used for electricity consumption. 
 
 Location-based marginal emissions factors measures the grid carbon intensity of a grid region. If your electricity consumption is connected to a grid, then you MUST use the marginal emissions rate of that grid, which excludes any [market-based measures](#market-based-measures). If your electricity consumption is not connected to a larger regional grid, you MUST use an approriate emissions factor for that system. From a developer perspective, only the location-based info is important for having an impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures), and is distinct from 100% renewable energy claims.
 
