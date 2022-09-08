@@ -24,7 +24,7 @@ The SCI is for everyone. It is possible to calculate an SCI score for any softwa
 
 As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during the design, development and delivery of software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
 - For a software programmer, this would imply writing energy efficient code.
-- For a AI/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardware for training.
+- For an AI/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardware for training.
 - For database engineer, this would comprise of choices like schema design, choice of storage, query optimizations.
 - For DevOps, this would require creating a carbon-aware pipeline and considering when to schedule builds and leverage clean energy.
 - For QA engineers, it would be about creating energy efficient test automation and performance testing scripts across browsers and devices.
