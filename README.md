@@ -19,7 +19,7 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 ## Contributing
 The recommended approach for getting involved with the specification is to:
 - Read the [development version](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md) of the specification.
-- Raise an issue, question or recommendation in the issues tab above and start a discussion with other members.
+- Raise an issue, question, or recommendation in the issues tab above and start a discussion with other members.
 - Once agreement has been reached, then raise a pull request to update the specification with your recommended changes.
 - Let others know about your pull request by either commenting on the relevant issue or posting in the Standards Working Group slack channel.
 - Pull requests are reviewed and merged during Standards Working Group meetings.
