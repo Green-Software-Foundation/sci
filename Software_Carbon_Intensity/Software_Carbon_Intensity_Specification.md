@@ -2,7 +2,7 @@
 
 ## Scope
 
-This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose of the score is to increase awareness and transparency of an applications sustainability credentials; to help users make informed choices about the applications they use in their daily lives (at home and at work). The score will also help application developers make better, evidence-based, decisions during system design, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
+This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose of the score is to increase awareness and transparency of an applications sustainability credentials. The score will help software practitioners make better, evidence-based, decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
 
 ## Versions
 
