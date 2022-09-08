@@ -61,7 +61,7 @@ The Software Carbon Intensity (SCI) is a rate, carbon emissions per one unit of 
 
 Where:
 
-- The total amount of carbon `C` the software is causing to be emitted.
+- The total amount of carbon `C` the software causes to be emitted.
 - All the elements in the SCI equation scale by the same Functional unit of `R` (e.g. carbon per additional user, API-call, ML job, etc).
 
 This can be expanded to:
