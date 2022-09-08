@@ -22,7 +22,7 @@ Reducing an SCI score is only possible through the elimination of emissions. Tha
 
 The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The product or service may be running in any environment, whether a personal computer, private data center or a hyperscale cloud.
 
-As software engineers, we all have a significant role to play in collectively reducing the SCI Score during the design, development and delivery of software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
+As software practitioners, we all have a significant role to play in collectively reducing the SCI Score during the design, development and delivery of software applications. The following list provides some strategies that can be used to reduce the SCI score across software roles. 
 - For a software programmer, this would imply writing energy efficient code.
 - For a AI/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardware for training.
 - For database engineer, this would comprise of choices like schema design, choice of storage, query optimizations.
