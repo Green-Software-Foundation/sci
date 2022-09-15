@@ -38,9 +38,9 @@ In situations where there is a lack of access, capability, or rights to the nece
 
 All actions that serve to reduce the carbon emissions of a piece of software fit into one of three categories: 
 
-- **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
-- **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
-- **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
+- **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function. For example using a more efficient search algorithm or a modern CPU that requires less power  
+- **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function. For example reserving fewer cores of a virtual machine or downsizing the hardware system software runs on. 
+- **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity. For example scheduling a cron job to run in the middle of the day in a place with excess solar or moving a machine learning job from one region to another where there is excess renewable energy. 
 
 The SCI specification intends to encourage more of these actions to be taken during the development and maintenance of software applications.
 
