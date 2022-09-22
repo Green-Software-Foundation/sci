@@ -71,8 +71,8 @@ This can be expanded to:
 `SCI = (O + M) per R`
 
 Where:
-- `O` = Operational emissions based on energy consumption (E) and location-based carbon intensity measurement (I)
-- `M` = Embodied emissions of a software system
+- `O` = Operational emissions based on the emissions caused by energy consumption 
+- `M` = Embodied emissions of the hardware needed to operate a software system
 
 ### Operational Emissions  (`O`)
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
