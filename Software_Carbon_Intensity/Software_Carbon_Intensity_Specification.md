@@ -118,27 +118,27 @@ To calculate the time-share, amortize the total embodied carbon over the expecte
 
 To calculate resource-share, we look at the share of total available resources reserved for use by your software. For instance, the percentage of total virtual CPUs reserved for your software is a good choice for the resource-share metric in the virtualized cloud space.
 
-To calculate the share of `M` for a software application, we use another equation:
-
-`M = TE * (TR/EL) * (RR/TR)`
-
-Where:
-
-- `TE` = Total Embodied Emissions, meaning the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
-- `TR` = Time Reserved, meaning the length of time the hardware is reserved for use by the software.
-- `EL` = Expected Lifespan, meaning the anticipated time that the equipment will be installed.
-- `RR` = Resources Reserved, meaning the number of resources reserved for use by the software.
-- `TR` = Total Resources, meaning the total number of resources available.
-
-We can further refine the equation:
+To calculate the share of `M` for a software application, we use the equation:
 
 `M = TE * TS * RS`
 
 Where:
 
+- `TE` = Total Embodied Emissions, meaning the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
+- `TS = Time-share, meaning the share of the total life span of the hardware reserved for use by the software.
+- `RS = Resource-share, meaning the share of the total available resources of the hardware reserved for use by the software.
+
+We can further refine the equation:
+
+`M = TE * (TR/EL) * (RR/TR)`
+
+Where:
+
 - `TE` = Total Embodied Emissions, meaning the sum of LCA emissions for all hardware components.
-- `TS = TR/EL` = Time-share, meaning the share of the total life span of the hardware reserved for use by the software.
-- `RS = RR/TR` = Resource-share, meaning the share of the total available resources of the hardware reserved for use by the software.
+- `TR` = Time Reserved, meaning the length of time the hardware is reserved for use by the software.
+- `EL` = Expected Lifespan, meaning the anticipated time that the equipment will be installed.
+- `RR` = Resources Reserved, meaning the number of resources reserved for use by the software.
+- `TR` = Total Resources, meaning the total number of resources available.
 
 You MUST include an estimate of all the embodied emissions for the hardware used within your software boundary.
 
