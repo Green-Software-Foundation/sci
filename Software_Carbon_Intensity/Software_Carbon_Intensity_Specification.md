@@ -272,21 +272,9 @@ Market-based measures are financial instruments designed to neutralize or offset
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Definitions
+### Definitions and abbreviations
 
-Please consult the [GSF Dictionary](https://github.com/Green-Software-Foundation/dictionary) for definitions of terms used in this document.
-
-### Abbreviations
-
-<table>
-<caption></caption>
-<tbody>
-  <tr>
-    <td>GSF</td>
-    <td>Green Software Foundation</td>
-  </tr>
-</tbody>
-</table>
+Please consult the [GSF Dictionary](https://github.com/Green-Software-Foundation/dictionary) for definitions of terms and abbreviations used in this document.
 
 ## References
 ### Normative References
