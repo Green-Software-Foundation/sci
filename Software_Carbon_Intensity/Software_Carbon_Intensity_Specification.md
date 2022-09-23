@@ -274,21 +274,7 @@ Market-based measures are financial instruments designed to neutralize or offset
 
 ### Definitions
 
-<table>
-  <caption></caption>
-  <tbody>
-    <tr>
-	<td><strong>Marginal Carbon Intensity (I) </strong></td>
-	<td>This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.</td>
-    </tr>
-    <tr>
-	<td><strong>Carbon Delta (D)</strong></td>
-	<td>This is the carbon difference between an initial and modified carbon intensity. This optional parameter is used to capture a "what if", by comparing a real number against another scenario. This allows quantification of carbon savings by using the SCI to compare two carbon intensities, and facilitates a singular statement of, "Over X predictions made, users on average reduced their carbon footprint by Z %”</td>
-    </tr>
-  </tbody>
-</table>
-
-Kindly consult [GSFDICT] for more definitions used in this document.
+Please consult the [GSF Dictionary](https://github.com/Green-Software-Foundation/dictionary) for definitions of terms used in this document.
 
 ### Abbreviations
 
