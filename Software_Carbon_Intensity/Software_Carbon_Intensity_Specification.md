@@ -34,7 +34,9 @@ The SCI encourages calculation using granular real-world data, which is challeng
 
 In situations where there is a lack of access, capability, or rights to the necessary real-world data, the SCI allows for data generated through modeling, using best estimates instead.
 
-## Software Sustainability Actions
+## Software sustainability actions
+
+> Rex: ISO requires all headings to use sentence-case; that is, only the first word can have a leading uppercase letter, unless that and subseqent words are proper nouns spelled with leading and/or embedded uppercase letters. Only this heading has been changed (from "Software Sustainability Actions"), as a sample. Others will need to be downcased as well.
 
 All actions that serve to reduce the carbon emissions of a piece of software fit into one of three categories: 
 
