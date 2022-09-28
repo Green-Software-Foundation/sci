@@ -1,5 +1,7 @@
 # Software Carbon Intensity (SCI) Specification (v.Alpha)
 
+> Rex: The [ISO House Style](https://www.iso.org/ISO-house-style.html) states, "Use an impersonal tone. Avoid “I”, “we”, “you” and other personal pronouns." This means getting rid of "you" and "your", for example.
+
 ## Scope
 
 This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose of the score is to increase awareness and transparency of an applications sustainability credentials. The score will help software practitioners make better, evidence-based, decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
