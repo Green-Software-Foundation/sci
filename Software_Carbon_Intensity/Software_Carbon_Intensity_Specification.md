@@ -340,6 +340,8 @@ Kindly consult [GSFDICT] for more definitions used in this document.
 ## Terminology and Conventions
 ### Conventions
 
+> Rex: ISO does *NOT* use RFC2119 conventions! Instead it uses "shall", "shall not", "should", "should not", "may", "can", "cannot", "must". See [7 Verbal forms for expressions of provisions](https://www.iso.org/sites/directives/current/part2/index.xhtml#_idTextAnchor078).
+
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119].
 
 All sections and appendixes, except "Scope" and "Introduction", are normative unless they are explicitly indicated to be informative.
