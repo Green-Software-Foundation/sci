@@ -59,6 +59,10 @@ The steps required to calculate and report an SCI score are:
 
 ## Methodology Summary
 
+### General
+
+> Rex: ISO requires that if a section contains any subsections, it *CANNOT* contain any text *BEFORE* the first subsection. As such, the following text must belong to a new subsection, which I have called "General". You might want to call it "Introduction". This is the first of 2 samples.
+
 The Software Carbon Intensity (SCI) is a rate; carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
 
 `SCI = C per R`
@@ -77,6 +81,11 @@ Where:
 - `M` = Embodied emissions of the hardware needed to operate a software system
 
 ### Operational Emissions  (`O`)
+
+#### General
+
+> Rex: ISO requires that if a section contains any subsections, it *CANNOT* contain any text *BEFORE* the first subsection. As such, the following text must belong to a new subsection, which I have called "General". You might want to call it "Introduction". Note that by using this approach, headings are no longer unique, which makes it a bit more challenging to reference them in markdown (you must qualify them with a prefix from their parent heading). This is the second of 2 samples.
+
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
 To calculate the operational emissions `O` for a software application, we use:
