@@ -26,6 +26,31 @@ In situations where there is a lack of access, capability, or rights to the nece
 
 This specification describes a methodology for calculating the rate of carbon emissions for a software system; that is, its SCI score. The purpose of this score is to increase awareness and transparency of an application's sustainability credentials. The score will help software practitioners make better, evidence-based decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
 
+## Terms and definitions
+
+For the purposes of this document, the following terms and definitions apply.
+
+ISO and IEC maintain terminological databases for use in standardization at the following addresses:
+-	ISO Online browsing platform: available at https://www.iso.org/obp
+-	IEC Electropedia: available at http://www.electropedia.org/
+
+T.1  
+**action**  
+explicit outcome taken, or change avoided, depending on the quantifiable emissions measured by this specification
+
+Note to entry: Actions generally relate to using less electricity, using electricity more intelligently, or using less hardware.
+
+T.2  
+**carbon-aware**  
+attribute of software or hardware that adjusts its behavior (consumption of inputs, processing, or production of outputs) in response to the carbon intensity of the energy it consumes
+
+The following abbreviations are used throughout this specification:
+-	E – Energy consumed by a software system
+-	I – Location-based marginal carbon emissions
+-	M – Embodied emissions of the hardware needed to operate a software system
+-	O – Operational emissions based on the emissions caused by energy consumption
+-	R – Function unit 
+
 ## Software Sustainability Actions
 
 All actions that serve to reduce the carbon emissions of a piece of software fit into one of three categories: 
