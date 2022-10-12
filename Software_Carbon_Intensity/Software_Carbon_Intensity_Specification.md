@@ -1,8 +1,8 @@
-# Software Carbon Intensity (SCI) Specification (version 1.0)
+# Software Carbon Intensity (SCI) Specification
 
 ## Scope
 
-This document, the Software Carbon Intensity technical specification, describes a methodology for calculating the rate of carbon emissions for a software system. The purpose of the score is to increase awareness and transparency of an applications sustainability credentials. The score will help software practitioners make better, evidence-based, decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
+This specification describes a methodology for calculating the rate of carbon emissions for a software system; that is, its SCI score. The purpose of this score is to increase awareness and transparency of an application's sustainability credentials. The score will help software practitioners make better, evidence-based decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
 
 ## Introduction
 
