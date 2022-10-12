@@ -242,39 +242,36 @@ What one unit of `R` looks like may be modelled and the total carbon (`C`) calcu
 
 When taking an action to reduce the carbon intensity of a piece of software, the intensity should be compared to a baseline. The baseline shall be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional units, etc. shall remain the same between the baseline and proposed SCI.
 
-## Core Characteristics
+## Core characteristics
 
-As the SCI specification matures and develops, these core characteristics shall remain true.
+As this specification matures and develops, the following core characteristics shall remain true:
 
-### The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency
+- **The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency**
+  - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, or hardware efficiency.
+  - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
 
-- The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, or hardware efficiency.
-- If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
+- **The SCI takes a systems-impact view**
+  - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that creates reductions at a system-wide level rather than just at a local level. Local-level optimizations may lead to micro improvements but may have negative downstream impacts at a macro level that negate the impact of those actions.
+  - Such a systems view shall be adopted by articulating the [boundaries](#software-boundary) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
-### The SCI takes a systems-impact view
+- **The SCI is easy to implement**  
+To achieve impact at scale, the SCI encourages adoption through ease of implementation.
+  - Anyone without much experience or training shall be able to follow the SCI specification instructions.
+  - Calculation of the SCI shall be possible without incurring any cost, for instance, for data, services, or tooling.
+  - Where possible, teams should consider investing more time or money in calculating their SCI number to increase its accuracy.
 
-- The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that creates reductions at a system-wide level rather than just at a local level. Local-level optimizations may lead to micro improvements but may have negative downstream impacts at a macro level that negate the impact of those actions.
-- Such a systems view shall be adopted by articulating the [boundaries](#software-boundary) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
-
-### The SCI is easy to implement
-
-To achieve impact at scale, the SCI needs to encourage adoption through ease of implementation.
-
-- Anyone without much experience or training shall be able to follow the SCI specification instructions.
-- Calculation of the SCI shall be possible without incurring any cost, for instance, for data or services or tooling.
-- Where possible, teams should consider investing more time or money in calculating their SCI number to increase its accuracy.
-
-### The SCI encourages the use of granular data
-
-In calculating the SCI value, you should use the highest granularity data available to you to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values shall be used which are the lowest acceptable level of granularity.
+- **The SCI encourages the use of granular data**  
+In calculating the SCI value, the highest granularity data available should be used to compute each of `O`, `E`, `I`, and `M`. In cases where temporal granular data is not available, annual values shall be used which are the lowest acceptable level of granularity.
 
 ## Exclusions
 
-Our focus is elimination, not offsetting. One tonne of carbon eliminated (meaning that it was not emitted into our atmosphere) is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place.
+### General
 
-Only actions that eliminate emissions reduce an SCI score. As such, you cannot reduce an SCI score through carbon offsets, such as [market-based measures](#market-based-measures).
+The focus is elimination, not offsetting. One tonne of carbon eliminated (meaning that it was not emitted into the atmosphere) is not the same as one tonne of carbon that has been offset. By far the more preferable goal is never to have emitted the carbon in the first place.
 
-### Market-based Measures
+Only actions that eliminate emissions reduce an SCI score. As such, an SCI score cannot be reduced through carbon offsets, such as [market-based measures](#market-based-measures).
+
+### Market-based measures
 
 Market-based measures are financial instruments designed to neutralize or offset carbon emissions. Market-based measures include, but are not limited to the following:
 
@@ -286,30 +283,8 @@ Market-based measures are financial instruments designed to neutralize or offset
 - Power Purchase Agreements (PPAs)
 - Renewable Energy Credits (RECs)
 
-### Definitions and abbreviations
+## Bibliography
 
-Please consult the [GSF Dictionary](https://github.com/Green-Software-Foundation/dictionary) for definitions of terms and abbreviations used in this document.
+The following documents are useful references for implementers and users of this document:
 
-## References
-### Normative References
-
-<table>
-  <caption>Normative References </caption>
-  <tbody>
-    <tr>
-      <td><strong>[RFC2119]</strong></td>
-      <td>"Key words for use in RFCs to Indicate Requirement Levels", S. Bradner, March 1997, URL:http://www.ietf.org/rfc/rfc2119.txt</td>
-    </tr>
-    <tr>
-      <td><strong>[RFC5234]</strong></td>
-      <td>"Augmented BNF for Syntax Specifications: ABNF", D. Crocker, Ed., P. Overell, January 2008, URL: https://tools.ietf.org/rfc/rfc5234.txt</td>
-    </tr>
-  </tbody>
-</table>
-
-### Informative References
-
-|                                              |                                                         |
-| -------------------------------------------- | ------------------------------------------------------- |
-| **[GSFDICT]**                                | https://github.com/Green-Software-Foundation/Dictionary |
-| **Principles of Green Software Engineering** | https://principles.green                                |
+[1] *The Net-Zero STANDARD*, Science Based Targets initiative (SBTi), https://sciencebasedtargets.org/net-zero
