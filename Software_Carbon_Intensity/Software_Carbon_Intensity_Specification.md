@@ -168,11 +168,11 @@ Then, as long as the functional unit of `R` is the same across all the component
 
 If the functional unit of a software component is not the same as the aggregate functional unit, then the component SCI score needs to be converted to match that of the aggregate SCI functional unit. Details of any unit conversion factors used in calculating the SCI score shall be disclosed.
 
-## Software Boundary
+## Software boundary
 
-The first step in generating your SCI score is deciding what the boundaries of your software system are i.e. what software components to include or exclude in the calculation of the SCI score.
+The first step in generating an SCI score is deciding what the boundaries of the software system are; i.e., what software components to include or exclude in the calculation of the SCI score.
 
-The calculation of software carbon intensity shall include all supporting infrastructure and systems that significantly contribute to the software’s operation.
+The calculation of SCI shall include all supporting infrastructure and systems that significantly contribute to the software’s operation.
 
 Supporting infrastructure and systems may include:
 
@@ -192,15 +192,15 @@ Supporting infrastructure and systems may include:
 - resources to support redundancy
 - resources to support failover
 
-If your boundary includes on-premise and/or cloud data center operations, E should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
+If the boundary includes on-premise and/or cloud data center operations, E should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
 
-## Functional Unit (`R`)
+## Functional unit
 
-The second step in generating your SCI score is deciding your functional unit which will be used to describe how your application scales. First, you decide on your functional unit, your choice of `R`. Then you calculate how much `C` is emitted per unit of `R`.
+The second step in generating an SCI score is deciding which functional unit will be used to describe how the application scales. First,  decide on the functional unit, using the choice of `R`. Then calculate how much `C` is emitted per unit of `R`.
 
-For instance, if your application scales by user then choose this as your functional unit.
+For instance, if the application scales by user then choose this as the functional unit.
 
-You shall use a consistent choice of `R` across all the components in your software boundary.
+A consistent choice of `R` across all the components in the software boundary shall be used.
 
 A suggested list of functional units includes:
 
@@ -216,27 +216,29 @@ A suggested list of functional units includes:
 - Transaction
 - Database read/write
 
-## Quantification Method
+## Quantification method
 
-The third step in generating your SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in your software boundary.
+### General
+
+The third step in generating an SCI score is deciding the approach to take when quantifying the carbon emissions for *each component* in the software boundary.
 
 The goal of the SCI is to **quantify** how much `C` (carbon) is emitted per **one unit** of `R`.
 
 There are two main approaches to quantifying carbon emissions (`C`), [measurement](#measurement) via real-world data or [calculation](#calculation) via models.
 
-Each component in your software boundary may use either measurement or calculation to quantify the carbon emissions.
+Each component in the software boundary may use either measurement or calculation to quantify the carbon emissions.
 
-We strongly advise speaking to your suppliers (be they hardware, hosting, or other) and requesting the data you need in the resolution you require for quantifying your SCI score.
+It is strongly advised that suppliers (be they hardware, hosting, or other) be contacted regarding the data needed in the resolution required for quantifying the SCI score.
 
 ### Measurement
 
-You may quantify carbon emissions by measuring the total real-world carbon emissions of your component (`C`) over a time period and dividing by the number of functional units (`R`) in the same time period to get `C` per `R`. For instance, you may measure data regarding the real-world usage of your application "in the wild" and then divide by the number of users serviced in the same time period to get `C` per `User`.
+Carbon emissions may be quantified by measuring the total real-world carbon emissions of the component (`C`) over a time period and dividing by the number of functional units (`R`) in the same time period to get `C` per `R`. For instance, data regarding the real-world usage of the application "in the wild" might be measured and then divided by the number of users serviced in the same time period to get `C` per user.
 
 ### Calculation
 
-You may model what one unit of `R` looks like and calculate the total carbon (`C`) for executing one functional unit of work (`R`) in a controlled lab environment. For instance, you may create a benchmark application that models a `user` interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per `user`.
+What one unit of `R` looks like may be modelled and the total carbon (`C`) calculated for executing one functional unit of work (`R`) in a controlled lab environment. For instance, a benchmark application may be created that models a user interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per user.
 
-## Comparing a SCI Score to a Baseline
+## Comparing an SCI score to a baseline
 
 When taking an action to reduce the carbon intensity of a piece of software, the intensity should be compared to a baseline. The baseline shall be calculated using an identical methodology to how the proposed SCI was calculated, except excluding the proposed action(s). The measurements, assumptions, models, functional units, etc. shall remain the same between the baseline and proposed SCI.
 
