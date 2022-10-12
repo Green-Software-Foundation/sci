@@ -119,55 +119,54 @@ The only figure that matters when trying to optimize the scheduling of a computa
 
 Units: this shall be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
-### Embodied Emissions (`M`)
+### Embodied emissions
 
 Embodied carbon (otherwise referred to as “embedded carbon”) is the amount of carbon emitted during the creation and disposal of a hardware device.
 
-When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that you need to calculate in the SCI equation.
+When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that needs to be calculated in the SCI equation.
 
-This fraction consists of both a time-share and a resource-share. The length of time your software runs on the device determines the time-share. The percentage of the device reserved just for your application during the time-share determines your resource-share.
+This fraction consists of both a time-share and a resource-share. The length of time software runs on the device determines its time-share. The percentage of the device reserved just for that application during the time-share determines that application's resource-share.
 
-To calculate the time-share, amortize the total embodied carbon over the expected life span of your device and then extrapolate based on the time reserved for your usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of 4 years and you reserved use for 1hr, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28g of the total.
+To calculate the time-share, amortize the total embodied carbon over the expected life span of the device and then extrapolate based on the time reserved for the usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of four years and it was reserved for use for one hour, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28g of the total.
 
-To calculate resource-share, we look at the share of total available resources reserved for use by your software. For instance, the percentage of total virtual CPUs reserved for your software is a good choice for the resource-share metric in the virtualized cloud space.
+To calculate resource-share, look at the share of total available resources reserved for use by the software. For instance, the percentage of total virtual CPUs reserved for the software is a good choice for the resource-share metric in the virtualized cloud space.
 
-To calculate the share of `M` for a software application, we use the equation:
+To calculate the share of `M` for a software application, use the equation:
 
 `M = TE * TS * RS`
 
 Where:
 
-- `TE` = Total Embodied Emissions, meaning the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
-- `TS = Time-share, meaning the share of the total life span of the hardware reserved for use by the software.
-- `RS = Resource-share, meaning the share of the total available resources of the hardware reserved for use by the software.
+- `TE` = Total Embodied Emissions; the sum of Life Cycle Assessment (LCA) emissions for all hardware components.
+- `TS` = Time-share; the share of the total life span of the hardware reserved for use by the software.
+- `RS` = Resource-share; the share of the total available resources of the hardware reserved for use by the software.
 
-We can further refine the equation:
+The equation can be expanded further:
 
 `M = TE * (TR/EL) * (RR/TR)`
 
 Where:
 
-- `TE` = Total Embodied Emissions, meaning the sum of LCA emissions for all hardware components.
-- `TR` = Time Reserved, meaning the length of time the hardware is reserved for use by the software.
-- `EL` = Expected Lifespan, meaning the anticipated time that the equipment will be installed.
-- `RR` = Resources Reserved, meaning the number of resources reserved for use by the software.
-- `TR` = Total Resources, meaning the total number of resources available.
+- `TR` = Time Reserved; the length of time the hardware is reserved for use by the software.
+- `EL` = Expected Lifespan; the anticipated time that the equipment will be installed.
+- `RR` = Resources Reserved; the number of resources reserved for use by the software.
+- `TR` = Total Resources; the total number of resources available.
 
-You shall include an estimate of all the embodied emissions for the hardware used within your software boundary.
+An estimate of all the embodied emissions for the hardware used within the software boundary shall be included.
 
-You may use simple models to estimate embodied emissions; however, you should use the most granular data possible and ideally emissions data from a device’s life cycle analysis when calculating your embodied carbon.
+Simple models to estimate embodied emissions may be used; however, the most granular data possible and ideally emissions data from a device’s life cycle analysis when calculating the embodied carbon should be used.
 
-Since the purpose of the SCI is the elimination of emissions `M` shall not include any any [market-based measures](#market-based-measures).
+Since the purpose of the SCI is the elimination of emissions `M` shall not include any [market-based measures](#market-based-measures).
 
 Units: this shall be in grams of carbon (gCO2eq).
 
-### Functional Unit Conversion
+### Functional unit conversion
 
 An aggregate SCI score can be composed of multiple component SCI scores.
 
-Then, as long as the functional unit of R is the same across all the component SCI scores, you can sum them up to calculate the aggregate SCI. To sum multiple component SCI scores into one aggregate score, the functional unit R shall be the same across all components.
+Then, as long as the functional unit of `R` is the same across all the component SCI scores, these can be summed to calculate the aggregate SCI. To sum multiple component SCI scores into one aggregate score, the functional unit R shall be the same across all components.
 
-If the functional unit of a software component is not the same as the aggregate functional unit, then the component SCI score needs to be converted to match that of the aggregate SCI functional unit. You shall disclose details of any unit conversion factors used in calculating your SCI score.
+If the functional unit of a software component is not the same as the aggregate functional unit, then the component SCI score needs to be converted to match that of the aggregate SCI functional unit. Details of any unit conversion factors used in calculating the SCI score shall be disclosed.
 
 ## Software Boundary
 
