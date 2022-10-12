@@ -51,75 +51,71 @@ The following abbreviations are used throughout this specification:
 -	O – Operational emissions based on the emissions caused by energy consumption
 -	R – Function unit 
 
-## Software Sustainability Actions
+## Software sustainability actions
 
-All actions that serve to reduce the carbon emissions of a piece of software fit into one of three categories: 
+All actions that serve to reduce the carbon emissions of a piece of software fit into one of the following categories: 
 
 - **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
-- **Hardware Efficiency**: Actions taken to make software use less physical resources to perform the same function.
+- **Hardware Efficiency**: Actions taken to make software use fewer physical resources to perform the same function.
 - **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
 
-The SCI specification intends to encourage more of these actions to be taken during the development and maintenance of software applications.
+It is the intent of this specification to encourage more of these actions to be taken during the development and maintenance of software applications.
 
 ## Procedure
 
 The steps required to calculate and report an SCI score are:
 
+1. **Bound**: Decide on the [software boundary](#software-boundary); i.e., the components of a software system to include.
+1. **Scale**: As the SCI is a rate (carbon emissions per one [functional unit](#functional-unit-r)), pick the functional unit which best describes how the application scales.
+1. **Define**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method); real-world measurements, based on telemetry, or lab-based measurements, based on models.
+1. **Quantify**: Calculate a rate for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
+1. **Report**: Disclose the SCI score, software boundary, and the calculation methodology.
 
-1. **Bound**: Decide on the [software boundary](#software-boundary), i.e. the components of a software system to include.
-1. **Scale**: The SCI is a rate; carbon emissions per one [functional unit](#functional-unit-r). The next step is to pick the functional unit which best describes how the application scales.
-1. **Define**: For each software component listed in the software boundary, decide on the [quantification method](#quantification-method); real-world measurements, based on telemetry or lab-based measurements, based on models.
-1. **Quantify**: Calculate a rate (an SCI value) for every software component. The SCI value of the whole application is the sum of the SCI values for every software component in the system.
-1. **Report**. Disclosure the SCI score, software boundary, and the calculation methodology.
+## Methodology summary
 
-## Methodology Summary
+### General
 
-The Software Carbon Intensity (SCI) is a rate; carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
+SCI is a rate; carbon emissions per one unit of `R`. The equation used to calculate the SCI value of a software system is:
 
 `SCI = C per R`
 
 Where:
 
 - The total amount of carbon `C` the software causes to be emitted.
-- All the elements in the SCI equation scale by the same Functional unit of `R` (e.g. carbon per additional user, API-call, ML job, etc).
+- All the elements in the SCI equation scale by the same functional unit of `R` (e.g., carbon per additional user, API-call, or ML job).
 
 This can be expanded to:
 
 `SCI = (O + M) per R`
 
-Where:
-- `O` = Operational emissions based on the emissions caused by energy consumption 
-- `M` = Embodied emissions of the hardware needed to operate a software system
+### Operational emissions
 
-### Operational Emissions  (`O`)
+#### General
+
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
-To calculate the operational emissions `O` for a software application, we use:
+To calculate the operational emissions `O` for a software application, use teh following:
 
 `O = (E * I)`
 
-Where:
-- `E` = Energy consumed by a software system
-- `I` = Location-based marginal carbon emissions
-
-#### Energy (`E`)
+#### Energy
 
 This is the energy consumed by a software system for a functional unit of work. This could be applied to several taxonomies:  
 
 - Datacenter
-- Individual machine (e.g. VM/Node)
-- Individual service (e.g. API call, ML training job)
+- Individual machine (e.g., VM/Node)
+- Individual service (e.g., API call or ML training job)
 - Execution of code
 
 Units: this shall be in kilowatt hours (kWh).
 
-#### Location-Based Marginal Carbon Intensity (`I`)
+#### Location-based marginal carbon intensity
 
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this standard uses a consequential approach, marginal emissions rates shall be used for electricity consumption. 
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this specification uses a consequential approach, marginal emissions rates shall be used for electricity consumption. 
 
-Location-based marginal emissions factors measure the grid carbon intensity of a grid region. If your electricity consumption is connected to a grid, then you shall use the marginal emissions rate of that grid, which excludes any [market-based measures](#market-based-measures). If your electricity consumption is not connected to a larger regional grid, you shall use an appropriate emissions factor for that system. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
+Location-based marginal emissions factors measure the grid carbon intensity of a grid region. If the electricity consumption is connected to a grid, the marginal emissions rate of that grid shall be used, which excludes any [market-based measures](#market-based-measures). If the electricity consumption is not connected to a larger regional grid, an appropriate emissions factor for that system shall be used. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
 
-The only figure that matters if you’re trying to optimize the scheduling of your compute in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if you schedule some compute (e.g. increase electricity demand from the grid) at that moment.
+The only figure that matters when trying to optimize the scheduling of a computation in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if a computation is scheduled (e.g., increase electricity demand from the grid) at that moment.
 
 Units: this shall be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
