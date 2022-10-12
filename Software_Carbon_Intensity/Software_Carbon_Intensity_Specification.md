@@ -18,7 +18,7 @@ Software practitioners have a significant role to play in collectively reducing 
 - For QA engineers, it involves creating energy efficient test automation and performance testing scripts across browsers and devices.
 - For an architect, this implies choices like serverless or event driven architectures, infrastructure optimization, and design for carbon-aware systems.
 
-The SCI encourages calculation using granular real-world data, which is challenging to obtain in some environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources needed to calculate the SCI at lower resolutions and will provide tools and guidance for sourcing this information wherever systems are hosted. However, access to the data needed for higher resolution calculations might not always be available. Where this is the case, users of this specification are strongly advised to request such data from their suppliers (be they hardware, hosting, or other).
+The SCI encourages calculation using granular real-world data, which is challenging to obtain in some environments, particularly the public cloud. Access to the data needed for higher resolution calculations might not always be available. Where this is the case, users of this specification are strongly advised to request such data from their suppliers (be they hardware, hosting, or other).
 
 In situations where there is a lack of access, capability, or rights to the necessary real-world data, the SCI allows for data generated through modeling, using best estimates instead.
 
@@ -143,14 +143,14 @@ Where:
 
 The equation can be expanded further:
 
-`M = TE * (TR/EL) * (RR/TR)`
+`M = TE * (TiR/EL) * (RR/ToR)`
 
 Where:
 
-- `TR` = Time Reserved; the length of time the hardware is reserved for use by the software.
+- `TiR` = Time Reserved; the length of time the hardware is reserved for use by the software.
 - `EL` = Expected Lifespan; the anticipated time that the equipment will be installed.
 - `RR` = Resources Reserved; the number of resources reserved for use by the software.
-- `TR` = Total Resources; the total number of resources available.
+- `ToR` = Total Resources; the total number of resources available.
 
 An estimate of all the embodied emissions for the hardware used within the software boundary shall be included.
 
