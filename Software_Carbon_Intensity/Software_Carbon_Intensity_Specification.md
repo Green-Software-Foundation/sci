@@ -1,30 +1,30 @@
 # Software Carbon Intensity (SCI) Specification
 
-## Scope
-
-This specification describes a methodology for calculating the rate of carbon emissions for a software system; that is, its SCI score. The purpose of this score is to increase awareness and transparency of an application's sustainability credentials. The score will help software practitioners make better, evidence-based decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
-
 ## Introduction
 
 > "If you can't measure it, you can't improve it." - Peter Drucker
 
-Software systems cause emissions through the hardware that they operate on, both through the energy that the physical hardware consumes and the emissions associated with manufacturing the hardware. The Software Carbon Intensity (SCI) Specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible. This specification is focused on helping users and developers understand how to improve software to reduce or avoid the creation of emissions.
+Software systems cause emissions through the hardware that they operate on, both through the energy that the physical hardware consumes and the emissions associated with manufacturing the hardware. This specification defines a methodology for calculating the rate of carbon emissions for a software system. The purpose is to help users and developers make informed choices about which tools, approaches, architectures, and services they use in the future. It is a score rather than a total; lower numbers are better than higher numbers, and reaching 0 is impossible. This specification is focused on helping users and developers understand how to improve software to reduce or avoid the creation of emissions.
 
-Reducing an SCI score is only possible through the elimination of emissions. That can be achieved by modifying a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralization or avoidance offsets do not reduce an SCI score ([see exclusions section](#exclusions)). This makes the SCI an ideal strategy that organizations can adopt to meet climate targets focussed on eliminating emissions, such as a [net-zero target](https://sciencebasedtargets.org/net-zero).
+Reducing an SCI score is only possible through the elimination of emissions. That can be achieved by modifying a software system to use less physical hardware, less energy, or consume lower-carbon energy sources. Neutralization or avoidance offsets do not reduce an SCI score ([see exclusions section](#exclusions)). This makes the SCI an ideal strategy that organizations can adopt to meet climate targets focused on eliminating emissions, such as those specified by [1].
 
-The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large distributed cloud system to a small monolithic open source library, any on-premise application or even a serverless function. The environment the product or service is running in can also vary; from personal computers, private data centers or a hyperscale cloud.
+The SCI is for everyone. It is possible to calculate an SCI score for any software application, from a large, distributed cloud system to a small monolithic open source library, any on-premise application, or even a serverless function. The environment the product or service is running in can also vary; from personal computers, private data centers or a hyperscale cloud.
 
-As software practitioners, we all have a significant role to play in collectively reducing the SCI score during the design, development and delivery of software applications. The following list provides some strategies that can be used to do this across different software roles: 
-- For a software programmer, this would imply writing energy efficient code.
-- For an AI/ML developer it would imply model optimization, using pre-trained models or leveraging optimized hardware for training.
-- For a database engineer, this would comprise of choices like schema design, choice of storage, query optimizations.
-- For a DevOps practitioner, this would require creating a carbon-aware pipeline and considering when to schedule builds and leverage clean energy.
-- For QA engineers, it would be about creating energy efficient test automation and performance testing scripts across browsers and devices.
-- For an architect, this would imply choices like serverless or event driven architectures, infrastructure optimization and design for carbon-aware systems.
+Software practitioners have a significant role to play in collectively reducing the SCI score during the design, development and delivery of software applications. The following list provides some strategies that can be used to do this across different software roles: 
+- For a software programmer, this implies writing energy efficient code.
+- For an AI/ML developer, it implies model optimization, using pre-trained models or leveraging optimized hardware for training.
+- For a database engineer, this comprises choices like schema design, choice of storage, and query optimizations.
+- For a DevOps practitioner, this requires creating a carbon-aware pipeline and considering when to schedule builds and leverage clean energy.
+- For QA engineers, it involves creating energy efficient test automation and performance testing scripts across browsers and devices.
+- For an architect, this implies choices like serverless or event driven architectures, infrastructure optimization, and design for carbon-aware systems.
 
-The SCI encourages calculation using granular real-world data, which is challenging to obtain in some environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources needed to calculate the SCI at lower resolutions and will provide tools and guidance for sourcing this information wherever systems are hosted. Access to the data needed for higher resolution calculations, however, may not always be available. Where this is the case, we strongly advise speaking to your suppliers (be they hardware, hosting or other) and requesting it.
+The SCI encourages calculation using granular real-world data, which is challenging to obtain in some environments, particularly the public cloud. The Green Software Foundation is committed to ensuring everyone has free and open access to the data sources needed to calculate the SCI at lower resolutions and will provide tools and guidance for sourcing this information wherever systems are hosted. However, access to the data needed for higher resolution calculations might not always be available. Where this is the case, users of this specification are strongly advised to request such data from their suppliers (be they hardware, hosting, or other).
 
 In situations where there is a lack of access, capability, or rights to the necessary real-world data, the SCI allows for data generated through modeling, using best estimates instead.
+
+## Scope
+
+This specification describes a methodology for calculating the rate of carbon emissions for a software system; that is, its SCI score. The purpose of this score is to increase awareness and transparency of an application's sustainability credentials. The score will help software practitioners make better, evidence-based decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
 
 ## Software Sustainability Actions
 
