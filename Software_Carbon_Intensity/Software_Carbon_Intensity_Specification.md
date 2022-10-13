@@ -46,10 +46,10 @@ attribute of software or hardware that adjusts its behavior (consumption of inpu
 
 The following abbreviations are used throughout this specification:
 -	E – Energy consumed by a software system
--	I – Location-based marginal carbon emissions
+-	I – Location-based marginal carbon intensity
 -	M – Embodied emissions of the hardware needed to operate a software system
 -	O – Operational emissions based on the emissions caused by energy consumption
--	R – Function unit 
+-	R – Functional unit 
 
 ## Software sustainability actions
 
@@ -57,9 +57,9 @@ All actions that serve to reduce the carbon emissions of a piece of software fit
 
 - **Energy Efficiency**: Actions taken to make software use less electricity to perform the same function.
 - **Hardware Efficiency**: Actions taken to make software use fewer physical resources to perform the same function.
-- **Carbon Awareness**: Actions taken to time or region-shift software computation to take advantage of clean, renewable or low carbon sources of electricity.
+- **Carbon Awareness**: Actions taken to time- or region-shift software computation to take advantage of cleaner, more renewable or lower carbon sources of electricity.
 
-It is the intent of this specification to encourage more of these actions to be taken during the development and maintenance of software applications.
+It is the intent of this specification to encourage more of these actions to be taken during the design, development, and maintenance of software applications.
 
 ## Procedure
 
@@ -82,7 +82,7 @@ SCI is a rate; carbon emissions per one unit of `R`. The equation used to calcul
 Where:
 
 - The total amount of carbon `C` the software causes to be emitted.
-- All the elements in the SCI equation scale by the same functional unit of `R` (e.g., carbon per additional user, API-call, or ML job).
+- All the elements in the SCI equation scale by the same functional unit of `R` (e.g., carbon emissions per additional user, API-call, or ML training run).
 
 This can be expanded to:
 
@@ -94,7 +94,7 @@ This can be expanded to:
 
 To calculate the operational emissions associate with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
 
-To calculate the operational emissions `O` for a software application, use teh following:
+To calculate the operational emissions `O` for a software application, use the following:
 
 `O = (E * I)`
 
@@ -104,7 +104,7 @@ This is the energy consumed by a software system for a functional unit of work. 
 
 - Datacenter
 - Individual machine (e.g., VM/Node)
-- Individual service (e.g., API call or ML training job)
+- Individual service (e.g., API call or ML training run)
 - Execution of code
 
 Units: this shall be in kilowatt hours (kWh).
@@ -115,7 +115,7 @@ The carbon intensity of electricity is a measure of how much carbon (CO2eq) emis
 
 Location-based marginal emissions factors measure the grid carbon intensity of a grid region. If the electricity consumption is connected to a grid, the marginal emissions rate of that grid shall be used, which excludes any [market-based measures](#market-based-measures). If the electricity consumption is not connected to a larger regional grid, an appropriate emissions factor for that system shall be used. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
 
-The only figure that matters when trying to optimize the scheduling of a computation in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will be turned up if a computation is scheduled (e.g., increase electricity demand from the grid) at that moment.
+The only figure that matters when trying to optimize the scheduling of a computation in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will need to be turned up if a computation is scheduled (e.g., increase electricity demand from the grid) at that moment.
 
 Units: this shall be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
@@ -125,7 +125,7 @@ Embodied carbon (otherwise referred to as “embedded carbon”) is the amount o
 
 When software runs on a device, a fraction of the total embodied emissions of the device is allocated to the software. This is the value of `M` that needs to be calculated in the SCI equation.
 
-This fraction consists of both a time-share and a resource-share. The length of time software runs on the device determines its time-share. The percentage of the device reserved just for that application during the time-share determines that application's resource-share.
+This fraction consists of both a time- and resource-share. The length of time that the software runs on the device determines its time-share. The percentage of the device reserved just for that application during the time-share determines that application's resource-share.
 
 To calculate the time-share, amortize the total embodied carbon over the expected life span of the device and then extrapolate based on the time reserved for the usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of four years and it was reserved for use for one hour, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28g of the total.
 
@@ -154,7 +154,7 @@ Where:
 
 An estimate of all the embodied emissions for the hardware used within the software boundary shall be included.
 
-Simple models to estimate embodied emissions may be used; however, the most granular data possible and ideally emissions data from a device’s life cycle analysis when calculating the embodied carbon should be used.
+Simple models to estimate embodied emissions may be used; however, the most granular data possible and ideally emissions data from a device’s LCA when calculating the embodied carbon should be used.
 
 Since the purpose of the SCI is the elimination of emissions `M` shall not include any [market-based measures](#market-based-measures).
 
@@ -192,13 +192,13 @@ Supporting infrastructure and systems may include:
 - resources to support redundancy
 - resources to support failover
 
-If the boundary includes on-premise and/or cloud data center operations, E should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
+If the boundary includes on-premise and/or cloud data center operations, `E` should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
 
 ## Functional unit
 
-The second step in generating an SCI score is deciding which functional unit will be used to describe how the application scales. First,  decide on the functional unit, using the choice of `R`. Then calculate how much `C` is emitted per unit of `R`.
+The second step in generating an SCI score is deciding which functional unit will be used to describe how the application scales. First, decide on the functional unit, using the choice of `R`. Then calculate how much `C` is emitted per unit of `R`.
 
-For instance, if the application scales by user then choose this as the functional unit.
+For instance, if the application scales by number of users then choose this as the functional unit.
 
 A consistent choice of `R` across all the components in the software boundary shall be used.
 
@@ -244,10 +244,10 @@ When taking an action to reduce the carbon intensity of a piece of software, the
 
 ## Core characteristics
 
-As this specification matures and develops, the following core characteristics shall remain true:
+As this specification develops, the following core characteristics shall remain true:
 
-- **The SCI is sensitive to carbon awareness, energy efficiency, or hardware efficiency**
-  - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, or hardware efficiency.
+- **The SCI is sensitive to carbon awareness, energy efficiency, and hardware efficiency**
+  - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, and hardware efficiency.
   - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
 
 - **The SCI takes a systems-impact view**
