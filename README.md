@@ -4,7 +4,6 @@ A specification that describes how to calculate a carbon intensity score for sof
 
 Created and managed by the [Standards Working Group](https://github.com/Green-Software-Foundation/standards_wg) in the [greensoftware.foundation](https://greensoftware.foundation).
 
-
 ## Project Scope
 This document, the Software Carbon Intensity technical specification, describes how to calculate the carbon intensity of a software application. It describes the methodology of calculating the total carbon emissions and the selection criteria to turn the total into a rate that can be used to achieve real-world, physical emissions reductions, also known as abatement.
 
@@ -15,6 +14,9 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 - The latest published version of the specification is [here](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md).
 - The `dev` branch contains the current version that is being worked on and the `main` branch contains the latest published version.
 - Check the [issues tab](https://github.com/Green-Software-Foundation/software_carbon_intensity/issues) for active and closed conversations regarding the spec.
+
+## GitHub Training 
+- [Getting started with GitHub](https://green-software-foundation.github.io/github-training/)
 
 ## Contributing
 The recommended approach for getting involved with the specification is to:

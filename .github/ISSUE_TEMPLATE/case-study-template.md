@@ -3,7 +3,7 @@ name: Case-study template
 about: This is a template to use for case studies that are submitted to apply the
   SCI.
 title: Test case submission
-labels: Case-study submission, consistency review
+labels: Case-study submission
 assignees: atg-abhishek, Henry-WattTime
 
 ---

@@ -191,6 +191,9 @@ Supporting infrastructure and systems may include:
 - backup
 - resources to support redundancy
 - resources to support failover
+- End user devices
+- IoT devices
+- Edge devices
 
 If the boundary includes on-premise and/or cloud data center operations, `E` should take into account the efficiency of the data center, including cooling and other energy consumption necessary to operate a data center. The data center's energy efficiency is usually available as a PUE (Power Usage Effectiveness) value.
 
