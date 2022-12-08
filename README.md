@@ -1,4 +1,4 @@
-# Software Carbon Intensity (SCI) Specification [v.alpha]
+# Software Carbon Intensity (SCI) Specification
 
 A specification that describes how to calculate a carbon intensity score for software applications. 
 
