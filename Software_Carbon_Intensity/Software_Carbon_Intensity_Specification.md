@@ -109,6 +109,8 @@ This is the energy consumed by a software system for a functional unit of work. 
 
 Units: this shall be in kilowatt hours (kWh).
 
+The energy consumption should include all energy consumed by hardware reserved or provisioned, not just the hardware actually used to meet the software needs.  
+
 #### Location-based marginal carbon intensity
 
 The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this specification uses a consequential approach, marginal emissions rates shall be used for electricity consumption. 
