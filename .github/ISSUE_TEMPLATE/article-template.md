@@ -1,21 +1,21 @@
 ---
-name: Article template
+name: Case Study Article Submission
 about: Case Study Article Submission
-title: ''
-labels: ''
+title: Article Submission
+labels: Article Submission
 assignees: seanmcilroy29
 
 ---
 
 ## Executive Summary 
 
-Description of problem
+**Description of problem**
 
 ------- 
-How the use case solves the problem
+**How the use case solves the problem**
 
 --------
-Main benefits of the solution
+**Main benefits of the solution**
 
 -------
-What was the outcome, how were carbon emissions reduced
+**What was the outcome, how were carbon emissions reduced**
