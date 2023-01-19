@@ -19,3 +19,25 @@ assignees: seanmcilroy29
 
 -------
 **What was the outcome, how were carbon emissions reduced**
+
+-------
+**Problem statement**
+
+
+-------
+**Solution statement**
+
+
+-------
+**Process**
+
+-------
+**Architecture**
+
+-------
+**Conclusion**
+
+-------
+**Looking ahead / where could this lead**
+
+-------
