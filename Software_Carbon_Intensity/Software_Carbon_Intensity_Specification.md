@@ -51,6 +51,10 @@ The following abbreviations are used throughout this specification:
 -	O – Operational emissions based on the emissions caused by energy consumption
 -	R – Functional unit 
 
+T.3
+**carbon**  
+Greenhouse gases are a group of gases contributing to global warming. In this specification we use 'carbon' as a broad term to refer to the impact of all types of emissions and activities on global warming.
+
 ## Software sustainability actions
 
 All actions that serve to reduce the carbon emissions of a piece of software fit into one of the following categories: 
