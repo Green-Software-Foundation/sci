@@ -121,8 +121,6 @@ The carbon intensity of electricity is a measure of how much carbon (CO2eq) emis
 
 Location-based emissions factors measure the grid carbon intensity of a grid region. If the electricity consumption is connected to a grid, the emissions rate of that grid shall be used, which excludes any [market-based measures](#market-based-measures). If the electricity consumption is not connected to a larger regional grid, an appropriate emissions factor for that system shall be used. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
 
-The only figure that matters when trying to optimize the scheduling of a computation in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will need to be turned up if a computation is scheduled (e.g., increase electricity demand from the grid) at that moment.
-
 Units: this shall be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
 ### Embodied emissions
