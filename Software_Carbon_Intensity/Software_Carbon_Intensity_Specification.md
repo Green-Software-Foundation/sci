@@ -255,7 +255,7 @@ As this specification develops, the following core characteristics shall remain 
 
 - **The SCI is sensitive to carbon awareness, energy efficiency, and hardware efficiency**
   - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, and hardware efficiency.
-  - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
+  - If an application's SCI is X, and then actions are taken to make the application verifiably more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
 
 - **The SCI takes a systems-impact view**
   - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that creates reductions at a system-wide level rather than just at a local level. Local-level optimizations may lead to micro improvements but may have negative downstream impacts at a macro level that negate the impact of those actions.
