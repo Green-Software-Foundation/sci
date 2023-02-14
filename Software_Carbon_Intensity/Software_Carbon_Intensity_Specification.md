@@ -46,7 +46,7 @@ attribute of software or hardware that adjusts its behavior (consumption of inpu
 
 The following abbreviations are used throughout this specification:
 -	E – Energy consumed by a software system
--	I – Location-based marginal carbon intensity
+-	I – Hourly location-based carbon intensity
 -	M – Embodied emissions of the hardware needed to operate a software system
 -	O – Operational emissions based on the emissions caused by energy consumption
 -	R – Functional unit 
