@@ -44,7 +44,7 @@ attribute of software or hardware that adjusts its behavior (consumption of inpu
 
 The following abbreviations are used throughout this specification:
 -	E – Energy consumed by a software system
--	I – Location-based marginal carbon intensity
+-	I – Region-specific carbon intensity
 -	M – Embodied emissions of the hardware needed to operate a software system
 -	O – Operational emissions based on the emissions caused by energy consumption
 -	R – Functional unit 
@@ -94,7 +94,7 @@ This can be expanded to:
 
 #### General
 
-To calculate the operational emissions associated with software, multiply the electricity consumption of the hardware the software is running on by the regional, granular marginal emissions rate. The marginal emissions rate reflects the change in emissions associated with a change in demand.
+To calculate the operational emissions associated with software, multiply the electricity consumption of the hardware the software is running on by the region-specific carbon intensity.
 
 To calculate the operational emissions `O` for a software application, use the following:
 
@@ -113,13 +113,11 @@ Units: this shall be in kilowatt hours (kWh).
 
 The energy consumption should include all energy consumed by hardware reserved or provisioned, not just the hardware actually used to meet the software needs.  
 
-#### Location-based marginal carbon intensity
+#### Region-specific carbon intensity
 
-The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed. Because this specification uses a consequential approach, marginal emissions rates shall be used for electricity consumption. 
+The carbon intensity of electricity is a measure of how much carbon (CO2eq) emissions are produced per kilowatt-hour (kWh) of electricity consumed.  
 
-Location-based marginal emissions factors measure the grid carbon intensity of a grid region. If the electricity consumption is connected to a grid, the marginal emissions rate of that grid shall be used, which excludes any [market-based measures](#market-based-measures). If the electricity consumption is not connected to a larger regional grid, an appropriate emissions factor for that system shall be used. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
-
-The only figure that matters when trying to optimize the scheduling of a computation in real-time is the marginal emissions intensity. This is the emissions intensity of the marginal power plant which will need to be turned up if a computation is scheduled (e.g., increase electricity demand from the grid) at that moment.
+Region-specific carbon intensity factors measure the grid carbon intensity of electricity in a grid region. If the electricity consumption is connected to a grid, the short run marginal, long run marginal, or average emissions grid intensity of that grid shall be used, which excludes any [market-based measures](#market-based-measures). If the electricity consumption is not connected to a larger regional grid, an appropriate emissions factor for that system shall be used. From a developer perspective, only the location-based info is important in terms of the impact on eliminating carbon emissions. This excludes [market-based measures](#market-based-measures) and is distinct from 100% renewable energy claims.
 
 Units: this shall be in grams of carbon per kilowatt hours (gCO2eq/kWh).
 
