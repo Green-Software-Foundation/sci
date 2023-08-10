@@ -129,7 +129,7 @@ When software runs on a device, a fraction of the total embodied emissions of th
 
 This fraction consists of both a time- and resource-share. The length of time that the software runs on the device determines its time-share. The percentage of the device reserved just for that application during the time-share determines that application's resource-share.
 
-To calculate the time-share, amortize the total embodied carbon over the expected life span of the device and then extrapolate based on the time reserved for the usage. For example, if the device’s embodied carbon was 1000kg with an expected lifespan of four years and it was reserved for use for one hour, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28g of the total.
+To calculate the time-share, amortize the total embodied carbon over the expected life span of the device and then extrapolate based on the time reserved for the usage. For example, if the device’s embodied carbon was 1000 kg with an expected lifespan of four years and it was reserved for use for one hour, the time-share embodied emissions would be 1000 * 1/(4\*365\*24) or around 28 g of the total.
 
 To calculate resource-share, look at the share of total available resources reserved for use by the software. For instance, the percentage of total virtual CPUs reserved for the software is a good choice for the resource-share metric in the virtualized cloud space.
 
@@ -241,7 +241,7 @@ Carbon emissions may be quantified by measuring the total real-world carbon emis
 
 ### Calculation
 
-What one unit of `R` looks like may be modelled and the total carbon (`C`) calculated for executing one functional unit of work (`R`) in a controlled lab environment. For instance, a benchmark application may be created that models a user interacting with your application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per user.
+What one unit of `R` looks like may be modelled and the total carbon (`C`) calculated for executing one functional unit of work (`R`) in a controlled lab environment. For instance, a benchmark application may be created that models a user interacting with developer's application and then measure the `C` emitted per run of that benchmark. The result is still a `C` per user.
 
 ## Comparing an SCI score to a baseline
 
@@ -252,11 +252,11 @@ When taking an action to reduce the carbon intensity of a piece of software, the
 As this specification develops, the following core characteristics shall remain true:
 
 - **The SCI is sensitive to carbon awareness, energy efficiency, and hardware efficiency**
-  - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, carbon awareness, energy efficiency, and hardware efficiency.
-  - If an application's SCI is X, and then actions are taken to make the application more carbon aware, more energy efficient, or more hardware efficient, the value of X shall go down.
+  - The purpose of the SCI is to encourage actions that reduce the carbon emissions of software. Therefore, the SCI shall be sensitive to those actions described in this document under **Software Sustainability Actions**; specifically, Carbon Awareness, Energy Efficiency, and Hardware Efficiency.
+  - If an application's SCI is X, and then actions are taken to make the application more carbon-aware, more energy efficient, or more hardware efficient, the value of X shall go down.
 
 - **The SCI takes a systems-impact view**
-  - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that creates reductions at a system-wide level rather than just at a local level. Local-level optimizations may lead to micro improvements but may have negative downstream impacts at a macro level that negate the impact of those actions.
+  - The purpose of the SCI is to encourage actions that reduce carbon emissions of software in a way that creates reductions at a system-wide level rather than just at a local level. While local-level optimizations might lead to micro improvements, they might lead to negative downstream impacts at a macro level that negate the impact of those actions.
   - Such a systems view shall be adopted by articulating the [boundaries](#software-boundary) of the software and its associated infrastructure, keeping in mind the [exclusions](#exclusions) mentioned in this specification.
 
 - **The SCI is easy to implement**  
