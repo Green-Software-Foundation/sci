@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - dev
       - webpage
 
 jobs:
@@ -13,16 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Switch to the webpage branch and pull latest changes from main
-        run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git fetch --unshallow
-          git pull origin dev
-          git add .
-          git commit -m "Update webpage"
-          git push 
 
       - name: Install Node.js
         uses: actions/setup-node@v2
