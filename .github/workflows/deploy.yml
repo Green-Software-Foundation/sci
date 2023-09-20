@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - dev
       - webpage
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Switch to the webpage branch and pull latest changes from main
         run: |
           git checkout webpage
-          git merge origin main
+          git pull origin dev
 
       - name: Install Node.js
         uses: actions/setup-node@v2
