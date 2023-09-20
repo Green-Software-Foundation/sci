@@ -23,9 +23,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git checkout webpage
-          git add SPEC.md
-          git commit -m "Update SPEC.md"
-          git pull origin webpage
+          git merge dev
 
       - name: Install Node.js
         uses: actions/setup-node@v2
