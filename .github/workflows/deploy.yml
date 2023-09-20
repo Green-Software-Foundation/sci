@@ -18,9 +18,11 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git checkout webpage
-          git fetch origin/dev
-          git merge dev
+          git fetch --unshallow
+          git pull origin dev
+          git add .
+          git commit -m "Update webpage"
+          git push 
 
       - name: Install Node.js
         uses: actions/setup-node@v2
