@@ -16,8 +16,10 @@ jobs:
 
       - name: Switch to the webpage branch and pull latest changes from main
         run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           git checkout webpage
-          git merge origin/dev
+          git pull origin dev
 
       - name: Install Node.js
         uses: actions/setup-node@v2
