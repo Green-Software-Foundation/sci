@@ -1,0 +1,17 @@
+{
+  "name": "sci",
+  "version": "1.0.0",
+  "description": "Software Carbon Intensity (SCI) Specification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node assets/js/compile.js && tailwindcss -o assets/css/styles.css",
+    "dev": "nodemon -e md,js --exec \"npm run build\""
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "marked": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
