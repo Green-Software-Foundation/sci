@@ -17,7 +17,7 @@ jobs:
       - name: Switch to the webpage branch and pull latest changes from main
         run: |
           git checkout webpage
-          git pull origin dev
+          git merge dev
 
       - name: Install Node.js
         uses: actions/setup-node@v2
