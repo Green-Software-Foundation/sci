@@ -19,7 +19,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git checkout webpage
-          git fetch origin dev
+          git fetch origin/dev
           git merge dev
 
       - name: Install Node.js
