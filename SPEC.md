@@ -1,3 +1,6 @@
+---
+version: 1.0.0
+---
 # Software Carbon Intensity (SCI) Specification
 
 ## Introduction
