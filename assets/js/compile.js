@@ -43,6 +43,7 @@ const htmlOutput = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Carbon Intensity (SCI) Specification</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 </head>
 <body class="bg-accent-lightest-1 ">
 <header class="bg-accent-lighter border-l-accent-default border-l-4 p-4 " role="alert">
