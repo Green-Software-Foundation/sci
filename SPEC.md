@@ -246,7 +246,7 @@ Carbon emissions may be quantified by measuring the total real-world carbon emis
 
 ### Calculation
 
-What one unit of `R` looks like may be modelled and the total carbon (`C`) calculated for executing one functional unit of work (`R`) in a controlled lab environment. For instance, a benchmark application may be created that models a user interacting with developer's and then measure the `C` emitted per run of that benchmark. The result is still a `C` per user.
+What one unit of `R` looks like may be modelled and the total carbon (`C`) calculated for executing one functional unit of work (`R`) in a controlled lab environment. For instance, a benchmark may be created that models a user interacting with a software application and then measures the `C` emitted per run of that benchmark. The result is still a `C` per user.
 
 ## Comparing an SCI score to a baseline
 
