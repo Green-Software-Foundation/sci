@@ -28,6 +28,7 @@ In situations where there is a lack of access, capability, or rights to the nece
 This specification describes a methodology for calculating the rate of carbon emissions for a software system; that is, its SCI score. The purpose of this score is to increase awareness and transparency of an application's sustainability credentials. The score will help software practitioners make better, evidence-based decisions during system design, development, and deployment, that will ultimately minimize carbon emissions. A reliable, consistent, fair and comparable measure allows targets to be defined during development and progress to be tracked.
 
 ## Normative references
+There are no normative references in this document.
 
 ## Terms and definitions
 
