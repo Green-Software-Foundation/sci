@@ -1,4 +1,4 @@
-# Software Carbon Intensity (SCI) Specification [v.alpha]
+# Software Carbon Intensity (SCI) Specification
 
 A specification that describes how to calculate a carbon intensity score for software applications. 
 
@@ -41,4 +41,4 @@ Standard WG projects operate under the W3C Patent Mode.
 
 # Feedback
 * [GitHub discussions](https://github.com/Green-Software-Foundation/software_carbon_intensity/discussions/new?category=sci-feedback)
-* <sci_feedback@greensoftware.foundation>
+* <standards-wg@greensoftware.foundation>
