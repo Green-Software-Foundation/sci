@@ -11,7 +11,7 @@ Electricity has a carbon intensity depending on where and when it is consumed. A
 
 ## Getting Started
 - The development version of the specification is [here](https://github.com/Green-Software-Foundation/sci/blob/dev/SPEC.md).
-- The latest published version of the specification is [here](https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md).
+- The latest published version of the specification is [here](https://github.com/Green-Software-Foundation/sci/blob/main/SPEC.md).
 - The `dev` branch contains the current version that is being worked on and the `main` branch contains the latest published version.
 - Check the [issues tab](https://github.com/Green-Software-Foundation/software_carbon_intensity/issues) for active and closed conversations regarding the spec.
 
