@@ -1,5 +1,8 @@
 # Software Carbon Intensity (SCI) Specification
 
+## ISO Accredited
+ Software Carbon Intensity (SCI) specification [ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html)
+
 A specification that describes how to calculate a carbon intensity score for software applications. 
 
 Created and managed by the [Standards Working Group](https://github.com/Green-Software-Foundation/standards_wg) in the [greensoftware.foundation](https://greensoftware.foundation).
