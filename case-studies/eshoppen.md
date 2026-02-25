@@ -90,23 +90,23 @@ P[kwH] = (Power consumed by CPU or Pc Number of cores + Power consumed by Memory
 
 ### Embodied Carbon (`M`)
 
-The equation to calculate `M = TE * (TR/EL) * (RR/TR)`
+The equation to calculate `M = TE * (TiR/EL) * (RR/ToR)`
 
 Where:
 
 * TE = Total Embodied Emissions, the sum of LCA emissions for all hardware components associated with the application server.
-* TR = Time Reserved, the length of time the hardware is reserved for use by the software.
+* TiR = Time Reserved, the length of time the hardware is reserved for use by the software.
 * EL = Expected Lifespan, the anticipated time that the equipment will be installed.
 * RR = Resources Reserved, the number of resources reserved for use by the software.
-* TR = Total Resources, the total number of resources available.
+* ToR = Total Resources, the total number of resources available.
 
 For this component:
 
 * TE: We will source the embodied carbon estimates for the servers from the [Cloud Carbon Footprint Coefficient](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/output/coefficients-azure-embodied.csv) Data Set.
-* TR: 1 hr.
+* TiR: 1 hr.
 * EL: We will assume a 4 year lifespan or 35,040 hrs.
 * RR: A virtual machine with 2 vCPUs was used, this data was sourced from [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
-* TR: The bare metal host is split up into 16 vCPUs in total. This data was sourced from the [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
+* ToR: The bare metal host is split up into 16 vCPUs in total. This data was sourced from the [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
 
 ### Database server for Web application
 
@@ -135,23 +135,23 @@ P[kwH] = (Power consumed by CPU or Pc Number of cores + Power consumed by Memory
 
 ### Embodied Carbon (`M`)
 
-The equation to calculate `M = TE * (TR/EL) * (RR/TR)`
+The equation to calculate `M = TE * (TiR/EL) * (RR/ToR)`
 
 Where:
 
 * TE = Total Embodied Emissions, the sum of LCA emissions for all hardware components associated with the database server.
-* TR = Time Reserved, the length of time the hardware is reserved for use by the software.
+* TiR = Time Reserved, the length of time the hardware is reserved for use by the software.
 * EL = Expected Lifespan, the anticipated time that the equipment will be installed.
 * RR = Resources Reserved, the number of resources reserved for use by the software.
-* TR = Total Resources, the total number of resources available.
+* ToR = Total Resources, the total number of resources available.
 
 For this component:
 
 * TE: We will source the embodied carbon estimates for the servers from the [Cloud Carbon Footprint Coefficient](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/output/coefficients-azure-embodied.csv) Data Set.
-* TR: 1 hr.
+* TiR: 1 hr.
 * EL: We will assume a 4 year lifespan or 35,040 hrs.
 * RR: A virtual machine with 2 vCPUs was used, this data was sourced from [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
-* TR: The bare metal host is split up into 16 vCPUs in total. This data was sourced from the [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
+* ToR: The bare metal host is split up into 16 vCPUs in total. This data was sourced from the [Cloud Carbon Footprint Azure Instances Coefficients](https://github.com/cloud-carbon-footprint/cloud-carbon-coefficients/blob/main/data/azure-instances.csv).
 
 ## (Quantify) SCI Value Calculation
 
@@ -185,13 +185,13 @@ I = **951 gCO2e/kWh**
 
 ### Embodied Carbon (`M`)
 
-`M = TE * (TR/EL) * (RR/TR)`
+`M = TE * (TiR/EL) * (RR/ToR)`
 
 - TE = 1205.52 kgCo2e
-- TR = 1 hour
+- TiR = 1 hour
 - EL = 35040
 - RR = 2
-- TR = 16
+- ToR = 16
 
 M = 1205.52 * (1/35040) * (2/16) = 0.004305 KG =~ **4.305 gCO2e**
 
@@ -227,13 +227,13 @@ I = **951 gCO2e/kWh**
 
 ### Embodied Carbon (`M`)
 
-`M = TE * (TR/EL) * (RR/TR)`
+`M = TE * (TiR/EL) * (RR/ToR)`
 
 - TE = 1433.12 kgCo2e
-- TR = 1 hour
+- TiR = 1 hour
 - EL = 35040
 - RR = 2
-- TR = 16
+- ToR = 16
 
 M = 1433.12 * (1/35040) * (2/16) = 0.005112 KG =~ **5.112 gCO2e**
 
